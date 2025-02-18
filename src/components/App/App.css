@@ -1,0 +1,9 @@
+.page {
+  background-image: url(../../assets/Bg_photo.svg);
+}
+
+.page__content {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
