@@ -20,9 +20,13 @@
   letter-spacing: 0px;
 }
 
+.header__container {
+  display: flex;
+}
+
 .header__home {
   width: 49px;
-  margin-left: 718px;
+  margin-left: 693px;
   text-decoration: none;
   border-bottom: none;
   color: rgba(255, 255, 255, 1);
@@ -35,9 +39,10 @@
 }
 
 .header__signin {
-  width: 152px;
-  height: 44px;
-  margin-right: 87px;
+  width: 176px;
+  height: 58px;
+  margin-right: 104px;
+  margin-left: 42px;
   border-radius: 50px;
   font-family: "Roboto";
   font-weight: 500;
