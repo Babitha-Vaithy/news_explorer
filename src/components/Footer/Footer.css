@@ -1,0 +1,61 @@
+.footer {
+  width: 1440px;
+  height: 80px;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__name {
+  width: 433px;
+  margin-top: 32px;
+  margin-bottom: 26px;
+  margin-left: 104px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  color: rgba(182, 188, 191, 1);
+}
+
+.footer__container {
+  display: flex;
+}
+
+.footer__home {
+  width: 49px;
+  margin: 30px 40px 26px 268px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: rgba(26, 27, 34, 1);
+}
+
+.footer__tripleten {
+  width: 74px;
+  margin: 30px 0px 26px 0;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: rgba(26, 27, 34, 1);
+}
+
+.footer__gitavatar {
+  width: 20.21px;
+  height: 19.71px;
+  margin: 28px 0 28px 40px;
+}
+
+.footer__facebook {
+  width: 20px;
+  height: 20px;
+  margin: 28px 104px 28px 40px;
+}
