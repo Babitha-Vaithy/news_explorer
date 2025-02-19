@@ -7,6 +7,7 @@ import SearchForm from "../SearchForm/SearchForm";
 import About from "../About/About";
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
+import Preloader from "../Preloader/Preloader";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -48,6 +49,7 @@ function App() {
           <SearchForm />
         </div>
       </div>
+      <Preloader />
       <About />
       <Footer />
 
