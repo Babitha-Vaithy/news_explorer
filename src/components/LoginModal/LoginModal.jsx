@@ -26,10 +26,11 @@ const LoginModal = ({
   return (
     <ModalWithForm
       title="Sign in"
-      buttonText="Sign in"
+      buttonText="or Sign up"
       isOpen={isOpen}
       onClose={closeActiveModal}
       onSubmit={handleSubmit}
+      openModal={handleSignupClick}
     >
       <label htmlFor="email" className="modal__label">
         Email
@@ -53,12 +54,8 @@ const LoginModal = ({
           onChange={handlePasswordChange}
         />
       </label>
-      <button
-        type="button"
-        onClick={handleSignupClick}
-        className="signin__signup"
-      >
-        or Sign up
+      <button type="submit" onClick={onSignIn} className="signin__signup">
+        Sign in
       </button>
     </ModalWithForm>
   );

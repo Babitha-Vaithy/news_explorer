@@ -9,17 +9,23 @@ function ModalWithForm({
   isOpen,
   onClose,
   onSubmit,
+  openModal,
 }) {
   return (
     <div className={`modal ${isOpen === true && "modal_opened"}`}>
       <div className="modal__content">
         <h2 className="modal__title">{title}</h2>
-        <button onClick={onClose} type="button" className="modal__close">
-          <img src={closebutton} alt="Close Btn" className="modal__close_btn" />
-        </button>
+
+        <img
+          onClick={onClose}
+          src={closebutton}
+          alt="Close Btn"
+          className="modal__close_btn"
+        />
+
         <form className="modal__form" onSubmit={onSubmit}>
           {children}
-          <button type="submit" className="modal__submit">
+          <button type="button" onClick={openModal} className="modal__submit">
             {buttonText}
           </button>
         </form>

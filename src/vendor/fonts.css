@@ -2,8 +2,20 @@
   font-family: "Roboto";
   font-style: normal;
   src: url("./fonts/roboto-500.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
   src: url("./fonts/roboto-700.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
   src: url("./fonts/roboto-900.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
   src: url("./fonts/roboto-400-regular.woff") format("woff");
 }
 
@@ -11,5 +23,21 @@
   font-family: "Roboto Slab";
   font-style: normal;
   src: url("./fonts/roboto-slab-400-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
   src: url("./fonts/roboto-slab-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  src: url("./fonts/inter-400-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  src: url("./fonts/inter-500.woff") format("woff");
 }

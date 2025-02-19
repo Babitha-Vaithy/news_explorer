@@ -24,9 +24,17 @@ function App() {
   };
 
   const onSignIn = (email, password) => {
-    logIn(email, password)
+    signIn(email, password)
       .then((res) => {
         closeActiveModal();
+      })
+      .catch(console.error);
+  };
+
+  const onSignUp = ({ name, link, email, password }) => {
+    signUp({ name, link, email, password })
+      .then((data) => {
+        onSignIn(data.email, password);
       })
       .catch(console.error);
   };
@@ -35,10 +43,7 @@ function App() {
     <div className="page__root">
       <div className="page">
         <div className="page__content">
-          <Header
-            handleSignInClick={handleSignInClick}
-            handleSignupClick={handleSignupClick}
-          />
+          <Header handleSignInClick={handleSignInClick} />
           <Main />
           <SearchForm />
         </div>

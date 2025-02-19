@@ -29,10 +29,11 @@ const RegisterModal = ({
   return (
     <ModalWithForm
       title="Sign Up"
-      buttonText="Sign Up"
+      buttonText="or Sign in"
       isOpen={isOpen}
       onClose={closeActiveModal}
       onSubmit={handleSubmit}
+      openModal={handleSignInClick}
     >
       <label htmlFor="email" className="modal__label">
         Email
@@ -69,12 +70,8 @@ const RegisterModal = ({
         />
       </label>
 
-      <button
-        type="button"
-        onClick={handleSignInClick}
-        className="signup__signin"
-      >
-        or Sign in
+      <button type="submit" onClick={onSignUp} className="signup__signin">
+        Sign up
       </button>
     </ModalWithForm>
   );
