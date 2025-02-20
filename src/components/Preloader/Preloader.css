@@ -6,7 +6,7 @@
 
 .preloader__text {
   margin-left: 626px;
-  margin-top: 187px;
+  margin-top: 180px;
   display: inline-block;
   margin-bottom: 80px;
   font-family: "Roboto";
@@ -28,7 +28,7 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom: -481px;
+  bottom: -554px;
   margin: auto;
   animation: spin 0.75s infinite linear;
 }

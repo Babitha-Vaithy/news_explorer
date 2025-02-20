@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -26,7 +26,7 @@ function App() {
   };
 
   const onSignIn = ({ email, password }) => {
-    signIn(email, password)
+    signIn({ email, password })
       .then((res) => {
         localStorage.setItem("jwt", res.token);
         checkToken(res.token);
@@ -39,6 +39,7 @@ function App() {
     signUp({ username, email, password })
       .then((data) => {
         onSignIn(data.email);
+        closeActiveModal();
       })
       .catch(console.error);
   };
@@ -50,6 +51,11 @@ function App() {
       });
     });
   };
+
+  useEffect(() => {
+    const jwt = localStorage.getItem("jwt");
+    checkToken(jwt);
+  }, []);
 
   return (
     <div className="page__root">
