@@ -8,6 +8,7 @@ import About from "../About/About";
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import Preloader from "../Preloader/Preloader";
+import { signUp, signIn } from "../../utils/auth.js";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -24,20 +25,30 @@ function App() {
     setActiveModal("");
   };
 
-  const onSignIn = (email, password) => {
+  const onSignIn = ({ email, password }) => {
     signIn(email, password)
       .then((res) => {
+        localStorage.setItem("jwt", res.token);
+        checkToken(res.token);
         closeActiveModal();
       })
       .catch(console.error);
   };
 
-  const onSignUp = ({ name, link, email, password }) => {
-    signUp({ name, link, email, password })
+  const onSignUp = ({ username, email, password }) => {
+    signUp({ username, email, password })
       .then((data) => {
-        onSignIn(data.email, password);
+        onSignIn(data.email);
       })
       .catch(console.error);
+  };
+
+  const checkToken = (token) => {
+    return new Promise((resolve, reject) => {
+      resolve({
+        data: { name: "fake user", email: "test@gmail.com", _id: "fake-id" },
+      });
+    });
   };
 
   return (

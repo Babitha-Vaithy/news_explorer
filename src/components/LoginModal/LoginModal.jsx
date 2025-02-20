@@ -39,6 +39,7 @@ const LoginModal = ({
           type="email"
           className="modal__input"
           placeholder="Enter email"
+          required
           value={email}
           onChange={handleEmailChange}
         />
@@ -50,6 +51,7 @@ const LoginModal = ({
           type="password"
           className="modal__input"
           placeholder="Enter password"
+          required
           value={password}
           onChange={handlePasswordChange}
         />

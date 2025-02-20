@@ -5,7 +5,7 @@ import "./Header.css";
 function Header({ handleSignInClick }) {
   return (
     <header className="header">
-      <Link to="/">
+      <Link to="/" className="header__link">
         <p className="header__logo" alt="Header Logo">
           NewsExplorer
         </p>
