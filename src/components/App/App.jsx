@@ -8,10 +8,14 @@ import About from "../About/About";
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import Preloader from "../Preloader/Preloader";
-import { signUp, signIn } from "../../utils/auth.js";
+import { signUp, signIn, getUser } from "../../utils/auth.js";
+import Navigation from "../Navigation/Navigation.jsx";
+import { CurrentUserContext } from "../../Contexts/CurrentUserContext.js";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
 
   const handleSignupClick = () => {
     setActiveModal("signUp");
@@ -45,11 +49,14 @@ function App() {
   };
 
   const checkToken = (token) => {
-    return new Promise((resolve, reject) => {
-      resolve({
-        data: { name: "fake user", email: "test@gmail.com", _id: "fake-id" },
-      });
-    });
+    if (token) {
+      getUser(token)
+        .then((data) => {
+          setCurrentUser(data.data);
+          setIsLoggedIn(true);
+        })
+        .catch(console.error);
+    }
   };
 
   useEffect(() => {
@@ -59,34 +66,37 @@ function App() {
 
   return (
     <div className="page__root">
-      <div className="page">
-        <div className="page__content">
-          <Header handleSignInClick={handleSignInClick} />
-          <Main />
-          <SearchForm />
+      <CurrentUserContext.Provider value={currentUser}>
+        <div className="page">
+          <div className="page__content">
+            <Header handleSignInClick={handleSignInClick} />
+
+            <Main />
+            <SearchForm />
+            <Navigation />
+          </div>
         </div>
-      </div>
-      <Preloader />
-      <About />
-      <Footer />
+        <About />
+        <Footer />
 
-      {activeModal === "signUp" && (
-        <RegisterModal
-          closeActiveModal={closeActiveModal}
-          isOpen={activeModal === "signUp"}
-          onSignUp={onSignUp}
-          handleSignInClick={handleSignInClick}
-        />
-      )}
+        {activeModal === "signUp" && (
+          <RegisterModal
+            closeActiveModal={closeActiveModal}
+            isOpen={activeModal === "signUp"}
+            onSignUp={onSignUp}
+            handleSignInClick={handleSignInClick}
+          />
+        )}
 
-      {activeModal === "signin" && (
-        <LoginModal
-          closeActiveModal={closeActiveModal}
-          isOpen={activeModal === "signin"}
-          onSignIn={onSignIn}
-          handleSignupClick={handleSignupClick}
-        />
-      )}
+        {activeModal === "signin" && (
+          <LoginModal
+            closeActiveModal={closeActiveModal}
+            isOpen={activeModal === "signin"}
+            onSignIn={onSignIn}
+            handleSignupClick={handleSignupClick}
+          />
+        )}
+      </CurrentUserContext.Provider>
     </div>
   );
 }

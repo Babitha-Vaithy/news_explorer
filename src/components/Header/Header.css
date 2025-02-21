@@ -30,7 +30,7 @@
 
 .header__home {
   width: 49px;
-  margin-left: 693px;
+  margin-left: 617px;
   text-decoration: none;
   border-bottom: none;
   color: rgba(255, 255, 255, 1);
@@ -57,4 +57,48 @@
   background-color: transparent;
   border-color: rgba(255, 255, 255, 1);
   color: rgba(255, 255, 255, 1);
+}
+
+.header__saved {
+  width: 114px;
+  margin-right: 64px;
+  margin-left: 66px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(182, 188, 191, 1);
+}
+
+.header__user-containter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__username {
+  width: 148px;
+  height: 48px;
+  margin-right: 104px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 50px;
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 1);
+}
+
+.header__username-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 19px;
+  margin-bottom: -6px;
+}
+
+.header__nav-link {
+  text-decoration: none;
 }

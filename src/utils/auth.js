@@ -10,4 +10,12 @@ function signIn({ email, password }) {
   });
 }
 
-export { signUp, signIn };
+function getUser(token) {
+  return new Promise((resolve, reject) => {
+    resolve({
+      data: { name: "fake user", email: "test@gmail.com", _id: "fake-id" },
+    });
+  });
+}
+
+export { signUp, signIn, getUser };
