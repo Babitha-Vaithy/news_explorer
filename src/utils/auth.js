@@ -13,7 +13,7 @@ function signIn({ email, password }) {
 function getUser(token) {
   return new Promise((resolve, reject) => {
     resolve({
-      data: { name: "fake user", email: "test@gmail.com", _id: "fake-id" },
+      data: { name: "fake user", email: "fake@example.com", _id: "fake-id" },
     });
   });
 }
