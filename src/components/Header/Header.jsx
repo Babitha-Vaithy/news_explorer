@@ -7,7 +7,6 @@ import usernameicon from "../../assets/username_icon.svg";
 
 function Header({ handleSignInClick }) {
   const currentUser = useContext(CurrentUserContext);
-  console.log(currentUser);
   return (
     <header className="header">
       <Link to="/" className="header__link">

@@ -17,6 +17,7 @@ function App() {
   const [activeModal, setActiveModal] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
+  const [search, setSearch] = useState(null);
 
   const handleSignupClick = () => {
     setActiveModal("signUp");
@@ -25,7 +26,6 @@ function App() {
   const handleSignInClick = () => {
     setActiveModal("signin");
   };
-
   const closeActiveModal = () => {
     setActiveModal("");
   };
@@ -53,8 +53,7 @@ function App() {
     console.log(data);
     getSearchData(data)
       .then((data) => {
-        //onSearch();
-        console.log(data);
+        setSearch(data.articles);
       })
       .catch(console.error);
   };
@@ -87,7 +86,18 @@ function App() {
             <Navigation />
           </div>
         </div>
-        <NewsCard />
+        {search &&
+          search.map((item) => {
+            return (
+              <NewsCard
+                title={item.title}
+                urlToImage={item.urlToImage}
+                description={item.description}
+                publishedAt={item.publishedAt}
+                author={item.author}
+              />
+            );
+          })}
         <About />
         <Footer />
 
