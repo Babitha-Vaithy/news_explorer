@@ -9,6 +9,16 @@
   flex-direction: column;
 }
 
+.newscard__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0;
+  margin-left: 104px;
+  margin-right: 48px;
+  gap: 16px;
+}
+
 .newscard__title {
   width: 712px;
   margin: 80px 0 64px 104px;
@@ -38,8 +48,7 @@
 
 .newscard__list {
   width: 400px;
-  margin-left: 104px;
-  margin-right: 104px;
+  margin-right: 16px;
   list-style-type: none;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 15px;

@@ -86,18 +86,9 @@ function App() {
             <Navigation />
           </div>
         </div>
-        {search &&
-          search.map((item) => {
-            return (
-              <NewsCard
-                title={item.title}
-                urlToImage={item.urlToImage}
-                description={item.description}
-                publishedAt={item.publishedAt}
-                author={item.author}
-              />
-            );
-          })}
+
+        <NewsCard search={search} />
+
         <About />
         <Footer />
 
