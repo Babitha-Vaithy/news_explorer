@@ -4,11 +4,11 @@ import notfound from "../../assets/not_found.svg";
 
 function Preloader() {
   return (
-    <div className="preloader">
-      <div className="preloader__circle-container">
-        <div className="circle__preloader"></div>
-        <p className="preloader__text">Searching for news...</p>
-      </div>
+    // <div className="preloader">
+    //   <div className="preloader__circle-container">
+    //     <div className="circle__preloader"></div>
+    //     <p className="preloader__text">Searching for news...</p>
+    //   </div>
       {/* <div className="preloader__error">
         <img src={notfound} alt="Not Found avatar" className="error__avatar" />
         <p className="error__title">Nothing found</p>
@@ -16,7 +16,7 @@ function Preloader() {
           Sorry, but nothing matched your search terms.
         </p>
       </div> */}
-    </div>
+    // </div>
   );
 }
 

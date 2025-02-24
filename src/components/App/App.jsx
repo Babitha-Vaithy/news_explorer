@@ -7,10 +7,11 @@ import SearchForm from "../SearchForm/SearchForm";
 import About from "../About/About";
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
-import Preloader from "../Preloader/Preloader";
+import NewsCard from "../NewsCard/NewsCard.jsx";
 import { signUp, signIn, getUser } from "../../utils/auth.js";
 import Navigation from "../Navigation/Navigation.jsx";
 import { CurrentUserContext } from "../../Contexts/CurrentUserContext.js";
+import { getSearchData } from "../../utils/api.js";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -48,6 +49,16 @@ function App() {
       .catch(console.error);
   };
 
+  const onSearch = (data) => {
+    console.log(data);
+    getSearchData(data)
+      .then((data) => {
+        //onSearch();
+        console.log(data);
+      })
+      .catch(console.error);
+  };
+
   const checkToken = (token) => {
     if (token) {
       getUser(token)
@@ -72,10 +83,11 @@ function App() {
             <Header handleSignInClick={handleSignInClick} />
 
             <Main />
-            <SearchForm />
+            <SearchForm onSearch={onSearch} />
             <Navigation />
           </div>
         </div>
+        <NewsCard />
         <About />
         <Footer />
 
