@@ -1,15 +1,30 @@
 import "./NewsCard.css";
 import savebtn from "../../assets/save__btn.svg";
-import nature from "../../assets/nature1.svg";
+import savedBtn from "../../assets/saved_btn.svg";
+import { useState } from "react";
+import Preloader from "../Preloader/Preloader";
 
-function NewsCard({ search }) {
+function NewsCard({ search, loader }) {
+  const [counter, setCounter] = useState(3);
+
+  const items =
+    search &&
+    search
+      .filter((item) => {
+        return item;
+      })
+      .slice(0, search.length < counter ? search.length : counter);
+
+  const showitems =
+    (search && !search.length <= 3) || (search && search.length - counter) <= 3;
+
   return (
     <div className="newscard">
       <div className="newscard__container">
         <p className="newscard__title">Search results</p>
         <div className="newscard__cards">
-          {search &&
-            search.map((item) => {
+          {items &&
+            items.map((item) => {
               return (
                 <li className="newscard__list">
                   <img
@@ -17,11 +32,17 @@ function NewsCard({ search }) {
                     alt="Newscard Image"
                     className="newscard__image"
                   />
-                  <img
-                    src={savebtn}
-                    alt="Newscard Save Button"
-                    className="newscard__savebtn"
-                  />
+                  <div className="saved__container">
+                    <img
+                      src={savebtn}
+                      alt="Newscard Save Button"
+                      className="newscard__savebtn"
+                    />
+
+                    <h3 className="hover__image-text">
+                      Sign in to save articles
+                    </h3>
+                  </div>
                   <p className="newscard__date">{item.publishedAt}</p>
 
                   <h3 className="newscard__caption">{item.title}</h3>
@@ -32,9 +53,16 @@ function NewsCard({ search }) {
             })}
         </div>
       </div>
-      <button type="button" className="newscard__show">
-        Show more
-      </button>
+
+      {showitems && (
+        <button
+          onClick={() => setCounter(counter + 3)}
+          type="button"
+          className="newscard__show"
+        >
+          Show more
+        </button>
+      )}
     </div>
   );
 }

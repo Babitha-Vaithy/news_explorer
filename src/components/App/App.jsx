@@ -12,12 +12,14 @@ import { signUp, signIn, getUser } from "../../utils/auth.js";
 import Navigation from "../Navigation/Navigation.jsx";
 import { CurrentUserContext } from "../../Contexts/CurrentUserContext.js";
 import { getSearchData } from "../../utils/api.js";
+import Preloader from "../Preloader/Preloader.jsx";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const [search, setSearch] = useState(null);
+  const [loader, setLoader] = useState(null);
 
   const handleSignupClick = () => {
     setActiveModal("signUp");
@@ -50,7 +52,7 @@ function App() {
   };
 
   const onSearch = (data) => {
-    console.log(data);
+    setLoader("load");
     getSearchData(data)
       .then((data) => {
         setSearch(data.articles);
@@ -87,6 +89,7 @@ function App() {
           </div>
         </div>
 
+        <Preloader loader={loader} search={search} />
         <NewsCard search={search} />
 
         <About />

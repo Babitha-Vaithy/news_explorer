@@ -40,7 +40,11 @@ function Header({ handleSignInClick }) {
                   Home
                 </p>
               </Link>
-              <p className="header__saved">Saved articles</p>
+              <Link to="/savedarticles" className="header__link">
+                <p className="header__saved" alt="Saved Articles">
+                  Saved articles
+                </p>
+              </Link>
               <button className="header__username">
                 {currentUser.name}
                 <img

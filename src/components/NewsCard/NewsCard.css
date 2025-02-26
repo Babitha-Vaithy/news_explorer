@@ -106,10 +106,34 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  margin-top: 24px;
-  margin-left: -64px;
+  margin-top: -28px;
+  margin-left: 337px;
+  top: -237px;
 }
 
-/* .newscard__savebtn:hover {
-  font: "Sign in to save articles";
-} */
+.saved__container {
+  position: relative;
+  display: block;
+}
+
+.hover__image-text {
+  width: 124px;
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  margin-top: -264px;
+  margin-left: -296px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14.06px;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 10px 22px 0px rgba(59, 74, 116, 0.1);
+  padding: 11px 20px 11px 20px;
+}
+
+.saved__container:hover .hover__image-text {
+  cursor: pointer;
+}
