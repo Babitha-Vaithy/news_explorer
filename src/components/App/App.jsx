@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+
 import "./App.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -13,6 +15,7 @@ import Navigation from "../Navigation/Navigation.jsx";
 import { CurrentUserContext } from "../../Contexts/CurrentUserContext.js";
 import { getSearchData } from "../../utils/api.js";
 import Preloader from "../Preloader/Preloader.jsx";
+import Savedarticles from "../SavedArticles/SavedArticles.jsx";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -20,6 +23,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [search, setSearch] = useState(null);
   const [loader, setLoader] = useState(null);
+  const [savedArticles, setSavedArticles] = useState(false);
 
   const handleSignupClick = () => {
     setActiveModal("signUp");
@@ -30,6 +34,10 @@ function App() {
   };
   const closeActiveModal = () => {
     setActiveModal("");
+  };
+
+  const handleSavedArticles = () => {
+    setSavedArticles(true);
   };
 
   const onSignIn = ({ email, password }) => {
@@ -81,19 +89,43 @@ function App() {
       <CurrentUserContext.Provider value={currentUser}>
         <div className="page">
           <div className="page__content">
-            <Header handleSignInClick={handleSignInClick} />
-
-            <Main />
-            <SearchForm onSearch={onSearch} />
-            <Navigation />
+            {savedArticles === false && (
+              <>
+                <Header
+                  handleSignInClick={handleSignInClick}
+                  styleColor="white"
+                  handleSavedArticles={handleSavedArticles}
+                />
+                <Routes>
+                  <Route
+                    path="/"
+                    element={<Main onSearch={onSearch} />}
+                  ></Route>{" "}
+                </Routes>
+                <Navigation />
+              </>
+            )}
           </div>
         </div>
 
-        <Preloader loader={loader} search={search} />
-        <NewsCard search={search} />
+        <Routes>
+          <Route
+            path="/saved-news"
+            element={
+              <Savedarticles handleSavedArticles={handleSavedArticles} />
+            }
+          ></Route>
+        </Routes>
 
-        <About />
-        <Footer />
+        {savedArticles === false && (
+          <>
+            <Preloader loader={loader} search={search} />
+            <NewsCard search={search} />
+
+            <About />
+            <Footer />
+          </>
+        )}
 
         {activeModal === "signUp" && (
           <RegisterModal

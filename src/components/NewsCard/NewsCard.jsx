@@ -32,7 +32,7 @@ function NewsCard({ search, loader }) {
                     alt="Newscard Image"
                     className="newscard__image"
                   />
-                  <div className="saved__container">
+                  <div className="savedbtn__container">
                     <img
                       src={savebtn}
                       alt="Newscard Save Button"

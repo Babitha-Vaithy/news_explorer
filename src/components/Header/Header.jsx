@@ -5,10 +5,10 @@ import { CurrentUserContext } from "../../Contexts/CurrentUserContext";
 import { useContext } from "react";
 import usernameicon from "../../assets/username_icon.svg";
 
-function Header({ handleSignInClick }) {
+function Header({ handleSignInClick, styleColor, handleSavedArticles }) {
   const currentUser = useContext(CurrentUserContext);
   return (
-    <header className="header">
+    <header className="header" style={{ color: styleColor }}>
       <Link to="/" className="header__link">
         <p className="header__logo" alt="Header Logo">
           NewsExplorer
@@ -33,28 +33,34 @@ function Header({ handleSignInClick }) {
         )}
 
         {currentUser && (
-          <Link to="/navigation" className="header__nav-link">
+          <div className="header__nav-link">
             <div className="header__user-containter">
               <Link to="/" className="header__link">
                 <p className="header__home" alt="Home">
                   Home
                 </p>
               </Link>
-              <Link to="/savedarticles" className="header__link">
+              <Link
+                to="/saved-news"
+                onClick={handleSavedArticles}
+                className="header__link"
+              >
                 <p className="header__saved" alt="Saved Articles">
                   Saved articles
                 </p>
               </Link>
-              <button className="header__username">
-                {currentUser.name}
-                <img
-                  src={usernameicon}
-                  alt="Username Icon"
-                  className="header__username-icon"
-                />
-              </button>
+              <Link to="/" className="header__link">
+                <button className="header__username">
+                  {currentUser.name}
+                  <img
+                    src={usernameicon}
+                    alt="Username Icon"
+                    className="header__username-icon"
+                  />
+                </button>
+              </Link>
             </div>
-          </Link>
+          </div>
         )}
       </div>
     </header>
