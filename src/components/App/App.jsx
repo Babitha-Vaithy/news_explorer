@@ -16,6 +16,7 @@ import { CurrentUserContext } from "../../Contexts/CurrentUserContext.js";
 import { getSearchData } from "../../utils/api.js";
 import Preloader from "../Preloader/Preloader.jsx";
 import Savedarticles from "../SavedArticles/SavedArticles.jsx";
+import SuccessModal from "../RegisterModal/SuccessModal.jsx";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -53,8 +54,7 @@ function App() {
   const onSignUp = ({ username, email, password }) => {
     signUp({ username, email, password })
       .then((data) => {
-        onSignIn(data.email);
-        closeActiveModal();
+        setActiveModal("success");
       })
       .catch(console.error);
   };
@@ -142,6 +142,13 @@ function App() {
             isOpen={activeModal === "signin"}
             onSignIn={onSignIn}
             handleSignupClick={handleSignupClick}
+          />
+        )}
+        {activeModal === "success" && (
+          <SuccessModal
+            closeActiveModal={closeActiveModal}
+            isOpen={activeModal === "success"}
+            handleSignInClick={handleSignInClick}
           />
         )}
       </CurrentUserContext.Provider>
