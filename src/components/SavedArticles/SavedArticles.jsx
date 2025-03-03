@@ -9,10 +9,26 @@ import trash from "../../assets/trash.svg";
 
 function Savedarticles() {
   const [savedArticles, setSavedArticles] = useState(null);
+  const [keyword, setKeyword] = useState(null);
 
   useEffect(() => {
+    let key = "";
     getItems().then((data) => {
       setSavedArticles(data);
+      if (data && data.length <= 2) {
+        data.map((item) => (key = key + "," + item));
+      } else {
+        if (data) {
+          data.filter((item, index) => {
+            if (index <= 1) {
+              key = key + "," + item.keyword;
+            }
+          });
+          key = `${key} and ${data.length - 2} others`;
+        }
+      }
+      let newKeyword = key.slice(1);
+      setKeyword(newKeyword);
     });
   }, []);
 
@@ -26,7 +42,7 @@ function Savedarticles() {
         </h1>
         <p className="saved__keywords">
           By keywords:
-          <span className="keywords">Nature, Yellowstone, and 2 other</span>
+          <span className="keywords">{keyword}</span>;
         </p>
         <div className="saved__cards">
           {savedArticles &&
@@ -39,7 +55,7 @@ function Savedarticles() {
                       alt="Newscard Image"
                       className="saved__image"
                     />
-                    <h2 className="keywords__image-text">sample</h2>
+                    <h2 className="keywords__image-text">{item.keyword}</h2>
                     <div className="delete__container">
                       <img
                         src={deleteicon}

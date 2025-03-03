@@ -30,6 +30,7 @@ export function getItems() {
         description:
           " imagine that soon enough, artificial intelligence will be able to recreate the sounds of the more than 100 voices I created for characters on “The Simpsons” over almost four decades.",
         author: "Jeremy Engle",
+        keyword: "AI",
       },
       {
         _id: "6785882563335c63f01a841b", // I just generated this at random from a mongodb id generator website
@@ -41,6 +42,7 @@ export function getItems() {
         description:
           "In November last year, Australia imposed a sweeping ban on social media for children under 16. It is one of the world’s most comprehensive measures aimed at safeguarding young people from potential hazards online, such as online hate or bullying.",
         author: "The Learning Network",
+        keyword: "Social Media",
       },
       {
         _id: "6785882463335c63f01a8419", // I just generated this at random from a mongodb id generator website
@@ -51,6 +53,7 @@ export function getItems() {
         description:
           "That’s the question that led Luka Doncic, one of the N.B.A.’s brightest stars, to start a foundation dedicated to helping young players embrace “mess and joy.",
         author: "The Learning Network",
+        keyword: "Sports",
       },
       {
         _id: "67858d3ec556bd90deae8a0d", // I just generated this at random from a mongodb id generator website
@@ -62,6 +65,7 @@ export function getItems() {
         description:
           "Meta — the company that owns Facebook, Instagram, Threads and Whatsapp — announced on Jan. 7 that it would be ending its longstanding fact-checking program, a policy instituted to curtail the spread of misinformation across its social media apps.",
         author: "Natalie Proulx",
+        keyword: "Social Media",
       },
     ])
   );
