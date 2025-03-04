@@ -10,7 +10,7 @@ import About from "../About/About";
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import NewsCard from "../NewsCard/NewsCard.jsx";
-import { signUp, signIn, getUser } from "../../utils/auth.js";
+import { signUp, signIn, getUser, saveArticle } from "../../utils/auth.js";
 import Navigation from "../Navigation/Navigation.jsx";
 import { CurrentUserContext } from "../../Contexts/CurrentUserContext.js";
 import { getSearchData } from "../../utils/api.js";
@@ -63,9 +63,14 @@ function App() {
     setLoader("load");
     getSearchData(data)
       .then((data) => {
+        setLoader("complete");
         setSearch(data.articles);
       })
       .catch(console.error);
+  };
+
+  const onSaveCards = () => {
+    saveArticle();
   };
 
   const checkToken = (token) => {
@@ -120,7 +125,7 @@ function App() {
         {savedArticles === false && (
           <>
             <Preloader loader={loader} search={search} />
-            <NewsCard search={search} />
+            <NewsCard search={search} onSaveCards={onSaveCards} />
 
             <About />
             <Footer />

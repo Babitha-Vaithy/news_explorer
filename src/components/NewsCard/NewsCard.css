@@ -111,6 +111,11 @@
   top: -237px;
 }
 
+.newscard__savebtn:hover {
+  cursor: pointer;
+  background-image: url(../../assets/saved_btn.svg);
+}
+
 .savedbtn__container {
   position: relative;
   display: block;
@@ -134,6 +139,7 @@
   padding: 11px 20px 11px 20px;
 }
 
-.saved__container:hover .hover__image-text {
+.newscard__savebtn:hover .hover__image-text {
   cursor: pointer;
+  display: contents;
 }

@@ -38,3 +38,36 @@
     transform: rotate(360deg);
   }
 }
+
+.preloader__error {
+  /* margin-left: 542px; */
+  padding: 86px 0 80px 0;
+}
+
+.error__avatar {
+  width: 82.5px;
+  height: 82.5px;
+  margin-left: 678px;
+}
+
+.error__title {
+  width: 356px;
+  margin-left: 542px;
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  color: rgba(26, 27, 34, 1);
+  text-align: center;
+}
+
+.error__text {
+  width: 242px;
+  margin-left: 591px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(182, 188, 191, 1);
+}

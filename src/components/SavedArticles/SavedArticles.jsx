@@ -11,6 +11,16 @@ function Savedarticles() {
   const [savedArticles, setSavedArticles] = useState(null);
   const [keyword, setKeyword] = useState(null);
 
+  const onDelete = (_id) => {
+    let deleteCards = savedArticles.reduce((data, item) => {
+      if (item._id !== _id) {
+        data.push(item);
+      }
+      return data;
+    }, []);
+    setSavedArticles(deleteCards);
+  };
+
   useEffect(() => {
     let key = "";
     getItems().then((data) => {
@@ -61,6 +71,7 @@ function Savedarticles() {
                         src={deleteicon}
                         alt="Delete Button"
                         className="saved__deletebtn"
+                        onClick={() => onDelete(item._id)}
                       />
 
                       <h3 className="hover__text">Remove from saved</h3>

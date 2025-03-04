@@ -4,7 +4,7 @@ import savedBtn from "../../assets/saved_btn.svg";
 import { useState } from "react";
 import Preloader from "../Preloader/Preloader";
 
-function NewsCard({ search, loader }) {
+function NewsCard({ search, onSaveCards }) {
   const [counter, setCounter] = useState(3);
 
   const items =
@@ -37,6 +37,7 @@ function NewsCard({ search, loader }) {
                       src={savebtn}
                       alt="Newscard Save Button"
                       className="newscard__savebtn"
+                      onClick={() => onSaveCards(item)}
                     />
 
                     <h3 className="hover__image-text">
