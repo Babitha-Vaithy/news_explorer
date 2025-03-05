@@ -69,7 +69,7 @@ function Header({ handleSignInClick, styleColor, handleSavedArticles }) {
                 >
                   {currentUser.name}
                   <img
-                    src={usernameicon}
+                    src={styleColor ? usernameicon : logout}
                     alt="Username Icon"
                     className="header__username-icon"
                   />

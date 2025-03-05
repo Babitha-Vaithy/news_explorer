@@ -67,9 +67,7 @@ function Savedarticles() {
                     />
                     <h2 className="keywords__image-text">{item.keyword}</h2>
                     <div className="delete__container">
-                      <img
-                        src={deleteicon}
-                        alt="Delete Button"
+                      <button
                         className="saved__deletebtn"
                         onClick={() => onDelete(item._id)}
                       />

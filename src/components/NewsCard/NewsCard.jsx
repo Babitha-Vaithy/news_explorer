@@ -33,9 +33,7 @@ function NewsCard({ search, onSaveCards }) {
                     className="newscard__image"
                   />
                   <div className="savedbtn__container">
-                    <img
-                      src={savebtn}
-                      alt="Newscard Save Button"
+                    <button
                       className="newscard__savebtn"
                       onClick={() => onSaveCards(item)}
                     />

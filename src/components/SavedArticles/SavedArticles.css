@@ -66,6 +66,7 @@
   background-color: rgba(255, 255, 255, 1);
   border-radius: 15px;
   height: 645px;
+  position: relative;
 }
 
 .saved__image {
@@ -123,28 +124,29 @@
   font-family: "Roboto";
   font-weight: 500;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 37px;
   text-align: center;
   color: rgba(0, 0, 0, 1);
   border-radius: 6px;
-  margin-top: -245px;
-  margin-left: 24px;
+  top: 17px;
+  left: 24px;
   position: absolute;
   display: block;
 }
 
 .delete__container {
-  position: relative;
+  position: absolute;
 }
 
-.delete__container .saved__deletebtn {
+.saved__deletebtn {
   width: 40px;
   height: 40px;
-  margin-top: -25px;
-  margin-left: 337px;
-  top: -237px;
   position: absolute;
-  display: block;
+  top: -272px;
+  left: 338px;
+  background-image: url("../../assets/Deletebtn.svg");
+  border: none;
+  border-radius: 10px;
 }
 
 .hover__trash-image {
