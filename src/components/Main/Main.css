@@ -1,3 +1,12 @@
+.main__pagecontent {
+  width: 1440px;
+  background-image: url(../../assets/Bg_photo.svg);
+  padding: 0;
+  border: 1px solid rgba(209, 210, 214, 1);
+  background-size: cover;
+  object-fit: cover;
+}
+
 .cards__title {
   width: 585px;
   font-family: "Roboto Slab";

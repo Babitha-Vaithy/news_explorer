@@ -4,13 +4,18 @@ import "./Header.css";
 import { CurrentUserContext } from "../../Contexts/CurrentUserContext";
 import { useContext } from "react";
 import usernameicon from "../../assets/username_icon.svg";
+import logout from "../../assets/logout.svg";
 
 function Header({ handleSignInClick, styleColor, handleSavedArticles }) {
   const currentUser = useContext(CurrentUserContext);
   return (
-    <header className="header" style={{ color: styleColor }}>
+    <header className="header">
       <Link to="/" className="header__link">
-        <p className="header__logo" alt="Header Logo">
+        <p
+          className="header__logo"
+          style={{ color: styleColor }}
+          alt="Header Logo"
+        >
           NewsExplorer
         </p>
       </Link>
@@ -36,7 +41,11 @@ function Header({ handleSignInClick, styleColor, handleSavedArticles }) {
           <div className="header__nav-link">
             <div className="header__user-containter">
               <Link to="/" className="header__link">
-                <p className="header__home" alt="Home">
+                <p
+                  className="header__home"
+                  alt="Home"
+                  style={{ color: styleColor }}
+                >
                   Home
                 </p>
               </Link>
@@ -45,12 +54,19 @@ function Header({ handleSignInClick, styleColor, handleSavedArticles }) {
                 onClick={handleSavedArticles}
                 className="header__link"
               >
-                <p className="header__saved" alt="Saved Articles">
+                <p
+                  className="header__saved"
+                  alt="Saved Articles"
+                  style={{ color: styleColor }}
+                >
                   Saved articles
                 </p>
               </Link>
               <Link to="/" className="header__link">
-                <button className="header__username">
+                <button
+                  className="header__username"
+                  style={{ color: styleColor }}
+                >
                   {currentUser.name}
                   <img
                     src={usernameicon}

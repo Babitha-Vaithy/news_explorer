@@ -1,6 +1,7 @@
-/* .Header__saved-page {
-  color: black;
-} */
+.savedarticles {
+  background-image: none;
+  background-color: transparent;
+}
 
 .saved__name {
   margin-top: 40px;
