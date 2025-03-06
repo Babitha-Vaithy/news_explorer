@@ -19,50 +19,54 @@ function NewsCard({ search, onSaveCards }) {
     (search && !search.length <= 3) || (search && search.length - counter) <= 3;
 
   return (
-    <div className="newscard">
-      <div className="newscard__container">
-        <p className="newscard__title">Search results</p>
-        <div className="newscard__cards">
-          {items &&
-            items.map((item) => {
-              return (
-                <li className="newscard__list">
-                  <img
-                    src={item.urlToImage}
-                    alt="Newscard Image"
-                    className="newscard__image"
-                  />
-                  <div className="savedbtn__container">
-                    <button
-                      className="newscard__savebtn"
-                      onClick={() => onSaveCards(item)}
-                    />
+    <>
+      {search && search.length > 0 && (
+        <div className="newscard">
+          <div className="newscard__container">
+            <p className="newscard__title">Search results</p>
+            <div className="newscard__cards">
+              {items &&
+                items.map((item) => {
+                  return (
+                    <li className="newscard__list">
+                      <img
+                        src={item.urlToImage}
+                        alt="Newscard Image"
+                        className="newscard__image"
+                      />
+                      <div className="savedbtn__container">
+                        <button
+                          className="newscard__savebtn"
+                          onClick={() => onSaveCards(item)}
+                        />
 
-                    <h3 className="hover__image-text">
-                      Sign in to save articles
-                    </h3>
-                  </div>
-                  <p className="newscard__date">{item.publishedAt}</p>
+                        <h3 className="hover__image-text">
+                          Sign in to save articles
+                        </h3>
+                      </div>
+                      <p className="newscard__date">{item.publishedAt}</p>
 
-                  <h3 className="newscard__caption">{item.title}</h3>
-                  <p className="newscard__content">{item.description}</p>
-                  <p className="newscard__name">{item.author}</p>
-                </li>
-              );
-            })}
+                      <h3 className="newscard__caption">{item.title}</h3>
+                      <p className="newscard__content">{item.description}</p>
+                      <p className="newscard__name">{item.author}</p>
+                    </li>
+                  );
+                })}
+            </div>
+          </div>
+
+          {showitems && (
+            <button
+              onClick={() => setCounter(counter + 3)}
+              type="button"
+              className="newscard__show"
+            >
+              Show more
+            </button>
+          )}
         </div>
-      </div>
-
-      {showitems && (
-        <button
-          onClick={() => setCounter(counter + 3)}
-          type="button"
-          className="newscard__show"
-        >
-          Show more
-        </button>
       )}
-    </div>
+    </>
   );
 }
 

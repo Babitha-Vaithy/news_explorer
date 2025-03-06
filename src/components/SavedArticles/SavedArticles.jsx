@@ -4,8 +4,6 @@ import Footer from "../Footer/Footer";
 import Navigation from "../Navigation/Navigation";
 import { useEffect, useState } from "react";
 import { getItems } from "../../utils/auth";
-import deleteicon from "../../assets/deletebtn.svg";
-import trash from "../../assets/trash.svg";
 
 function Savedarticles() {
   const [savedArticles, setSavedArticles] = useState(null);

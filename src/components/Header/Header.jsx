@@ -6,7 +6,12 @@ import { useContext } from "react";
 import usernameicon from "../../assets/username_icon.svg";
 import logout from "../../assets/logout.svg";
 
-function Header({ handleSignInClick, styleColor, handleSavedArticles }) {
+function Header({
+  handleSignInClick,
+  styleColor,
+  handleSavedArticles,
+  onSignOut,
+}) {
   const currentUser = useContext(CurrentUserContext);
   return (
     <header className="header">
@@ -72,6 +77,7 @@ function Header({ handleSignInClick, styleColor, handleSavedArticles }) {
                     src={styleColor ? usernameicon : logout}
                     alt="Username Icon"
                     className="header__username-icon"
+                    onClick={onSignOut}
                   />
                 </button>
               </Link>

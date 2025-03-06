@@ -13,6 +13,7 @@ function Main({
   loader,
   search,
   onSaveCards,
+  onSignOut,
 }) {
   return (
     <main>
@@ -22,6 +23,7 @@ function Main({
             handleSignInClick={handleSignInClick}
             styleColor="white"
             handleSavedArticles={handleSavedArticles}
+            onSignOut={onSignOut}
           />
           <p className="cards__title">What's going on in the world?</p>
           <p className="cards__text">

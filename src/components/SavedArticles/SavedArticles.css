@@ -3,6 +3,15 @@
   background-color: transparent;
 }
 
+.Header__saved-page {
+  display: flex;
+  align-items: center;
+  padding: 30px 0 26px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: 0px -1px 0px 0px rgba(209, 210, 214, 1) inset;
+}
+
 .saved__name {
   margin-top: 40px;
   margin-bottom: 28px;
@@ -149,15 +158,11 @@
   border-radius: 10px;
 }
 
-.hover__trash-image {
-  background: url("../../assets/trash.svg") no-repeat scroll center center
-    rgba(0, 0, 0, 0);
-  margin-top: -28px;
-  margin-left: -32px;
-  top: -229px;
-  position: absolute;
-  display: none;
-  z-index: -1;
+.saved__deletebtn:hover {
+  border: none;
+  border-radius: 8px;
+  background: url("../../assets/deletebtn_hover.svg");
+  cursor: pointer;
 }
 
 .hover__text {
@@ -178,12 +183,7 @@
   padding: 11px 20px 11px 20px;
 }
 
-.saved__deletebtn:hover .hover__trash-image {
+.delete__container:hover .hover__text {
   display: block;
   cursor: pointer;
 }
-
-/* .hover__trash-image:hover {
-  display: block;
-  cursor: pointer;
-} */

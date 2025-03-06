@@ -114,6 +114,17 @@
   border-radius: 8px;
 }
 
+.newscard__savedbtn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 26px;
+  left: 330px;
+  background-image: url("../../assets/save__btn.svg");
+  border: none;
+  border-radius: 8px;
+}
+
 .newscard__savebtn:hover {
   cursor: pointer;
   background-image: url(../../assets/savebtn_hover.svg);

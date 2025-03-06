@@ -62,8 +62,19 @@ function App() {
       .catch(console.error);
   };
 
-  const onSaveCards = () => {
-    saveArticle();
+  const onSaveCards = (item) => {
+    console.log(item);
+    saveArticle(item)
+      .then(() => {
+        setSavedArticles(item.articles);
+      })
+      .catch(console.error);
+  };
+
+  const onSignOut = () => {
+    localStorage.removeItem("jwt");
+    setIsLoggedIn(false);
+    setCurrentUser(null);
   };
 
   const checkToken = (token) => {
@@ -101,6 +112,7 @@ function App() {
                         loader={loader}
                         search={search}
                         onSaveCards={onSaveCards}
+                        onSignOut={onSignOut}
                       />
                     }
                   ></Route>{" "}
