@@ -1,7 +1,6 @@
 .preloader {
   width: 1440px;
   background-color: rgba(245, 246, 247, 1);
-  height: 282px;
 }
 
 .preloader__text {
@@ -40,7 +39,6 @@
 }
 
 .preloader__error {
-  /* margin-left: 542px; */
   padding: 86px 0 80px 0;
 }
 

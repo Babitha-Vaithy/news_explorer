@@ -6,6 +6,16 @@ import Preloader from "../Preloader/Preloader";
 
 function NewsCard({ search, onSaveCards }) {
   const [counter, setCounter] = useState(3);
+  const [style, setStyle] = useState("newscard__savebtn");
+
+  const saveCards = (item) => {
+    if (
+      style === "newscard__savebtn"
+        ? setStyle("newscard__savedbtn")
+        : setStyle("newscard__savebtn")
+    );
+    onSaveCards(item);
+  };
 
   const items =
     search &&
@@ -15,8 +25,7 @@ function NewsCard({ search, onSaveCards }) {
       })
       .slice(0, search.length < counter ? search.length : counter);
 
-  const showitems =
-    (search && !search.length <= 3) || (search && search.length - counter) <= 3;
+  const showitems = search && search.length > 3;
 
   return (
     <>
@@ -36,8 +45,8 @@ function NewsCard({ search, onSaveCards }) {
                       />
                       <div className="savedbtn__container">
                         <button
-                          className="newscard__savebtn"
-                          onClick={() => onSaveCards(item)}
+                          className={style}
+                          onClick={() => saveCards(item)}
                         />
 
                         <h3 className="hover__image-text">

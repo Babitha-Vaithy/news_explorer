@@ -7,15 +7,19 @@ function Preloader({ loader, search }) {
 
   const shownoresult = search && search.length === 0;
 
+  const showresult = showloader !== shownoresult;
+
   return (
     <>
-      {showloader && (
+      {showresult && (
         <div className="preloader">
           {showloader && (
-            <div className="preloader__circle-container">
-              <div className="circle__preloader"></div>
-              <p className="preloader__text">Searching for news...</p>
-            </div>
+            <>
+              <div className="preloader__circle-container">
+                <div className="circle__preloader"></div>
+                <p className="preloader__text">Searching for news...</p>
+              </div>
+            </>
           )}
           <div className="preloader__error">
             {shownoresult && (

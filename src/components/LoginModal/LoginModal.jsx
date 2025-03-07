@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import "./LoginModal.css";
+import { set } from "mongoose";
 
 const LoginModal = ({
   closeActiveModal,
@@ -8,34 +9,8 @@ const LoginModal = ({
   isOpen,
   handleSignupClick,
 }) => {
-  // function validateForm() {
-  //   let email = document.getElementById("email").value;
-  //   let password = document.getElementById("password").value;
-  //   let emailError = document.getElementById("emailError");
-  //   let passwordError = document.getElementById("passwordError");
-  //   let isValid = true;
-
-  //   emailError.textContent = "";
-  //   passwordError.textContent = "";
-
-  //   if (email === "") {
-  //     emailError.textContent = "Email is required";
-  //     isValid = false;
-  //   } else if (!isValidEmail(email)) {
-  //     emailError.textContent = "Invalid email format";
-  //     isValid = false;
-  //   }
-
-  //   if (password === "") {
-  //     passwordError.textContent = "Password is required";
-  //     isValid = false;
-  //   } else if (password.length < 6) {
-  //     passwordError.textContent = "Password must be at least 6 characters";
-  //     isValid = false;
-  //   }
-
-  //   return isValid;
-  // }
+  const [emailError, setEmailError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
 
   const [email, setEmail] = useState("");
   const handleEmailChange = (e) => {
@@ -45,6 +20,20 @@ const LoginModal = ({
   const [password, setPassword] = useState("");
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
+  };
+
+  const formvalidation = () => {
+    console.log("form");
+    if (email == "") {
+      setEmailError(true);
+      return;
+    }
+
+    if (password == "") {
+      setPasswordError(true);
+      return;
+    }
+    onSignIn(email, password);
   };
 
   const handleSubmit = (e) => {
@@ -72,7 +61,11 @@ const LoginModal = ({
           value={email}
           onChange={handleEmailChange}
         />
-        {/* <span id="emailError" style="color: red;"></span> */}
+        {emailError === true && (
+          <span id="emailError" onClick={formvalidation} style="color: red;">
+            Email cannot be null
+          </span>
+        )}
       </label>
       <label htmlFor="password" className="modal__label">
         Password
@@ -85,9 +78,13 @@ const LoginModal = ({
           value={password}
           onChange={handlePasswordChange}
         />
-        {/* <span id="passwordError" style="color: red;"></span> */}
+        {passwordError === true && (
+          <span id="passwordError" style="color: red;">
+            Password cannot be null
+          </span>
+        )}
       </label>
-      <button type="submit" onClick={onSignIn} className="signin__signup">
+      <button type="submit" onClick={formvalidation} className="signin__signup">
         Sign in
       </button>
     </ModalWithForm>
