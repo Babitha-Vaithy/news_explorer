@@ -35,7 +35,9 @@ function Main({
         </div>
 
         <Preloader loader={loader} search={search} />
-        <NewsCard search={search} onSaveCards={onSaveCards} />
+        {search && (
+          <NewsCard search={search} onSaveCards={onSaveCards} count={3} />
+        )}
         <About />
         <Footer />
       </div>

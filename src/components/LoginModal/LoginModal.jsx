@@ -24,16 +24,16 @@ const LoginModal = ({
 
   const formvalidation = () => {
     console.log("form");
-    if (email == "") {
-      setEmailError(true);
-      return;
-    }
 
-    if (password == "") {
+    if (!email.includes("@")) {
+      setEmailError(true);
+      return false;
+    } else if (password == "") {
       setPasswordError(true);
-      return;
+      return false;
+    } else {
+      onSignIn(email, password);
     }
-    onSignIn(email, password);
   };
 
   const handleSubmit = (e) => {
@@ -54,7 +54,7 @@ const LoginModal = ({
         Email
         <input
           id="email"
-          type="email"
+          //type="email"
           className="modal__input"
           placeholder="Enter email"
           required
@@ -62,9 +62,7 @@ const LoginModal = ({
           onChange={handleEmailChange}
         />
         {emailError === true && (
-          <span id="emailError" onClick={formvalidation} style="color: red;">
-            Email cannot be null
-          </span>
+          <span id="emailError">Invalid email address</span>
         )}
       </label>
       <label htmlFor="password" className="modal__label">
@@ -74,17 +72,15 @@ const LoginModal = ({
           type="password"
           className="modal__input"
           placeholder="Enter password"
-          required
+          //required
           value={password}
           onChange={handlePasswordChange}
         />
         {passwordError === true && (
-          <span id="passwordError" style="color: red;">
-            Password cannot be null
-          </span>
+          <span id="passwordError">Password cannot be null</span>
         )}
       </label>
-      <button type="submit" onClick={formvalidation} className="signin__signup">
+      <button type="button" onClick={formvalidation} className="signin__signup">
         Sign in
       </button>
     </ModalWithForm>

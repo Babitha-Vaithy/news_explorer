@@ -74,7 +74,7 @@ function Header({
                 >
                   {currentUser.name}
                   <img
-                    src={styleColor ? usernameicon : logout}
+                    src={styleColor == "white" ? usernameicon : logout}
                     alt="Username Icon"
                     className="header__username-icon"
                     onClick={onSignOut}

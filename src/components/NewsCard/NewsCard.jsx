@@ -4,16 +4,18 @@ import savedBtn from "../../assets/saved_btn.svg";
 import { useState } from "react";
 import Preloader from "../Preloader/Preloader";
 
-function NewsCard({ search, onSaveCards }) {
+function NewsCard({ search, onSaveCards, count }) {
   const [counter, setCounter] = useState(3);
   const [style, setStyle] = useState("newscard__savebtn");
+  const [title, setTitle] = useState(null);
 
-  const saveCards = (item) => {
+  const saveCards = (event, item) => {
     if (
-      style === "newscard__savebtn"
+      event.target.className === "newscard__savebtn"
         ? setStyle("newscard__savedbtn")
         : setStyle("newscard__savebtn")
     );
+    setTitle(item.title);
     onSaveCards(item);
   };
 
@@ -25,7 +27,7 @@ function NewsCard({ search, onSaveCards }) {
       })
       .slice(0, search.length < counter ? search.length : counter);
 
-  const showitems = search && search.length > 3;
+  const showMore = search && search.length > 3 && search.length - counter >= 3;
 
   return (
     <>
@@ -45,8 +47,10 @@ function NewsCard({ search, onSaveCards }) {
                       />
                       <div className="savedbtn__container">
                         <button
-                          className={style}
-                          onClick={() => saveCards(item)}
+                          className={
+                            item.title === title ? style : "newscard__savebtn"
+                          }
+                          onClick={(e) => saveCards(e, item)}
                         />
 
                         <h3 className="hover__image-text">
@@ -64,7 +68,7 @@ function NewsCard({ search, onSaveCards }) {
             </div>
           </div>
 
-          {showitems && (
+          {showMore && (
             <button
               onClick={() => setCounter(counter + 3)}
               type="button"
