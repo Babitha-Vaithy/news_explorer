@@ -1,5 +1,6 @@
 .newscard {
-  width: 1440px;
+  max-width: 1440px;
+  width: 100%;
   /* height: 974px; */
   background-color: rgba(245, 246, 247, 1);
 }

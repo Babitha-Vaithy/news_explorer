@@ -1,5 +1,6 @@
 .preloader {
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   background-color: rgba(245, 246, 247, 1);
 }
 

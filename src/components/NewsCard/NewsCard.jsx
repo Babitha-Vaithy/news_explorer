@@ -1,11 +1,13 @@
 import "./NewsCard.css";
 import savebtn from "../../assets/save__btn.svg";
 import savedBtn from "../../assets/saved_btn.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Preloader from "../Preloader/Preloader";
 
+const DEFAULT_CARD_COUNT = 3;
+
 function NewsCard({ search, onSaveCards, count }) {
-  const [counter, setCounter] = useState(3);
+  const [counter, setCounter] = useState(DEFAULT_CARD_COUNT);
   const [style, setStyle] = useState("newscard__savebtn");
   const [title, setTitle] = useState(null);
 
@@ -28,6 +30,10 @@ function NewsCard({ search, onSaveCards, count }) {
       .slice(0, search.length < counter ? search.length : counter);
 
   const showMore = search && search.length > 3 && search.length - counter >= 3;
+
+  useEffect(() => {
+    setCounter(DEFAULT_CARD_COUNT);
+  }, [search]);
 
   return (
     <>
