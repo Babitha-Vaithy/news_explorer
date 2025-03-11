@@ -10,6 +10,7 @@ import { CurrentUserContext } from "../../Contexts/CurrentUserContext.js";
 import { getSearchData } from "../../utils/api.js";
 import Savedarticles from "../SavedArticles/SavedArticles.jsx";
 import SuccessModal from "../RegisterModal/SuccessModal.jsx";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -119,9 +120,11 @@ function App() {
                   <Route
                     path="/saved-news"
                     element={
-                      <Savedarticles
-                        handleSavedArticles={handleSavedArticles}
-                      />
+                      <ProtectedRoute isLoggedIn={isLoggedIn}>
+                        <Savedarticles
+                          handleSavedArticles={handleSavedArticles}
+                        />
+                      </ProtectedRoute>
                     }
                   ></Route>
                 </Routes>

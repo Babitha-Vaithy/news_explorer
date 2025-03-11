@@ -55,7 +55,7 @@
 }
 
 .saved__cards {
-  width: 1400px;
+  max-width: 1400px;
   list-style-type: none;
   background-color: rgba(245, 246, 247, 1);
   display: flex;

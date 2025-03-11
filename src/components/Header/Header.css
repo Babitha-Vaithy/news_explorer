@@ -80,13 +80,13 @@
 .header__username {
   width: 148px;
   height: 48px;
-  margin-right: 68px;
+  /* margin-right: 68px; */
   font-family: "Roboto";
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
   border-radius: 50px;
-  border-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
   box-shadow: none;
   background-color: transparent;
   color: rgba(255, 255, 255, 1);

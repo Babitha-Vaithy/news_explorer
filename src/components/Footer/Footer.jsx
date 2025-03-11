@@ -1,16 +1,35 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
+import { CurrentUserContext } from "../../Contexts/CurrentUserContext";
+import { useContext } from "react";
 
 import gitavatar from "../../assets/git_avatar.svg";
 import facebook from "../../assets/facebook.svg";
 
 function Footer() {
+  const currentUser = useContext(CurrentUserContext);
   return (
     <footer className="footer">
       <p className="footer__name">
         &copy; {new Date().getFullYear()} Supersite, Powered by News API
       </p>
       <div className="footer__container">
-        <p className="footer__home">Home</p>
+        {!currentUser && (
+          <Link to="/" className="footer__link">
+            <p className="footer__home">Home</p>
+          </Link>
+        )}
+
+        {currentUser && (
+          <div className="footer__nav-link">
+            <div className="footer__user-containter">
+              <Link to="/" className="footer__link">
+                <p className="footer__home">Home</p>
+              </Link>
+            </div>{" "}
+          </div>
+        )}
+
         <p className="footer__tripleten">TripleTen</p>
         <img src={gitavatar} alt="Git Avatar" className="footer__gitavatar" />
         <img src={facebook} alt="" className="footer__facebook" />

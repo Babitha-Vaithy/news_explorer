@@ -60,3 +60,11 @@
   height: 20px;
   margin: 28px 104px 28px 40px;
 }
+
+.footer__link {
+  text-decoration: none;
+}
+
+.footer__nav-link {
+  text-decoration: none;
+}
