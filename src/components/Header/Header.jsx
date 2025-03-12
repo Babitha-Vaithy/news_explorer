@@ -70,7 +70,7 @@ function Header({
               <Link to="/" className="header__link">
                 <button
                   className="header__username"
-                  style={{ color: styleColor }}
+                  style={{ color: styleColor, borderColor: styleColor }}
                 >
                   {currentUser.name}
                   <img
