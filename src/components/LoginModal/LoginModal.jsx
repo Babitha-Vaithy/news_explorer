@@ -62,7 +62,9 @@ const LoginModal = ({
           onChange={handleEmailChange}
         />
         {emailError === true && (
-          <span id="emailError">Invalid email address</span>
+          <span id="emailError" className="email__error">
+            Invalid email address
+          </span>
         )}
       </label>
       <label htmlFor="password" className="modal__label">
@@ -77,7 +79,9 @@ const LoginModal = ({
           onChange={handlePasswordChange}
         />
         {passwordError === true && (
-          <span id="passwordError">Password cannot be null</span>
+          <span id="passwordError" className="password__error">
+            Password cannot be null
+          </span>
         )}
       </label>
       <button type="button" onClick={formvalidation} className="signin__signup">

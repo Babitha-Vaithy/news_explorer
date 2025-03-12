@@ -16,3 +16,12 @@
   background-color: rgba(47, 113, 229, 1);
   color: rgba(255, 255, 255, 1);
 }
+
+.email__error {
+  max-width: 173px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.52px;
+  color: rgba(255, 0, 0, 1);
+}
