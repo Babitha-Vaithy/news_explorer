@@ -25,13 +25,15 @@ function Main({
             handleSavedArticles={handleSavedArticles}
             onSignOut={onSignOut}
           />
-          <p className="cards__title">What's going on in the world?</p>
-          <p className="cards__text">
-            Find the latest news on any topic and save them in your personal
-            account.
-          </p>
+          <div className="main__searchlist">
+            <p className="cards__title">What's going on in the world?</p>
+            <p className="cards__text">
+              Find the latest news on any topic and save them in your personal
+              account.
+            </p>
 
-          <SearchForm onSearch={onSearch} />
+            <SearchForm onSearch={onSearch} />
+          </div>
         </div>
 
         <Preloader loader={loader} search={search} />

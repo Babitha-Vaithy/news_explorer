@@ -5,15 +5,13 @@ import { CurrentUserContext } from "../../Contexts/CurrentUserContext";
 import { useContext, useState } from "react";
 import usernameicon from "../../assets/username_icon.svg";
 import logout from "../../assets/logout.svg";
+import { useLocation } from "react-router-dom";
 
 function Header({ handleSignInClick, styleColor, onSignOut }) {
   const currentUser = useContext(CurrentUserContext);
 
-  const [id, setId] = useState(null);
+  const location = useLocation();
 
-  const handleNavClick = (e) => {
-    setId(e.currentTarget.id);
-  };
   return (
     <header
       className={styleColor == "white" ? "header" : "header__savedarticle"}
@@ -31,9 +29,11 @@ function Header({ handleSignInClick, styleColor, onSignOut }) {
         {!currentUser && (
           <Link
             to="/"
-            id="home"
-            onClick={(e) => handleNavClick(e)}
-            className={id === "home" ? "header__link-selected" : "header__link"}
+            className={
+              location.pathname === "/"
+                ? "header__link-selected"
+                : "header__link"
+            }
           >
             <p className="header__home" alt="Home">
               Home
@@ -55,10 +55,10 @@ function Header({ handleSignInClick, styleColor, onSignOut }) {
             <div className="header__user-containter">
               <Link
                 to="/"
-                id="home"
-                onClick={(e) => handleNavClick(e)}
                 className={
-                  id === "home" ? "header__link-selected" : "header__link"
+                  location.pathname === "/"
+                    ? "header__link-selected"
+                    : "header__link"
                 }
               >
                 <p
@@ -71,10 +71,10 @@ function Header({ handleSignInClick, styleColor, onSignOut }) {
               </Link>
               <Link
                 to="/saved-news"
-                id="savedArticles"
-                onClick={(e) => handleNavClick(e)}
                 className={
-                  id === "savedArticles" ? "header__link-saved" : "header__link"
+                  location.pathname === "/saved-news"
+                    ? "header__link-saved"
+                    : "header__link"
                 }
               >
                 <p

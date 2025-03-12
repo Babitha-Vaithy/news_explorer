@@ -59,6 +59,7 @@
 .newscard__image {
   width: 400px;
   height: 272px;
+  min-height: 272px;
   margin-bottom: 20px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
