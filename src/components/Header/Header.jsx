@@ -2,19 +2,22 @@ import { Link } from "react-router-dom";
 
 import "./Header.css";
 import { CurrentUserContext } from "../../Contexts/CurrentUserContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import usernameicon from "../../assets/username_icon.svg";
 import logout from "../../assets/logout.svg";
 
-function Header({
-  handleSignInClick,
-  styleColor,
-  handleSavedArticles,
-  onSignOut,
-}) {
+function Header({ handleSignInClick, styleColor, onSignOut }) {
   const currentUser = useContext(CurrentUserContext);
+
+  const [id, setId] = useState(null);
+
+  const handleNavClick = (e) => {
+    setId(e.currentTarget.id);
+  };
   return (
-    <header className="header">
+    <header
+      className={styleColor == "white" ? "header" : "header__savedarticle"}
+    >
       <Link to="/" className="header__link">
         <p
           className="header__logo"
@@ -26,7 +29,12 @@ function Header({
       </Link>
       <div className="header__container">
         {!currentUser && (
-          <Link to="/" className="header__link">
+          <Link
+            to="/"
+            id="home"
+            onClick={(e) => handleNavClick(e)}
+            className={id === "home" ? "header__link-selected" : "header__link"}
+          >
             <p className="header__home" alt="Home">
               Home
             </p>
@@ -45,7 +53,14 @@ function Header({
         {currentUser && (
           <div className="header__nav-link">
             <div className="header__user-containter">
-              <Link to="/" className="header__link">
+              <Link
+                to="/"
+                id="home"
+                onClick={(e) => handleNavClick(e)}
+                className={
+                  id === "home" ? "header__link-selected" : "header__link"
+                }
+              >
                 <p
                   className="header__home"
                   alt="Home"
@@ -56,8 +71,11 @@ function Header({
               </Link>
               <Link
                 to="/saved-news"
-                onClick={handleSavedArticles}
-                className="header__link"
+                id="savedArticles"
+                onClick={(e) => handleNavClick(e)}
+                className={
+                  id === "savedArticles" ? "header__link-saved" : "header__link"
+                }
               >
                 <p
                   className="header__saved"

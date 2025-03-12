@@ -40,13 +40,14 @@
 .footer__tripleten {
   width: 74px;
   margin: 30px 0px 26px 0;
-  font-family: Roboto;
+  font-family: "Roboto";
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0px;
   text-align: center;
   color: rgba(26, 27, 34, 1);
+  text-decoration: none;
 }
 
 .footer__gitavatar {

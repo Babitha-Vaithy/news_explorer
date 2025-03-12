@@ -30,8 +30,12 @@ function Footer() {
           </div>
         )}
 
-        <p className="footer__tripleten">TripleTen</p>
-        <img src={gitavatar} alt="Git Avatar" className="footer__gitavatar" />
+        <a href="https://tripleten.com/" className="footer__tripleten">
+          TripleTen
+        </a>
+        <a href="https://github.com/Babitha-Vaithy">
+          <img src={gitavatar} alt="Git Avatar" className="footer__gitavatar" />
+        </a>
         <img src={facebook} alt="" className="footer__facebook" />
       </div>
     </footer>
