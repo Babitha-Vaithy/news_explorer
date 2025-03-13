@@ -237,3 +237,77 @@
     left: -6px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .newscard {
+    max-width: 320px;
+  }
+
+  .newscard__title {
+    width: 288px;
+    margin: 32px 16px 58px 16px;
+  }
+
+  .newscard__show {
+    width: 288px;
+    height: 56px;
+    margin: 16px 16px 24px 16px;
+  }
+
+  .newscard__list {
+    width: 288px;
+    margin-right: 16px;
+    height: 440px;
+  }
+
+  .newscard__cards {
+    margin-left: 16px;
+  }
+
+  .newscard__image {
+    width: 288px;
+    height: 196px;
+    min-height: 196px;
+    margin-bottom: 16px;
+  }
+
+  .newscard__date {
+    margin: 0 16px 10px 16px;
+  }
+
+  .newscard__caption {
+    width: 256px;
+    height: 48px;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0 16px 14px 16px;
+    overflow: hidden;
+  }
+
+  .newscard__content {
+    width: 256px;
+    margin: 0 16px 8px 16px;
+    height: 88px;
+    overflow: hidden;
+  }
+
+  .newscard__name {
+    width: 256px;
+    margin: 0 16px 16px 16px;
+  }
+
+  .newscard__savebtn {
+    top: 8px;
+    left: 226px;
+  }
+
+  .newscard__savedbtn {
+    top: 8px;
+    left: 226px;
+  }
+
+  .hover__image-text {
+    top: -2px;
+    left: 53px;
+  }
+}

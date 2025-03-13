@@ -143,11 +143,11 @@
   }
 
   .header__link-selected {
-    padding: 22px 0 20px;
+    padding: 22px 0 -1px;
   }
 
   .header__link-saved {
-    padding: 22px 0 20px;
+    padding: 22px 0 -1px;
   }
 
   .header__user-containter {
@@ -163,16 +163,30 @@
     width: 100px;
     height: 40px;
     font-size: 16px;
+    display: flex;
+    align-items: center;
+    text-overflow: ellipsis;
   }
 
   .header__username-icon {
     position: absolute;
-    right: -13px;
+    right: 0px;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
   }
 
   .header__signin {
     width: 152px;
     height: 49px;
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__logo {
+    width: 117px;
+    font-size: 16px;
+    margin: 16px 147px 16px 16px;
   }
 }

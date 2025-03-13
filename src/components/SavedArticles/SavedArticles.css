@@ -208,7 +208,7 @@
 
   .saved__cards {
     max-width: 768px;
-    padding: 32px 40px 32px 40px;
+    padding: 32px 0 32px 31px;
     gap: 8px;
   }
 
@@ -266,5 +266,84 @@
     width: 107px;
     top: 103px;
     left: -105px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .saved__name {
+    font-size: 12px;
+    margin: 8px 0 16px 16px;
+  }
+
+  .saved__title {
+    width: 288px;
+    font-size: 30px;
+    line-height: 34px;
+    margin: 0 0 50px 16px;
+  }
+
+  .saved__keywords {
+    margin: 0 17px 32px 15px;
+  }
+
+  .saved__cards {
+    max-width: 320px;
+    padding: 24px 16px 12px 16px;
+  }
+
+  .saved__list {
+    width: 288px;
+    margin-right: 16px;
+    height: 440px;
+  }
+
+  .saved__image {
+    width: 288px;
+    height: 196px;
+    min-height: 196px;
+    margin-bottom: 16px;
+  }
+
+  .saved__date {
+    margin: 0 0 10px 16px;
+  }
+
+  .saved__caption {
+    width: 256px;
+    height: 48px;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0 16px 14px 16px;
+    overflow: hidden;
+  }
+
+  .saved__content {
+    width: 256px;
+    margin: 0 16px 30px 16px;
+    height: 66px;
+    overflow: hidden;
+  }
+
+  .saved__author {
+    width: 256px;
+    margin: 0 16px 16px 16px;
+  }
+
+  .saved__deletebtn {
+    border-radius: 8px;
+    top: -207px;
+    left: 238px;
+  }
+
+  .keywords__image-text {
+    line-height: 24px;
+    top: 8px;
+    left: 13px;
+  }
+
+  .hover__text {
+    width: 107px;
+    top: 59px;
+    left: -46px;
   }
 }

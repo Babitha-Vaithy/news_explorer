@@ -64,3 +64,25 @@
     margin-bottom: 96px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about__avatar {
+    width: 272px;
+    height: 272px;
+    margin: 32px auto 24px auto;
+  }
+
+  .about__title {
+    max-width: 288px;
+    margin: 0 auto 16px 72px;
+  }
+
+  .about__description {
+    max-width: 288px;
+    margin: 0 auto 128px auto;
+  }
+}

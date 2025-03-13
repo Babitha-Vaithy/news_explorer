@@ -101,3 +101,44 @@
     margin: 20px 40px 20px 0;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .footer {
+    max-width: 320px;
+    height: 176px;
+    flex-direction: column-reverse;
+  }
+
+  .footer__leftside {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    max-width: 200px;
+    line-height: 48px;
+  }
+
+  .footer__home {
+    margin: 20px 95px 0 0;
+  }
+
+  .footer__tripleten {
+    margin: 22px 69px 0 0;
+  }
+
+  .footer__name {
+    width: 288px;
+    margin: 38px 16px 22px 16px;
+  }
+
+  .footer__facebook {
+    width: 24px;
+    height: 24px;
+    margin: 22px 10px 20px 24px;
+  }
+
+  .footer__gitavatar {
+    width: 24px;
+    height: 24px;
+    margin: 20px 13px 20px 49px;
+  }
+}

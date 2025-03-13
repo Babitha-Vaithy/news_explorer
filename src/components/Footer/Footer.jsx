@@ -19,20 +19,22 @@ function Footer() {
             <p className="footer__home">Home</p>
           </Link>
         )}
+        <div className="footer__leftside">
+          {currentUser && (
+            <div className="footer__nav-link">
+              <div className="footer__user-containter">
+                <Link to="/" className="footer__link">
+                  <p className="footer__home">Home</p>
+                </Link>
+              </div>{" "}
+            </div>
+          )}
 
-        {currentUser && (
-          <div className="footer__nav-link">
-            <div className="footer__user-containter">
-              <Link to="/" className="footer__link">
-                <p className="footer__home">Home</p>
-              </Link>
-            </div>{" "}
-          </div>
-        )}
+          <a href="https://tripleten.com/" className="footer__tripleten">
+            TripleTen
+          </a>
+        </div>
 
-        <a href="https://tripleten.com/" className="footer__tripleten">
-          TripleTen
-        </a>
         <a href="https://github.com/Babitha-Vaithy">
           <img src={gitavatar} alt="Git Avatar" className="footer__gitavatar" />
         </a>
