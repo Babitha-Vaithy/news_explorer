@@ -1,7 +1,6 @@
 .newscard {
   max-width: 1440px;
   width: 100%;
-  /* height: 974px; */
   background-color: rgba(245, 246, 247, 1);
 }
 
@@ -16,7 +15,6 @@
   justify-content: flex-start;
   padding: 0;
   margin-left: 104px;
-  /* margin-right: 48px; */
   gap: 16px;
 }
 
@@ -159,4 +157,83 @@
 
 .savedbtn__container:hover .hover__image-text {
   display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .newscard {
+    max-width: 768px;
+  }
+
+  .newscard__cards {
+    margin-left: 40px;
+    gap: 8px;
+  }
+
+  .newscard__title {
+    width: 336px;
+    font-size: 30px;
+    line-height: 34px;
+    margin: 40px 0 32px 40px;
+  }
+
+  .newscard__show {
+    width: 240px;
+    height: 56px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+    margin-left: 272px;
+  }
+
+  .newscard__list {
+    width: 224px;
+    margin-right: 8px;
+    height: 420px;
+  }
+
+  .newscard__image {
+    width: 224px;
+    height: 150px;
+    min-height: 150px;
+    margin-bottom: 16px;
+  }
+
+  .newscard__date {
+    margin: 0 0 12px 15px;
+  }
+
+  .newscard__caption {
+    width: 192px;
+    height: 72px;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0 16px 10px 16px;
+    overflow: hidden;
+  }
+
+  .newscard__content {
+    width: 192px;
+    margin: 0 16px 12px 16px;
+    height: 88px;
+    overflow: hidden;
+  }
+
+  .newscard__name {
+    width: 192px;
+    margin: 0 16px 16px 16px;
+  }
+
+  .newscard__savebtn {
+    top: 8px;
+    left: 162px;
+  }
+
+  .newscard__savedbtn {
+    top: 8px;
+    left: 162px;
+  }
+
+  .hover__image-text {
+    top: -2px;
+    left: -6px;
+  }
 }

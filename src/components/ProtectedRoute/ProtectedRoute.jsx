@@ -9,7 +9,6 @@ const ProtectedRoute = ({ isLoggedIn, children }) => {
   const navigate = useNavigate();
   useEffect(() => {
     if (!currentUser || !isLoggedIn) {
-      debugger;
       navigate("/");
     }
   }, [currentUser, isLoggedIn]);
