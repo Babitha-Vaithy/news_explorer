@@ -69,3 +69,35 @@
 .footer__nav-link {
   text-decoration: none;
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    max-width: 768px;
+    height: 64px;
+  }
+
+  .footer__name {
+    width: 300px;
+    margin: 24px 0 18px 40px;
+  }
+
+  .footer__home {
+    margin: 21px 37px 19px 113px;
+  }
+
+  .footer__tripleten {
+    margin: 21px 40px 19px 0;
+  }
+
+  .footer__gitavatar {
+    width: 24px;
+    height: 24px;
+    margin: 20px 24px 20px 0;
+  }
+
+  .footer__facebook {
+    width: 24px;
+    height: 24px;
+    margin: 20px 40px 20px 0;
+  }
+}

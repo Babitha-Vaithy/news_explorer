@@ -35,6 +35,16 @@ function NewsCard({ search, onSaveCards, count }) {
     setCounter(DEFAULT_CARD_COUNT);
   }, [search]);
 
+  const formatDate = (date) => {
+    console.log(date);
+    let newDate = new Date(date);
+    return newDate.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  };
+
   return (
     <>
       {search && search.length > 0 && (
@@ -63,7 +73,9 @@ function NewsCard({ search, onSaveCards, count }) {
                           Sign in to save articles
                         </h3>
                       </div>
-                      <p className="newscard__date">{item.publishedAt}</p>
+                      <p className="newscard__date">
+                        {formatDate(item.publishedAt)}
+                      </p>
 
                       <h3 className="newscard__caption">{item.title}</h3>
                       <p className="newscard__content">{item.description}</p>
