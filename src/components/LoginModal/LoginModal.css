@@ -25,3 +25,10 @@
   line-height: 14.52px;
   color: rgba(255, 0, 0, 1);
 }
+
+@media screen and (max-width: 320px) {
+  .signin__signup {
+    width: 288px;
+    margin-top: 23px;
+  }
+}

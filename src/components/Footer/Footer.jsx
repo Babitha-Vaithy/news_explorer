@@ -14,31 +14,25 @@ function Footer() {
         &copy; {new Date().getFullYear()} Supersite, Powered by News API
       </p>
       <div className="footer__container">
-        {!currentUser && (
-          <Link to="/" className="footer__link">
-            <p className="footer__home">Home</p>
-          </Link>
-        )}
         <div className="footer__leftside">
-          {currentUser && (
-            <div className="footer__nav-link">
-              <div className="footer__user-containter">
-                <Link to="/" className="footer__link">
-                  <p className="footer__home">Home</p>
-                </Link>
-              </div>{" "}
-            </div>
-          )}
+          <Link to="/" className="footer__link">
+            Home
+          </Link>
 
-          <a href="https://tripleten.com/" className="footer__tripleten">
+          <a href="https://tripleten.com/" className="footer__link">
             TripleTen
           </a>
         </div>
-
-        <a href="https://github.com/Babitha-Vaithy">
-          <img src={gitavatar} alt="Git Avatar" className="footer__gitavatar" />
-        </a>
-        <img src={facebook} alt="" className="footer__facebook" />
+        <div className="footer__rightside">
+          <a href="https://github.com/Babitha-Vaithy">
+            <img
+              src={gitavatar}
+              alt="Git Avatar"
+              className="footer__gitavatar"
+            />
+          </a>
+          <img src={facebook} alt="" className="footer__facebook" />
+        </div>
       </div>
     </footer>
   );

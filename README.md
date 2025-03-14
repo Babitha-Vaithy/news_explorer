@@ -20,3 +20,13 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 Deployment Link:
+
+Project features:
+./Sprint 16 - 320px main.png
+./Sprint 16 - 768px main pg.png
+./Sprint 16 - 1440px main.png
+./Sprint 16 - 1440px saved articles.png
+./Sprint 16 - 768px saved article.png
+./Sprint 16 - 320px saved articles.png
+./Sprint 16 - 1440px signin.png
+./Sprint 16 - 768px signup.png

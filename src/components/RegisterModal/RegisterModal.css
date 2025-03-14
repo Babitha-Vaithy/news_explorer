@@ -17,3 +17,10 @@
   background-color: rgba(47, 113, 229, 1);
   color: rgba(255, 255, 255, 1);
 }
+
+@media screen and (max-width: 320px) {
+  .signup__signin {
+    width: 277px;
+    margin-top: 23px;
+  }
+}

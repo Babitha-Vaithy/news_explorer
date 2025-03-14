@@ -27,13 +27,22 @@ input[type="search"] {
 .searchform__button {
   width: 168px;
   height: 68px;
-  /* margin: -167px; */
-  background: rgba(47, 113, 229, 1);
+  background-color: rgba(47, 113, 229, 1);
   border-radius: 50px;
   box-shadow: 0px 5px 15px 0px rgba(14, 26, 57, 0.2);
   border-color: transparent;
   position: absolute;
   right: -3px;
+}
+
+.searchform__button:hover {
+  cursor: pointer;
+  background-color: rgba(52, 126, 255, 1);
+}
+
+.searchform__button:active {
+  cursor: pointer;
+  background-color: rgba(42, 101, 204, 1);
 }
 
 button[type="submit"] {
@@ -77,6 +86,6 @@ button[type="submit"] {
     width: 288px;
     height: 56px;
     top: 77px;
-    margin:0 auto 32px auto;
+    margin: 0 auto 32px auto;
   }
 }
