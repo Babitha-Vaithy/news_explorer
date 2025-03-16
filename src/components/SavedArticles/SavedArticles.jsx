@@ -1,7 +1,6 @@
 import "./SavedArticles.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import Navigation from "../Navigation/Navigation";
 import { useEffect, useState } from "react";
 import { getItems } from "../../utils/auth";
 

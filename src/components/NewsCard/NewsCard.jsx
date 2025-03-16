@@ -1,12 +1,9 @@
 import "./NewsCard.css";
-import savebtn from "../../assets/save__btn.svg";
-import savedBtn from "../../assets/saved_btn.svg";
 import { useEffect, useState } from "react";
-import Preloader from "../Preloader/Preloader";
 
 const DEFAULT_CARD_COUNT = 3;
 
-function NewsCard({ search, onSaveCards, count }) {
+function NewsCard({ search, onSaveCards }) {
   const [counter, setCounter] = useState(DEFAULT_CARD_COUNT);
   const [style, setStyle] = useState("newscard__savebtn");
   const [title, setTitle] = useState(null);
@@ -55,7 +52,7 @@ function NewsCard({ search, onSaveCards, count }) {
               {items &&
                 items.map((item) => {
                   return (
-                    <li className="newscard__list">
+                    <li key={item.id} className="newscard__list">
                       <img
                         src={item.urlToImage}
                         alt="Newscard Image"

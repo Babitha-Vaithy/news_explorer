@@ -2,15 +2,30 @@ import { Link } from "react-router-dom";
 
 import "./Header.css";
 import { CurrentUserContext } from "../../Contexts/CurrentUserContext";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import usernameicon from "../../assets/username_icon.svg";
 import logout from "../../assets/logout.svg";
 import { useLocation } from "react-router-dom";
+import menuicon from "../../assets/menu.svg";
+import closebutton from "../../assets/closebutton.svg";
 
 function Header({ handleSignInClick, styleColor, onSignOut }) {
   const currentUser = useContext(CurrentUserContext);
 
   const location = useLocation();
+  const handleMenu = () => {
+    document.getElementById("headerContainer").className =
+      "header__container_block";
+    let srcIcon = document.getElementById("menuIcon");
+    if (srcIcon.src.includes("menu")) {
+      srcIcon.src = closebutton;
+    } else {
+      srcIcon.src = menuicon;
+    }
+    document.querySelector(".page").style.backgroundColor =
+      "rgba(0, 0, 0, 0.3)";
+    //document.querySelector(".searchform__input").disabled = true;
+  };
 
   return (
     <header
@@ -25,7 +40,8 @@ function Header({ handleSignInClick, styleColor, onSignOut }) {
           NewsExplorer
         </p>
       </Link>
-      <div className="header__container">
+
+      <div id="headerContainer" className="header__container">
         {!currentUser && (
           <Link
             to="/"
@@ -103,6 +119,14 @@ function Header({ handleSignInClick, styleColor, onSignOut }) {
           </div>
         )}
       </div>
+
+      <img
+        src={menuicon}
+        alt="Menu Icon"
+        id="menuIcon"
+        onClick={() => handleMenu()}
+        className="header__menuicon"
+      />
     </header>
   );
 }

@@ -48,6 +48,7 @@ function App() {
   const onSignUp = ({ username, email, password }) => {
     signUp({ username, email, password })
       .then((data) => {
+        console.log(data);
         setActiveModal("success");
       })
       .catch(console.error);

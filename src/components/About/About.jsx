@@ -15,8 +15,8 @@ function About() {
           content. We can do this once we signup and signin the profile. React,
           javascript, HTML, CSS are the Techniques and technologies are used for
           creating and developing the project. I had a great learning process
-          from TripleTen about Javascript where I'm fresher to this IT field but
-          currently I'm able to create a webpage on my own.
+          from TripleTen about Javascript where I&apos;m fresher to this IT
+          field but currently I&apos;m able to create a webpage on my own.
         </p>
       </div>
     </about>

@@ -1,17 +1,20 @@
 function signUp({ username, email, password }) {
-  return new Promise((resolve, reject) => {
+  console.log(`${username} , ${email} , ${password}`);
+  return new Promise((resolve) => {
     resolve({ email: "test@gmail.com" });
   });
 }
 
 function signIn({ email, password }) {
-  return new Promise((resolve, reject) => {
+  console.log(`${email} , ${password}`);
+  return new Promise((resolve) => {
     resolve({ token: "0505199420241706" });
   });
 }
 
 function getUser(token) {
-  return new Promise((resolve, reject) => {
+  console.log(`${token}`);
+  return new Promise((resolve) => {
     resolve({
       data: { name: "fake user", email: "fake@example.com", _id: "fake-id" },
     });
@@ -19,7 +22,7 @@ function getUser(token) {
 }
 
 export function getItems() {
-  return new Promise((resolve, reject) =>
+  return new Promise((resolve) =>
     resolve([
       {
         _id: "65f7368dfb74bd6a92114c85", // I just generated this at random from a mongodb id generator website
@@ -73,7 +76,7 @@ export function getItems() {
 
 function saveArticle(article) {
   // article is a result from the NewsAPI
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     resolve({
       _id: "65f7371e7bce9e7d331b11a0", // another one made up from the generator
       url: article.url, // Use the properties the newsAPI gives you, I just made these up

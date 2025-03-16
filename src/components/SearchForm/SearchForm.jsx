@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-
-import Preloader from "../Preloader/Preloader";
+import { useState } from "react";
 import "./SearchForm.css";
 
 const SearchForm = ({ onSearch }) => {

@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import { CurrentUserContext } from "../../Contexts/CurrentUserContext";
-import { useContext } from "react";
 
 import gitavatar from "../../assets/git_avatar.svg";
 import facebook from "../../assets/facebook.svg";
 
 function Footer() {
-  const currentUser = useContext(CurrentUserContext);
   return (
     <footer className="footer">
       <p className="footer__name">

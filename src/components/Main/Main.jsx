@@ -26,7 +26,7 @@ function Main({
             onSignOut={onSignOut}
           />
           <div className="main__searchlist">
-            <p className="cards__title">What's going on in the world?</p>
+            <p className="cards__title">What&apos;s going on in the world?</p>
             <p className="cards__text">
               Find the latest news on any topic and save them in your personal
               account.
@@ -37,9 +37,7 @@ function Main({
         </div>
 
         <Preloader loader={loader} search={search} />
-        {search && (
-          <NewsCard search={search} onSaveCards={onSaveCards} count={3} />
-        )}
+        {search && <NewsCard search={search} onSaveCards={onSaveCards} />}
         <About />
         <Footer />
       </div>
