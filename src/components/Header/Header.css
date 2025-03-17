@@ -202,6 +202,7 @@
   }
 }
 
+
 @media screen and (max-width: 320px) {
   .header__menu {
     position: relative;
@@ -220,6 +221,7 @@
     float: left;
     background-color: black;
     height: 230px;
+    width: 320px;
   }
 
   .header {
@@ -240,6 +242,8 @@
     right: 0;
     height: 230px;
     background-color: black;
+    top: 56px;
+    width: 320px;
   }
 
   .header__menuicon {
@@ -289,7 +293,7 @@
 
   .header__saved {
     position: relative;
-    top: 30px;
+    top: 56px;
     left: -62px;
     font-size: 18px;
     line-height: 24px;
@@ -297,7 +301,7 @@
 
   .header__username {
     position: relative;
-    top: 8px;
+    top: 88px;
     left: 8px;
     width: 288px;
     height: 56px;

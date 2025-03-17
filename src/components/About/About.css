@@ -12,7 +12,7 @@
 .about__container {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  max-width: 600px;
 }
 
 .about__title {
@@ -48,7 +48,7 @@
   }
 
   .about__container {
-    width: 424px;
+    max-width: 424px;
   }
 
   .about__title {
@@ -99,11 +99,10 @@
 @media screen and (max-width: 320px) {
   .about {
     flex-direction: column;
-    width: 320px;
   }
 
   .about__container {
-    width: 320px;
+    max-width: 320px;
   }
 
   .about__avatar {
