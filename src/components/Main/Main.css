@@ -64,7 +64,7 @@
 
   .cards__text {
     width: 300px;
-    margin: 0 114px 48px ;
+    margin: 0 114px 48px;
   }
 }
 
@@ -73,6 +73,11 @@
     max-width: 320px;
     height: 536px;
     background-image: url(../../assets/background320.svg);
+    width: 100%;
+  }
+
+  .main__searchlist {
+    max-width: 320px;
   }
 
   .cards__title {

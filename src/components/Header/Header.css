@@ -1,9 +1,11 @@
 .header {
-  display: flex;
-  align-items: center;
   box-sizing: border-box;
-  justify-content: space-between;
   box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.2) inset;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__savedarticle {
@@ -203,7 +205,8 @@
 @media screen and (max-width: 320px) {
   .header__menu {
     position: relative;
-    /* background-color: black; */
+    /* background-color: black;
+    width: 100%; */
   }
 
   .header__logo {
@@ -215,6 +218,8 @@
   .header__container {
     display: none;
     float: left;
+    background-color: black;
+    height: 230px;
   }
 
   .header {
@@ -223,16 +228,18 @@
     box-sizing: border-box;
     justify-content: space-between;
     box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.2) inset;
-    /* background: rgba(26, 27, 34, 1); */
   }
+
   .header__container_block {
     display: flex;
     flex-direction: column;
     float: none;
     text-align: left;
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
+    height: 230px;
+    background-color: black;
   }
 
   .header__menuicon {
@@ -250,22 +257,55 @@
     display: block;
     position: absolute;
     left: 16px;
-    top: 16px;
+    top: 0;
     line-height: 56px;
+    height: 56px;
   }
 
   .header__signin {
     display: block;
     position: absolute;
-    left: 4px;
-    top: 56px;
+    left: -7px;
+    bottom: 24px;
     width: 288px;
     height: 56px;
+  }
+
+  .header__link {
+    padding: 0;
   }
 
   .header__link-selected {
     text-decoration: none;
     padding: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  .header__user-containter {
+    flex-direction: column;
+    position: absolute;
+    top: 19px;
+  }
+
+  .header__saved {
+    position: relative;
+    top: 30px;
+    left: -62px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .header__username {
+    position: relative;
+    top: 8px;
+    left: 8px;
+    width: 288px;
+    height: 56px;
+    text-align: center;
+    padding-left: 96px;
+  }
+
+  .header__username-icon {
+    padding-right: 81px;
   }
 }
