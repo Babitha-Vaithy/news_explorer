@@ -50,6 +50,24 @@
   }
 }
 
+@media screen and (max-width: 567px) {
+  .main__pagecontent {
+    max-width: 567px;
+    background-image: url(../../assets/background768.svg);
+  }
+
+  /* .cards__title {
+    width: 385px;
+    font-size: 36px;
+    line-height: 40px;
+  } */
+
+  .cards__text {
+    width: 300px;
+    margin: 0 114px 48px ;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .main__pagecontent {
     max-width: 320px;

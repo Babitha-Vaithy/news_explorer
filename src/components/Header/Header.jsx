@@ -14,16 +14,24 @@ function Header({ handleSignInClick, styleColor, onSignOut }) {
 
   const location = useLocation();
   const handleMenu = () => {
-    document.getElementById("headerContainer").className =
-      "header__container_block";
+    let headerContainer = document.getElementById("headerContainer");
+    if (headerContainer.className.includes("block")) {
+      headerContainer.className = "header__container";
+      document.querySelector(".page").style.backgroundColor = "white";
+    } else {
+      headerContainer.className = "header__container_block";
+      document.querySelector(".page").style.backgroundColor =
+        "rgba(0, 0, 0, 0.3)";
+    }
+
     let srcIcon = document.getElementById("menuIcon");
     if (srcIcon.src.includes("menu")) {
       srcIcon.src = closebutton;
     } else {
       srcIcon.src = menuicon;
     }
-    document.querySelector(".page").style.backgroundColor =
-      "rgba(0, 0, 0, 0.3)";
+    // document.querySelector(".page").style.backgroundColor =
+    //   "rgba(0, 0, 0, 0.3)";
     //document.querySelector(".searchform__input").disabled = true;
   };
 
@@ -31,102 +39,104 @@ function Header({ handleSignInClick, styleColor, onSignOut }) {
     <header
       className={styleColor == "white" ? "header" : "header__savedarticle"}
     >
-      <Link to="/" className="header__link">
-        <p
-          className="header__logo"
-          style={{ color: styleColor }}
-          alt="Header Logo"
-        >
-          NewsExplorer
-        </p>
-      </Link>
-
-      <div id="headerContainer" className="header__container">
-        {!currentUser && (
-          <Link
-            to="/"
-            className={
-              location.pathname === "/"
-                ? "header__link-selected"
-                : "header__link"
-            }
+      <div className="header__menu">
+        <Link to="/" className="header__link">
+          <p
+            className="header__logo"
+            style={{ color: styleColor }}
+            alt="Header Logo"
           >
-            <p className="header__home" alt="Home">
-              Home
-            </p>
-          </Link>
-        )}
-        {!currentUser && (
-          <button
-            onClick={handleSignInClick}
-            type="button"
-            className="header__signin"
-          >
-            Sign in
-          </button>
-        )}
+            NewsExplorer
+          </p>
+        </Link>
 
-        {currentUser && (
-          <div className="header__nav-link">
-            <div className="header__user-containter">
-              <Link
-                to="/"
-                className={
-                  location.pathname === "/"
-                    ? "header__link-selected"
-                    : "header__link"
-                }
-              >
-                <p
-                  className="header__home"
-                  alt="Home"
-                  style={{ color: styleColor }}
+        <div id="headerContainer" className="header__container">
+          {!currentUser && (
+            <Link
+              to="/"
+              className={
+                location.pathname === "/"
+                  ? "header__link-selected"
+                  : "header__link"
+              }
+            >
+              <p className="header__home" alt="Home">
+                Home
+              </p>
+            </Link>
+          )}
+          {!currentUser && (
+            <button
+              onClick={handleSignInClick}
+              type="button"
+              className="header__signin"
+            >
+              Sign in
+            </button>
+          )}
+
+          {currentUser && (
+            <div className="header__nav-link">
+              <div className="header__user-containter">
+                <Link
+                  to="/"
+                  className={
+                    location.pathname === "/"
+                      ? "header__link-selected"
+                      : "header__link"
+                  }
                 >
-                  Home
-                </p>
-              </Link>
-              <Link
-                to="/saved-news"
-                className={
-                  location.pathname === "/saved-news"
-                    ? "header__link-saved"
-                    : "header__link"
-                }
-              >
-                <p
-                  className="header__saved"
-                  alt="Saved Articles"
-                  style={{ color: styleColor }}
+                  <p
+                    className="header__home"
+                    alt="Home"
+                    style={{ color: styleColor }}
+                  >
+                    Home
+                  </p>
+                </Link>
+                <Link
+                  to="/saved-news"
+                  className={
+                    location.pathname === "/saved-news"
+                      ? "header__link-saved"
+                      : "header__link"
+                  }
                 >
-                  Saved articles
-                </p>
-              </Link>
-              <Link to="/" className="header__link">
-                <button
-                  className="header__username"
-                  style={{ color: styleColor, borderColor: styleColor }}
-                >
-                  {currentUser.name}
-                  <img
-                    src={styleColor == "white" ? usernameicon : logout}
-                    alt="Username Icon"
-                    className="header__username-icon"
-                    onClick={onSignOut}
-                  />
-                </button>
-              </Link>
+                  <p
+                    className="header__saved"
+                    alt="Saved Articles"
+                    style={{ color: styleColor }}
+                  >
+                    Saved articles
+                  </p>
+                </Link>
+                <Link to="/" className="header__link">
+                  <button
+                    className="header__username"
+                    style={{ color: styleColor, borderColor: styleColor }}
+                  >
+                    {currentUser.name}
+                    <img
+                      src={styleColor == "white" ? usernameicon : logout}
+                      alt="Username Icon"
+                      className="header__username-icon"
+                      onClick={onSignOut}
+                    />
+                  </button>
+                </Link>
+              </div>
             </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
 
-      <img
-        src={menuicon}
-        alt="Menu Icon"
-        id="menuIcon"
-        onClick={() => handleMenu()}
-        className="header__menuicon"
-      />
+        <img
+          src={menuicon}
+          alt="Menu Icon"
+          id="menuIcon"
+          onClick={() => handleMenu()}
+          className="header__menuicon"
+        />
+      </div>
     </header>
   );
 }

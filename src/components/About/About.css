@@ -60,8 +60,39 @@
 
   .about__description {
     max-width: 424px;
-    margin-top: 16px;
-    margin-bottom: 96px;
+    /* margin-top: 16px;
+    margin-bottom: 96px; */
+    margin: 16px auto 96px auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .about__description {
+    max-width: 288px;
+    margin: 0 auto 128px 0;
+  }
+
+  .about__title {
+    margin: 40px auto 16px 0;
+  }
+}
+
+@media screen and (max-width: 936px) {
+  .about__description {
+    max-width: 288px;
+    margin: 0 auto 128px 0;
+  }
+
+  .about__title {
+    margin: 40px auto 16px 0;
+    font-size: 33px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .about__title {
+    margin: 40px 0 16px 0;
+    font-size: 30px;
   }
 }
 

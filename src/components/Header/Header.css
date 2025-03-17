@@ -201,6 +201,11 @@
 }
 
 @media screen and (max-width: 320px) {
+  .header__menu {
+    position: relative;
+    /* background-color: black; */
+  }
+
   .header__logo {
     width: 117px;
     font-size: 16px;
@@ -218,21 +223,23 @@
     box-sizing: border-box;
     justify-content: space-between;
     box-shadow: 0px -1px 0px 0px rgba(255, 255, 255, 0.2) inset;
-    background: rgba(26, 27, 34, 1);
+    /* background: rgba(26, 27, 34, 1); */
   }
   .header__container_block {
     display: flex;
     flex-direction: column;
     float: none;
     text-align: left;
-    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
   }
 
   .header__menuicon {
     display: block;
     width: 24px;
     height: 24px;
-    top: 37px;
+    top: 18px;
     right: 16px;
     bottom: 16px;
     position: absolute;
@@ -241,5 +248,24 @@
 
   .header__home {
     display: block;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    line-height: 56px;
+  }
+
+  .header__signin {
+    display: block;
+    position: absolute;
+    left: 4px;
+    top: 56px;
+    width: 288px;
+    height: 56px;
+  }
+
+  .header__link-selected {
+    text-decoration: none;
+    padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
   }
 }
