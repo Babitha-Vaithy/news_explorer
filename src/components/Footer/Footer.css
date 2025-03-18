@@ -87,10 +87,37 @@
   }
 }
 
+@media screen and (max-width: 921px) {
+  .footer__container {
+    display: flex;
+    margin-left: -22px;
+  }
+}
+
+@media screen and (max-width: 892px) {
+  .footer__container {
+    display: flex;
+    margin-left: -62px;
+  }
+}
+
+@media screen and (max-width: 863px) {
+  .footer__container {
+    display: flex;
+    margin-left: -100px;
+  }
+}
+
+@media screen and (max-width: 827px) {
+  .footer__container {
+    display: flex;
+    margin-left: -120px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .footer {
     max-width: 320px;
-    height: 176px;
     flex-direction: column-reverse;
     align-items: stretch;
   }

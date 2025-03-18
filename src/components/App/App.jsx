@@ -153,6 +153,8 @@ function App() {
             isOpen={activeModal === "menu"}
             styleColor="white"
             closeActiveModal={closeActiveModal}
+            onSignOut={onSignOut}
+            handleSignInClick={handleSignInClick}
           />
         )}
 

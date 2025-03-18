@@ -71,6 +71,14 @@ button[type="submit"] {
   }
 }
 
+/* @media screen and (max-width: 759px) {
+  .searchform__input {
+    width: 452px;
+    height: 56px;
+    margin: auto auto auto 10px;
+  }
+} */
+
 @media screen and (max-width: 320px) {
   .search__form {
     padding-bottom: 32px;
