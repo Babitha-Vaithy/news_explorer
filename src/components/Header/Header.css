@@ -201,6 +201,24 @@
   }
 }
 
+@media screen and (max-width: 683px) {
+  .header__container {
+    margin-left: 45px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header__container {
+    margin-left: -35px;
+  }
+}
+
+@media screen and (max-width: 538px) {
+  .header__container {
+    margin-left: -17px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .header__menu {
     position: relative;

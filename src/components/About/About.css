@@ -94,19 +94,17 @@
   }
 }
 
-/* @media screen and (max-width: 867px) {
-  .about__avatar {
-    width: 464px;
-    height: 464px;
-    margin: 61px 22px 80px 72px;  
+@media screen and (max-width: 353px) {
+  .about {
+    flex-direction: column;
   }
-} */
+}
 
 @media screen and (max-width: 867px) {
   .about__avatar {
     width: 272px;
     height: 272px;
-    margin: 32px auto 24px auto; 
+    margin: 32px auto 24px auto;
   }
 }
 

@@ -71,13 +71,31 @@ button[type="submit"] {
   }
 }
 
-/* @media screen and (max-width: 759px) {
-  .searchform__input {
-    width: 452px;
-    height: 56px;
-    margin: auto auto auto 10px;
+@media screen and (max-width: 759px) {
+  .search__form {
+    padding-left: 61px;
   }
-} */
+}
+
+@media screen and (max-width: 461px) {
+  .search__form {
+    padding-top: 9px;
+    padding-left: 10px;
+  }
+
+  .searchform__input {
+    width: 288px;
+    height: 56px;
+    margin: 0 auto 16px auto;
+  }
+
+  .searchform__button {
+    width: 288px;
+    height: 56px;
+    top: 77px;
+    margin: 0 auto 32px auto;
+  }
+}
 
 @media screen and (max-width: 320px) {
   .search__form {
