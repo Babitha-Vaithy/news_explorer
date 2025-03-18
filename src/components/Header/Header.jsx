@@ -7,39 +7,34 @@ import usernameicon from "../../assets/username_icon.svg";
 import logout from "../../assets/logout.svg";
 import { useLocation } from "react-router-dom";
 import menuicon from "../../assets/menu.svg";
+import menublack from "../../assets/menublack.svg";
 import closebutton from "../../assets/closebutton.svg";
 
-function Header({ handleSignInClick, styleColor, onSignOut }) {
+function Header({
+  handleSignInClick,
+  styleColor,
+  onSignOut,
+  isOpen,
+  handleMenu,
+}) {
   const currentUser = useContext(CurrentUserContext);
 
-  const location = useLocation();
-  const handleMenu = () => {
-    let headerContainer = document.getElementById("headerContainer");
-    if (headerContainer.className.includes("block")) {
-      headerContainer.className = "header__container";
-      document.querySelector(".page").style.backgroundColor = "white";
-    } else {
-      headerContainer.className = "header__container_block";
-      document.querySelector(".page").style.backgroundColor =
-        "rgba(0, 0, 0, 0.3)";
-    }
+  // const handleClick = () => {
+  //   let headerContainer = document.getElementById("headerContainer");
+  //   let headerMenu = document.getElementById("headerMenu");
+  //   let srcIcon = document.getElementById("menuIcon");
+  //   headerContainer.className = "header__container";
+  //   headerMenu.className = "header__menu";
+  //   srcIcon.src = menuicon;
+  // };
 
-    let srcIcon = document.getElementById("menuIcon");
-    if (srcIcon.src.includes("menu")) {
-      srcIcon.src = closebutton;
-    } else {
-      srcIcon.src = menuicon;
-    }
-    // document.querySelector(".page").style.backgroundColor =
-    //   "rgba(0, 0, 0, 0.3)";
-    //document.querySelector(".searchform__input").disabled = true;
-  };
+  const location = useLocation();
 
   return (
     <header
       className={styleColor == "white" ? "header" : "header__savedarticle"}
     >
-      <div className="header__menu">
+      <div id="headerMenu" className="header__menu">
         <Link to="/" className="header__link">
           <p
             className="header__logo"
@@ -130,10 +125,10 @@ function Header({ handleSignInClick, styleColor, onSignOut }) {
         </div>
 
         <img
-          src={menuicon}
+          src={styleColor === "white" ? menuicon : menublack}
           alt="Menu Icon"
           id="menuIcon"
-          onClick={() => handleMenu()}
+          onClick={handleMenu}
           className="header__menuicon"
         />
       </div>

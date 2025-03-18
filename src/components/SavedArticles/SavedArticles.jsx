@@ -4,7 +4,7 @@ import Footer from "../Footer/Footer";
 import { useEffect, useState } from "react";
 import { getItems } from "../../utils/auth";
 
-function Savedarticles() {
+function Savedarticles({ handleMenu }) {
   const [savedArticles, setSavedArticles] = useState(null);
   const [keyword, setKeyword] = useState(null);
 
@@ -41,7 +41,7 @@ function Savedarticles() {
 
   return (
     <div className="savedarticles">
-      <Header className="Header__saved-page" styleColor="black" />
+      <Header className="Header__saved-page" styleColor="black" handleMenu={handleMenu}/>
       <div className="saved__container">
         <p className="saved__name">Saved articles</p>
         <h1 className="saved__title">

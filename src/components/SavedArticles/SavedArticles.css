@@ -346,4 +346,9 @@
     top: 59px;
     left: -46px;
   }
+
+  .header__user-containter,
+  .header__home {
+    color: white;
+  }
 }

@@ -14,6 +14,7 @@ function Main({
   search,
   onSaveCards,
   onSignOut,
+  handleMenu,
 }) {
   return (
     <main>
@@ -24,6 +25,7 @@ function Main({
             styleColor="white"
             handleSavedArticles={handleSavedArticles}
             onSignOut={onSignOut}
+            handleMenu={handleMenu}
           />
           <div className="main__searchlist">
             <p className="cards__title">What&apos;s going on in the world?</p>

@@ -11,6 +11,7 @@ import { getSearchData } from "../../utils/api.js";
 import Savedarticles from "../SavedArticles/SavedArticles.jsx";
 import SuccessModal from "../RegisterModal/SuccessModal.jsx";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import Menu from "../Menu/Menu.jsx";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -29,6 +30,10 @@ function App() {
   };
   const closeActiveModal = () => {
     setActiveModal("");
+  };
+
+  const handleMenu = () => {
+    setActiveModal("menu");
   };
 
   const handleSavedArticles = () => {
@@ -115,6 +120,7 @@ function App() {
                         search={search}
                         onSaveCards={onSaveCards}
                         onSignOut={onSignOut}
+                        handleMenu={handleMenu}
                       />
                     }
                   ></Route>{" "}
@@ -122,9 +128,7 @@ function App() {
                     path="/saved-news"
                     element={
                       <ProtectedRoute isLoggedIn={isLoggedIn}>
-                        <Savedarticles
-                          handleSavedArticles={handleSavedArticles}
-                        />
+                        <Savedarticles handleMenu={handleMenu} />
                       </ProtectedRoute>
                     }
                   ></Route>
@@ -142,6 +146,13 @@ function App() {
             isOpen={activeModal === "signUp"}
             onSignUp={onSignUp}
             handleSignInClick={handleSignInClick}
+          />
+        )}
+        {activeModal === "menu" && (
+          <Menu
+            isOpen={activeModal === "menu"}
+            styleColor="white"
+            closeActiveModal={closeActiveModal}
           />
         )}
 
