@@ -8,13 +8,11 @@ import logout from "../../assets/logout.svg";
 import { useLocation } from "react-router-dom";
 import menuicon from "../../assets/menu.svg";
 import menublack from "../../assets/menublack.svg";
-import closebutton from "../../assets/closebutton.svg";
 
 function Header({
   handleSignInClick,
   styleColor,
   onSignOut,
-  isOpen,
   handleMenu,
 }) {
   const currentUser = useContext(CurrentUserContext);
