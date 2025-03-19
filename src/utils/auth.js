@@ -25,7 +25,7 @@ export function getItems() {
   return new Promise((resolve) =>
     resolve([
       {
-        _id: "65f7368dfb74bd6a92114c85", // I just generated this at random from a mongodb id generator website
+        _id: "65f7368dfb74bd6a92114c85", 
         title: "Are You Worried About A.I. Taking Human Jobs?",
         urlToImage:
           "https://static01.nyt.com/images/2025/02/04/opinion/04azaria-promo-still/04azaria-promo-still-superJumbo.jpg?quality=75&auto=webp",
@@ -36,7 +36,7 @@ export function getItems() {
         keyword: "AI",
       },
       {
-        _id: "6785882563335c63f01a841b", // I just generated this at random from a mongodb id generator website
+        _id: "6785882563335c63f01a841b", 
         title:
           "What Teens Are Saying About Barring Children Under 16 From Social Media",
         urlToImage:
@@ -48,7 +48,7 @@ export function getItems() {
         keyword: "Social Media",
       },
       {
-        _id: "6785882463335c63f01a8419", // I just generated this at random from a mongodb id generator website
+        _id: "6785882463335c63f01a8419", 
         title: "Are Youth Sports Too Stressful? Teenagers Weigh In.",
         urlToImage:
           "https://static01.nyt.com/images/2024/12/19/multimedia/19doncic-youthbasketball-1-kvmj/19doncic-youthbasketball-1-kvmj-superJumbo.jpg?quality=75&auto=webp",
@@ -59,7 +59,7 @@ export function getItems() {
         keyword: "Sports",
       },
       {
-        _id: "67858d3ec556bd90deae8a0d", // I just generated this at random from a mongodb id generator website
+        _id: "67858d3ec556bd90deae8a0d", 
         title:
           "Should Social Media Companies Be Responsible for Fact-Checking Their Sites?",
         urlToImage:
@@ -75,14 +75,12 @@ export function getItems() {
 }
 
 function saveArticle(article) {
-  // article is a result from the NewsAPI
   return new Promise((resolve) => {
     resolve({
-      _id: "65f7371e7bce9e7d331b11a0", // another one made up from the generator
-      url: article.url, // Use the properties the newsAPI gives you, I just made these up
+      _id: "65f7371e7bce9e7d331b11a0",
+      url: article.url,
       title: article.title,
       imageUrl: article.imagUrl,
-      // whatever other properties from the newsAPI-given article object you saved to the database
     });
   });
 }

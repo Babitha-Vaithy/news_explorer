@@ -1,7 +1,6 @@
 .footer {
   width: 100%;
   max-width: 1440px;
-  /* height: 80px; */
   padding-bottom: 0;
   display: flex;
   align-items: center;
@@ -57,7 +56,6 @@
 @media screen and (max-width: 768px) {
   .footer {
     max-width: 768px;
-    /* height: 64px; */
   }
 
   .footer__name {

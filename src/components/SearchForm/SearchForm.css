@@ -100,6 +100,7 @@ button[type="submit"] {
 @media screen and (max-width: 320px) {
   .search__form {
     padding-bottom: 32px;
+    padding-left: 0px;
   }
 
   .searchform__input {

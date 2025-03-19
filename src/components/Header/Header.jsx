@@ -19,15 +19,6 @@ function Header({
 }) {
   const currentUser = useContext(CurrentUserContext);
 
-  // const handleClick = () => {
-  //   let headerContainer = document.getElementById("headerContainer");
-  //   let headerMenu = document.getElementById("headerMenu");
-  //   let srcIcon = document.getElementById("menuIcon");
-  //   headerContainer.className = "header__container";
-  //   headerMenu.className = "header__menu";
-  //   srcIcon.src = menuicon;
-  // };
-
   const location = useLocation();
 
   return (

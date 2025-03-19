@@ -29,9 +29,6 @@ const SearchForm = ({ onSearch }) => {
           Search
         </button>
       </div>
-      <div className="search__container">
-        <section className="search__preloader">{/* <Preloader /> */}</section>
-      </div>
     </>
   );
 };

@@ -41,7 +41,11 @@ function Savedarticles({ handleMenu }) {
 
   return (
     <div className="savedarticles">
-      <Header className="Header__saved-page" styleColor="black" handleMenu={handleMenu}/>
+      <Header
+        className="Header__saved-page"
+        styleColor="black"
+        handleMenu={handleMenu}
+      />
       <div className="saved__container">
         <p className="saved__name">Saved articles</p>
         <h1 className="saved__title">
@@ -83,7 +87,6 @@ function Savedarticles({ handleMenu }) {
             })}
         </div>
       </div>
-      {/* <Navigation /> */}
       <Footer />
     </div>
   );
