@@ -47,8 +47,8 @@ function NewsCard({ search, onSaveCards }) {
       {search && search.length > 0 && (
         <div className="newscard">
           <div className="newscard__container">
-            <p className="newscard__title">Search results</p>
-            <div className="newscard__cards">
+            <h1 className="newscard__title">Search results</h1>
+            <ul className="newscard__cards">
               {items &&
                 items.map((item) => {
                   return (
@@ -80,7 +80,7 @@ function NewsCard({ search, onSaveCards }) {
                     </li>
                   );
                 })}
-            </div>
+            </ul>
           </div>
 
           {showMore && (

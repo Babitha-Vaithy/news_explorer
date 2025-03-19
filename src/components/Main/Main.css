@@ -1,6 +1,6 @@
 .main__pagecontent {
   max-width: 1440px;
-  background-image: url(../../assets/Bg_photo.svg);
+  background-image: url(../../assets/background.png);
   padding: 0;
   border: 1px solid rgba(209, 210, 214, 1);
   background-size: cover;
@@ -36,7 +36,7 @@
 @media screen and (max-width: 768px) {
   .main__pagecontent {
     max-width: 768px;
-    background-image: url(../../assets/background768.svg);
+    background-image: url(../../assets/background768.png);
     box-sizing: border-box;
   }
 
@@ -62,7 +62,7 @@
 @media screen and (max-width: 433px) {
   .main__pagecontent {
     max-width: 433px;
-    background-image: url(../../assets/background768.svg);
+    background-image: url(../../assets/background768.png);
     box-sizing: border-box;
   }
 
@@ -124,10 +124,9 @@
 @media screen and (max-width: 567px) {
   .main__pagecontent {
     max-width: 567px;
-    background-image: url(../../assets/background768.svg);
+    background-image: url(../../assets/background768.png);
     box-sizing: border-box;
   }
-
 
   .cards__text {
     width: 300px;
@@ -139,7 +138,7 @@
   .main__pagecontent {
     max-width: 320px;
     height: 536px;
-    background-image: url(../../assets/background320.svg);
+    background-image: url(../../assets/background320.png);
     width: 100%;
     box-sizing: border-box;
   }

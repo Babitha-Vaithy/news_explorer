@@ -43,6 +43,7 @@ const RegisterModal = ({
           className="modal__input"
           placeholder="Enter email"
           value={email}
+          required
           onChange={handleEmailChange}
         />
       </label>
@@ -54,6 +55,7 @@ const RegisterModal = ({
           className="modal__input"
           placeholder="Enter password"
           value={password}
+          required
           onChange={handlePasswordChange}
         />
       </label>
@@ -67,6 +69,7 @@ const RegisterModal = ({
           placeholder="Enter your Username"
           value={name}
           onChange={handleNameChange}
+          required
         />
       </label>
 

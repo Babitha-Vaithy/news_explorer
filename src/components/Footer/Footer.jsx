@@ -16,12 +16,21 @@ function Footer() {
             Home
           </Link>
 
-          <a href="https://tripleten.com/" className="footer__link">
+          <a
+            href="https://tripleten.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__link"
+          >
             TripleTen
           </a>
         </div>
         <div className="footer__rightside">
-          <a href="https://github.com/Babitha-Vaithy">
+          <a
+            href="https://github.com/Babitha-Vaithy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src={gitavatar}
               alt="Git Avatar"

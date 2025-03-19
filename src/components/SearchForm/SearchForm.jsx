@@ -13,12 +13,13 @@ const SearchForm = ({ onSearch }) => {
 
   return (
     <>
-      <div className="search__form">
+      <form className="search__form">
         <input
           className="searchform__input"
           type="search"
           placeholder="Enter topic"
           onChange={handleSearchChange}
+          required
         />
         <button
           type="submit"
@@ -28,7 +29,7 @@ const SearchForm = ({ onSearch }) => {
         >
           Search
         </button>
-      </div>
+      </form>
     </>
   );
 };

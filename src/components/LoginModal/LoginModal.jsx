@@ -73,6 +73,7 @@ const LoginModal = ({
           className="modal__input"
           placeholder="Enter password"
           value={password}
+          required
           onChange={handlePasswordChange}
         />
         {passwordError === true && (

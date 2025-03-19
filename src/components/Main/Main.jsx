@@ -18,7 +18,7 @@ function Main({
 }) {
   return (
     <main>
-      <div className="main__container">
+      <section className="main__container">
         <div className="main__pagecontent">
           <Header
             handleSignInClick={handleSignInClick}
@@ -28,7 +28,7 @@ function Main({
             handleMenu={handleMenu}
           />
           <div className="main__searchlist">
-            <p className="cards__title">What&apos;s going on in the world?</p>
+            <h1 className="cards__title">What&apos;s going on in the world?</h1>
             <p className="cards__text">
               Find the latest news on any topic and save them in your personal
               account.
@@ -42,7 +42,7 @@ function Main({
         {search && <NewsCard search={search} onSaveCards={onSaveCards} />}
         <About />
         <Footer />
-      </div>
+      </section>
     </main>
   );
 }

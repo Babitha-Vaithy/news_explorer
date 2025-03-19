@@ -7,7 +7,7 @@ function About() {
     <about className="about">
       <img src={about} alt="About avatar" className="about__avatar" />
       <div className="about__container">
-        <p className="about__title"> About the author</p>
+        <h1 className="about__title"> About the author</h1>
         <p className="about__description">
           Babitha Vaithianathan is the project author. This project indicates
           the working of frontend of the sytstem. We have worked on User

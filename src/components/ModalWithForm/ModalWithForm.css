@@ -27,11 +27,7 @@
   padding-left: 36px;
 }
 
-/* .modal__close {
-  position: absolute;   
-} */
-
-.modal__close_btn {
+.modal__closebtn {
   position: absolute;
   top: -53px;
   right: -51px;
@@ -128,7 +124,7 @@
     margin: 16px auto 28px auto;
   }
 
-  .modal__close_btn {
+  .modal__closebtn {
     top: -53px;
     right: 13px;
   }

@@ -20,7 +20,7 @@ function ModalWithForm({
           onClick={onClose}
           src={closebutton}
           alt="Close Btn"
-          className="modal__close_btn"
+          className="modal__closebtn"
         />
 
         <form className="modal__form" onSubmit={onSubmit}>
