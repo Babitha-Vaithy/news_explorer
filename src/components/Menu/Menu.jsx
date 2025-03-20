@@ -20,13 +20,15 @@ function Menu({
       <div className="menu__container">
         <div className="menu__header">
           <Link to="/" onClick={closeActiveModal} className="menu__link">
-            <p
-              className="menu__logo"
-              style={{ color: styleColor }}
-              alt="Header Logo"
-            >
-              NewsExplorer
-            </p>
+            <nav>
+              <p
+                className="menu__logo"
+                style={{ color: styleColor }}
+                alt="Header Logo"
+              >
+                NewsExplorer
+              </p>
+            </nav>
           </Link>
           <img
             src={closebutton}
@@ -46,9 +48,11 @@ function Menu({
                 location.pathname === "/" ? "menu__link-selected" : "menu__link"
               }
             >
-              <p className="menu__home" alt="Home">
-                Home
-              </p>
+              <nav>
+                <p className="menu__home" alt="Home">
+                  Home
+                </p>
+              </nav>
             </Link>
           )}
           {!currentUser && (
@@ -72,13 +76,15 @@ function Menu({
                     : "menu__link"
                 }
               >
-                <p
-                  className="menu__home"
-                  alt="Home"
-                  style={{ color: styleColor }}
-                >
-                  Home
-                </p>
+                <nav>
+                  <p
+                    className="menu__home"
+                    alt="Home"
+                    style={{ color: styleColor }}
+                  >
+                    Home
+                  </p>
+                </nav>
               </Link>
               <Link
                 to="/saved-news"
@@ -89,23 +95,27 @@ function Menu({
                     : "menu__link"
                 }
               >
-                <p className="menu__saved" alt="Saved Articles">
-                  Saved articles
-                </p>
+                <nav>
+                  <p className="menu__saved" alt="Saved Articles">
+                    Saved articles
+                  </p>
+                </nav>
               </Link>
               <Link to="/" className="menu__link">
-                <button
-                  className="menu__username"
-                  style={{ color: styleColor, borderColor: styleColor }}
-                >
-                  {currentUser.name}
-                  <img
-                    src={styleColor == "white" ? usernameicon : logout}
-                    alt="Username Icon"
-                    className="menu__username-icon"
-                    onClick={onSignOut}
-                  />
-                </button>
+                <nav>
+                  <button
+                    className="menu__username"
+                    style={{ color: styleColor, borderColor: styleColor }}
+                  >
+                    {currentUser.name}
+                    <img
+                      src={styleColor == "white" ? usernameicon : logout}
+                      alt="Username Icon"
+                      className="menu__username-icon"
+                      onClick={onSignOut}
+                    />
+                  </button>
+                </nav>
               </Link>
             </div>
           )}

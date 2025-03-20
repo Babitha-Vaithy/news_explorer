@@ -101,41 +101,39 @@ function App() {
   }, []);
 
   return (
-    <div className="page__root">
+    <>
       <CurrentUserContext.Provider value={currentUser}>
         <div className="page">
-          <div className="page__content">
-            {
-              <>
-                <Routes>
-                  <Route
-                    path="/"
-                    element={
-                      <Main
-                        onSearch={onSearch}
-                        handleSignInClick={handleSignInClick}
-                        styleColor="white"
-                        handleSavedArticles={handleSavedArticles}
-                        loader={loader}
-                        search={search}
-                        onSaveCards={onSaveCards}
-                        onSignOut={onSignOut}
-                        handleMenu={handleMenu}
-                      />
-                    }
-                  ></Route>{" "}
-                  <Route
-                    path="/saved-news"
-                    element={
-                      <ProtectedRoute isLoggedIn={isLoggedIn}>
-                        <Savedarticles handleMenu={handleMenu} />
-                      </ProtectedRoute>
-                    }
-                  ></Route>
-                </Routes>
-              </>
-            }
-          </div>
+          {
+            <>
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <Main
+                      onSearch={onSearch}
+                      handleSignInClick={handleSignInClick}
+                      styleColor="white"
+                      handleSavedArticles={handleSavedArticles}
+                      loader={loader}
+                      search={search}
+                      onSaveCards={onSaveCards}
+                      onSignOut={onSignOut}
+                      handleMenu={handleMenu}
+                    />
+                  }
+                ></Route>{" "}
+                <Route
+                  path="/saved-news"
+                  element={
+                    <ProtectedRoute isLoggedIn={isLoggedIn}>
+                      <Savedarticles handleMenu={handleMenu} />
+                    </ProtectedRoute>
+                  }
+                ></Route>
+              </Routes>
+            </>
+          }
         </div>
 
         {savedArticles === false && <>{/* <Footer /> */}</>}
@@ -174,7 +172,7 @@ function App() {
           />
         )}
       </CurrentUserContext.Provider>
-    </div>
+    </>
   );
 }
 

@@ -13,30 +13,33 @@ function Footer() {
       <div className="footer__container">
         <div className="footer__leftside">
           <Link to="/" className="footer__link">
-            Home
+            <nav>Home</nav>
           </Link>
-
-          <a
-            href="https://tripleten.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer__link"
-          >
-            TripleTen
-          </a>
+          <nav>
+            <a
+              href="https://tripleten.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__link"
+            >
+              TripleTen
+            </a>
+          </nav>
         </div>
         <div className="footer__rightside">
-          <a
-            href="https://github.com/Babitha-Vaithy"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={gitavatar}
-              alt="Git Avatar"
-              className="footer__gitavatar"
-            />
-          </a>
+          <nav>
+            <a
+              href="https://github.com/Babitha-Vaithy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={gitavatar}
+                alt="Git Avatar"
+                className="footer__gitavatar"
+              />
+            </a>
+          </nav>
           <img src={facebook} alt="" className="footer__facebook" />
         </div>
       </div>

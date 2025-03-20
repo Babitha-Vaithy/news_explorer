@@ -9,12 +9,7 @@ import { useLocation } from "react-router-dom";
 import menuicon from "../../assets/menu.svg";
 import menublack from "../../assets/menublack.svg";
 
-function Header({
-  handleSignInClick,
-  styleColor,
-  onSignOut,
-  handleMenu,
-}) {
+function Header({ handleSignInClick, styleColor, onSignOut, handleMenu }) {
   const currentUser = useContext(CurrentUserContext);
 
   const location = useLocation();
@@ -60,16 +55,16 @@ function Header({
           )}
 
           {currentUser && (
-            <div className="header__nav-link">
-              <div className="header__user-containter">
-                <Link
-                  to="/"
-                  className={
-                    location.pathname === "/"
-                      ? "header__link-selected"
-                      : "header__link"
-                  }
-                >
+            <div className="header__user-containter">
+              <Link
+                to="/"
+                className={
+                  location.pathname === "/"
+                    ? "header__link-selected"
+                    : "header__link"
+                }
+              >
+                <nav>
                   <p
                     className="header__home"
                     alt="Home"
@@ -77,15 +72,17 @@ function Header({
                   >
                     Home
                   </p>
-                </Link>
-                <Link
-                  to="/saved-news"
-                  className={
-                    location.pathname === "/saved-news"
-                      ? "header__link-saved"
-                      : "header__link"
-                  }
-                >
+                </nav>
+              </Link>
+              <Link
+                to="/saved-news"
+                className={
+                  location.pathname === "/saved-news"
+                    ? "header__link-saved"
+                    : "header__link"
+                }
+              >
+                <nav>
                   <p
                     className="header__saved"
                     alt="Saved Articles"
@@ -93,8 +90,10 @@ function Header({
                   >
                     Saved articles
                   </p>
-                </Link>
-                <Link to="/" className="header__link">
+                </nav>
+              </Link>
+              <Link to="/" className="header__link">
+                <nav>
                   <button
                     className="header__username"
                     style={{ color: styleColor, borderColor: styleColor }}
@@ -107,8 +106,8 @@ function Header({
                       onClick={onSignOut}
                     />
                   </button>
-                </Link>
-              </div>
+                </nav>
+              </Link>
             </div>
           )}
         </div>

@@ -57,10 +57,10 @@ function Savedarticles({ handleMenu }) {
         </p>
         <div className="saved__cards">
           {savedArticles &&
-            savedArticles.map((item) => {
+            savedArticles.map((item, index) => {
               {
                 return (
-                  <li className="saved__list">
+                  <li key={index} className="saved__list">
                     <img
                       src={item.urlToImage}
                       alt="Newscard Image"
