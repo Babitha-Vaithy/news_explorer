@@ -12,6 +12,8 @@ import Savedarticles from "../SavedArticles/SavedArticles.jsx";
 import SuccessModal from "../RegisterModal/SuccessModal.jsx";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import Menu from "../Menu/Menu.jsx";
+import Footer from "../Footer/Footer.jsx";
+import Header from "../Header/Header.jsx";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -101,41 +103,47 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="page">
       <CurrentUserContext.Provider value={currentUser}>
-        <div className="page">
-          {
-            <>
-              <Routes>
-                <Route
-                  path="/"
-                  element={
-                    <Main
-                      onSearch={onSearch}
-                      handleSignInClick={handleSignInClick}
-                      styleColor="white"
-                      handleSavedArticles={handleSavedArticles}
-                      loader={loader}
-                      search={search}
-                      onSaveCards={onSaveCards}
-                      onSignOut={onSignOut}
-                      handleMenu={handleMenu}
-                    />
-                  }
-                ></Route>{" "}
-                <Route
-                  path="/saved-news"
-                  element={
-                    <ProtectedRoute isLoggedIn={isLoggedIn}>
-                      <Savedarticles handleMenu={handleMenu} />
-                    </ProtectedRoute>
-                  }
-                ></Route>
-              </Routes>
-            </>
-          }
-        </div>
-
+        {
+          <div className="page__content">
+            <Header
+              handleSignInClick={handleSignInClick}
+              styleColor="white"
+              handleSavedArticles={handleSavedArticles}
+              onSignOut={onSignOut}
+              handleMenu={handleMenu}
+              onSearch={onSearch}
+            />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Main
+                    // onSearch={onSearch}
+                    // handleSignInClick={handleSignInClick}
+                    // styleColor="white"
+                    // handleSavedArticles={handleSavedArticles}
+                    loader={loader}
+                    search={search}
+                    onSaveCards={onSaveCards}
+                    // onSignOut={onSignOut}
+                    // handleMenu={handleMenu}
+                  />
+                }
+              ></Route>{" "}
+              <Route
+                path="/saved-news"
+                element={
+                  <ProtectedRoute isLoggedIn={isLoggedIn}>
+                    <Savedarticles handleMenu={handleMenu} />
+                  </ProtectedRoute>
+                }
+              ></Route>
+            </Routes>
+            <Footer />
+          </div>
+        }
         {savedArticles === false && <>{/* <Footer /> */}</>}
 
         {activeModal === "signUp" && (
@@ -172,7 +180,7 @@ function App() {
           />
         )}
       </CurrentUserContext.Provider>
-    </>
+    </div>
   );
 }
 

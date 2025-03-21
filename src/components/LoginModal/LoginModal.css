@@ -4,7 +4,7 @@
   background-color: rgba(230, 232, 235, 1);
   border-radius: 50px;
   border: none;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -19,7 +19,7 @@
 
 .email__error {
   max-width: 173px;
-  font-family: "Inter";
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 14.52px;

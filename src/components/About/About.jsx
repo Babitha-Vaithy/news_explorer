@@ -4,7 +4,7 @@ import about from "../../assets/about.svg";
 
 function About() {
   return (
-    <about className="about">
+    <div className="about">
       <img src={about} alt="About avatar" className="about__avatar" />
       <div className="about__container">
         <h1 className="about__title"> About the author</h1>
@@ -19,7 +19,7 @@ function About() {
           field but currently I&apos;m able to create a webpage on my own.
         </p>
       </div>
-    </about>
+    </div>
   );
 }
 

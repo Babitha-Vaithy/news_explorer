@@ -15,7 +15,7 @@
 .saved__name {
   margin-top: 40px;
   margin-bottom: 28px;
-  font-family: "Roboto";
+  font-family: "Roboto",Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -26,7 +26,7 @@
 
 .saved__title {
   width: 530px;
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 40px;
   line-height: 46px;
@@ -37,7 +37,7 @@
 }
 
 .saved__keywords {
-  font-family: "Roboto";
+  font-family: "Roboto",Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -47,7 +47,7 @@
 }
 
 .keywords {
-  font-family: "Roboto";
+  font-family: "Roboto",Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -89,7 +89,7 @@
 
 .saved__date {
   margin: 0 0 12px 24px;
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro",Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -100,7 +100,7 @@
 .saved__caption {
   width: 352px;
   margin: 0 24px 16px 24px;
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 26px;
   line-height: 30px;
@@ -110,7 +110,7 @@
 .saved__content {
   width: 352px;
   margin: 0 24px 18px 24px;
-  font-family: "Roboto";
+  font-family: "Roboto",Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -119,7 +119,7 @@
 }
 
 .saved__author {
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -131,7 +131,7 @@
   width: 124px;
   max-width: 100%;
   background-color: rgba(255, 255, 255, 1);
-  font-family: "Roboto";
+  font-family: "Roboto",Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 37px;
@@ -173,7 +173,7 @@
   position: absolute;
   margin-top: -264px;
   margin-left: 128px;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 14.06px;

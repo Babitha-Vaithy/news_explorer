@@ -1,17 +1,17 @@
-.page {
+.page__content {
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
 }
 
 @media screen and (max-width: 768px) {
-  .page {
+  .page__content {
     max-width: 768px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .page {
+  .page__content {
     max-width: 320px;
   }
 }

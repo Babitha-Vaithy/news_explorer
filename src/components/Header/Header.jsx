@@ -2,27 +2,37 @@ import { Link } from "react-router-dom";
 
 import "./Header.css";
 import { CurrentUserContext } from "../../Contexts/CurrentUserContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import usernameicon from "../../assets/username_icon.svg";
 import logout from "../../assets/logout.svg";
 import { useLocation } from "react-router-dom";
 import menuicon from "../../assets/menu.svg";
 import menublack from "../../assets/menublack.svg";
+import SearchForm from "../SearchForm/SearchForm";
 
-function Header({ handleSignInClick, styleColor, onSignOut, handleMenu }) {
+function Header({
+  handleSignInClick,
+  styleColor,
+  onSignOut,
+  handleMenu,
+  onSearch,
+  handleSavedArticles,
+}) {
   const currentUser = useContext(CurrentUserContext);
 
   const location = useLocation();
+  const [showSearchForm, setShowSearchForm] = useState(true);
 
   return (
     <header
-      className={styleColor == "white" ? "header" : "header__savedarticle"}
+      className={showSearchForm === true ? "header" : "header__savedarticle"}
     >
       <div id="headerMenu" className="header__menu">
         <Link to="/" className="header__link">
           <p
-            className="header__logo"
-            style={{ color: styleColor }}
+            className={`header__logo ${
+              showSearchForm == true ? "header__white" : "header__black"
+            }`}
             alt="Header Logo"
           >
             NewsExplorer
@@ -58,6 +68,7 @@ function Header({ handleSignInClick, styleColor, onSignOut, handleMenu }) {
             <div className="header__user-containter">
               <Link
                 to="/"
+                onClick={() => setShowSearchForm(true)}
                 className={
                   location.pathname === "/"
                     ? "header__link-selected"
@@ -66,9 +77,10 @@ function Header({ handleSignInClick, styleColor, onSignOut, handleMenu }) {
               >
                 <nav>
                   <p
-                    className="header__home"
+                    className={`header__home ${
+                      showSearchForm == true ? "header__white" : "header__black"
+                    }`}
                     alt="Home"
-                    style={{ color: styleColor }}
                   >
                     Home
                   </p>
@@ -76,6 +88,7 @@ function Header({ handleSignInClick, styleColor, onSignOut, handleMenu }) {
               </Link>
               <Link
                 to="/saved-news"
+                onClick={() => setShowSearchForm(false)}
                 className={
                   location.pathname === "/saved-news"
                     ? "header__link-saved"
@@ -84,9 +97,10 @@ function Header({ handleSignInClick, styleColor, onSignOut, handleMenu }) {
               >
                 <nav>
                   <p
-                    className="header__saved"
+                    className={`header__saved ${
+                      showSearchForm == true ? "header__white" : "header__black"
+                    }`}
                     alt="Saved Articles"
-                    style={{ color: styleColor }}
                   >
                     Saved articles
                   </p>
@@ -95,12 +109,14 @@ function Header({ handleSignInClick, styleColor, onSignOut, handleMenu }) {
               <Link to="/" className="header__link">
                 <nav>
                   <button
-                    className="header__username"
-                    style={{ color: styleColor, borderColor: styleColor }}
+                    className={`header__username ${
+                      showSearchForm == true ? "header__white" : "header__black header__border" 
+                    }`}
+                    // style={{ color: styleColor, borderColor: styleColor }}
                   >
                     {currentUser.name}
                     <img
-                      src={styleColor == "white" ? usernameicon : logout}
+                      src={showSearchForm == true ? usernameicon : logout}
                       alt="Username Icon"
                       className="header__username-icon"
                       onClick={onSignOut}
@@ -120,6 +136,17 @@ function Header({ handleSignInClick, styleColor, onSignOut, handleMenu }) {
           className="header__menuicon"
         />
       </div>
+      {showSearchForm === true && (
+        <div className="header__searchlist">
+          <h1 className="header__title">What&apos;s going on in the world?</h1>
+          <p className="header__text">
+            Find the latest news on any topic and save them in your personal
+            account.
+          </p>
+
+          <SearchForm onSearch={onSearch} />
+        </div>
+      )}
     </header>
   );
 }

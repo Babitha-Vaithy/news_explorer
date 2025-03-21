@@ -1,15 +1,12 @@
-.newscard {
+.newscard__container {
+  display: flex;
+  flex-direction: column;
   max-width: 1440px;
   width: 100%;
   background-color: rgba(245, 246, 247, 1);
 }
 
-.newscard__container {
-  display: flex;
-  flex-direction: column;
-}
-
-.newscard__cards {
+.newscard__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -21,7 +18,7 @@
 .newscard__title {
   width: 712px;
   margin: 80px 0 64px 104px;
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 40px;
   line-height: 46px;
@@ -35,7 +32,7 @@
   margin-top: 64px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 80px;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -50,7 +47,7 @@
   background-color: rgba(232, 232, 232, 1);
 }
 
-.newscard__list {
+.newscard__items {
   width: 400px;
   margin-right: 16px;
   list-style-type: none;
@@ -70,7 +67,7 @@
 
 .newscard__date {
   margin: 0 0 12px 24px;
-  font-family: "Source Sans Pro";
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -81,7 +78,7 @@
 .newscard__caption {
   width: 352px;
   margin: 0 24px 16px 24px;
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 26px;
   line-height: 30px;
@@ -91,7 +88,7 @@
 .newscard__content {
   width: 352px;
   margin: 0 24px 18px 24px;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -100,7 +97,7 @@
 }
 
 .newscard__name {
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -149,7 +146,7 @@
   position: absolute;
   top: 15px;
   left: 159px;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 12px;
   line-height: 14.06px;
@@ -165,11 +162,11 @@
 }
 
 @media screen and (max-width: 768px) {
-  .newscard {
+  .newscard__container {
     max-width: 768px;
   }
 
-  .newscard__cards {
+  .newscard__list {
     margin-left: 40px;
     gap: 8px;
   }
@@ -189,7 +186,7 @@
     margin-left: 272px;
   }
 
-  .newscard__list {
+  .newscard__items {
     width: 224px;
     margin-right: 8px;
     height: 420px;
@@ -244,7 +241,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  .newscard {
+  .newscard__container {
     max-width: 320px;
   }
 
@@ -259,13 +256,13 @@
     margin: 16px 16px 24px 16px;
   }
 
-  .newscard__list {
+  .newscard__items {
     width: 288px;
     margin-right: 16px;
     height: 450px;
   }
 
-  .newscard__cards {
+  .newscard__list {
     margin-left: 16px;
   }
 

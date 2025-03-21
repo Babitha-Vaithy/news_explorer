@@ -1,6 +1,4 @@
 import "./SavedArticles.css";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
 import { useEffect, useState } from "react";
 import { getItems } from "../../utils/auth";
 
@@ -41,11 +39,11 @@ function Savedarticles({ handleMenu }) {
 
   return (
     <div className="savedarticles">
-      <Header
+      {/* <Header
         className="Header__saved-page"
         styleColor="black"
         handleMenu={handleMenu}
-      />
+      /> */}
       <div className="saved__container">
         <p className="saved__name">Saved articles</p>
         <h1 className="saved__title">
@@ -87,7 +85,7 @@ function Savedarticles({ handleMenu }) {
             })}
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

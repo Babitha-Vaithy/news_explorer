@@ -2,7 +2,7 @@
   width: 315px;
   margin-left: 36px;
   margin-top: 43px;
-  font-family: "Roboto";
+  font-family: "Roboto",Arial, Helvetica, sans-serif;
   font-weight: 900;
   font-size: 24px;
   line-height: 28.13px;
@@ -21,7 +21,7 @@
   max-width: 100%;
   margin-bottom: 51px;
   margin-left: 36px;
-  font-family: "Inter";
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.78px;

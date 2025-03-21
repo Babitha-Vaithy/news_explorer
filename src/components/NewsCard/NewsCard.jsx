@@ -45,43 +45,41 @@ function NewsCard({ search, onSaveCards }) {
   return (
     <>
       {search && search.length > 0 && (
-        <div className="newscard">
-          <div className="newscard__container">
-            <h1 className="newscard__title">Search results</h1>
-            <ul className="newscard__cards">
-              {items &&
-                items.map((item) => {
-                  return (
-                    <li key={item.id} className="newscard__list">
-                      <img
-                        src={item.urlToImage}
-                        alt="Newscard Image"
-                        className="newscard__image"
+        <div className="newscard__container">
+          <h1 className="newscard__title">Search results</h1>
+          <ul className="newscard__list">
+            {items &&
+              items.map((item) => {
+                return (
+                  <li key={item.id} className="newscard__items">
+                    <img
+                      src={item.urlToImage}
+                      alt="Newscard Image"
+                      className="newscard__image"
+                    />
+                    <div className="savedbtn__container">
+                      <button
+                        className={
+                          item.title === title ? style : "newscard__savebtn"
+                        }
+                        onClick={(e) => saveCards(e, item)}
                       />
-                      <div className="savedbtn__container">
-                        <button
-                          className={
-                            item.title === title ? style : "newscard__savebtn"
-                          }
-                          onClick={(e) => saveCards(e, item)}
-                        />
 
-                        <h3 className="hover__image-text">
-                          Sign in to save articles
-                        </h3>
-                      </div>
-                      <p className="newscard__date">
-                        {formatDate(item.publishedAt)}
-                      </p>
+                      <h3 className="hover__image-text">
+                        Sign in to save articles
+                      </h3>
+                    </div>
+                    <p className="newscard__date">
+                      {formatDate(item.publishedAt)}
+                    </p>
 
-                      <h3 className="newscard__caption">{item.title}</h3>
-                      <p className="newscard__content">{item.description}</p>
-                      <p className="newscard__name">{item.author}</p>
-                    </li>
-                  );
-                })}
-            </ul>
-          </div>
+                    <h3 className="newscard__caption">{item.title}</h3>
+                    <p className="newscard__content">{item.description}</p>
+                    <p className="newscard__name">{item.author}</p>
+                  </li>
+                );
+              })}
+          </ul>
 
           {showMore && (
             <button
