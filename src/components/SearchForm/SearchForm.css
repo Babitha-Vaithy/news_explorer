@@ -58,6 +58,7 @@ button[type="submit"] {
 @media screen and (max-width: 768px) {
   .search__form {
     padding-bottom: 48px;
+    margin-left: 98px;
   }
 
   .searchform__input {
@@ -71,9 +72,45 @@ button[type="submit"] {
   }
 }
 
+@media screen and (max-width: 760px) {
+  .search__form {
+    margin-left: 7px;
+  }
+}
+
+@media screen and (max-width: 752px) {
+  .search__form {
+    margin-left: 52px;
+  }
+}
+
+@media screen and (max-width: 763px) {
+  .search__form {
+    padding-left: 100px;
+  }
+}
+
 @media screen and (max-width: 759px) {
   .search__form {
     padding-left: 61px;
+  }
+}
+
+@media screen and (max-width: 584px) {
+  .search__form {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 566px) {
+  .search__form {
+    margin-left: 124px;
+  }
+}
+
+@media screen and (max-width: 537px) {
+  .search__form {
+    margin-left: 99px;
   }
 }
 
@@ -97,10 +134,32 @@ button[type="submit"] {
   }
 }
 
+@media screen and (max-width: 566px) {
+  .search__form {
+    padding-bottom: 32px;
+    padding-left: 0px;
+    margin-left: auto;
+  }
+
+  .searchform__input {
+    width: 288px;
+    height: 56px;
+    margin: 0 auto 16px auto;
+  }
+
+  .searchform__button {
+    width: 288px;
+    height: 56px;
+    top: 77px;
+    margin: 0 auto 32px auto;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .search__form {
     padding-bottom: 32px;
     padding-left: 0px;
+    margin-left: auto;
   }
 
   .searchform__input {
