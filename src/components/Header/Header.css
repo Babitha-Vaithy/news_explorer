@@ -474,6 +474,22 @@
   }
 }
 
+@media screen and (max-width: 599px) {
+  .header__title {
+    margin: 81px 0 32px 123px;
+  }
+}
+
+@media screen and (max-width: 584px) {
+  .header__title {
+    margin: 81px 0 32px 101px;
+  }
+
+  .header__text {
+    margin: 0 0 48px 106px;
+  }
+}
+
 @media screen and (max-width: 507px) {
   .header__text {
     margin: 0 0 46px 112px;
@@ -536,11 +552,11 @@
 
 @media screen and (max-width: 331px) {
   .header__text {
-    margin: 0 16px 94px 16px;
+    margin: 0 auto 94px auto;
   }
 
   .header__title {
-    margin: 30px 16px 16px 19px;
+    margin: 30px auto 16px auto;
   }
 }
 

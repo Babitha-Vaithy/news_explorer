@@ -23,24 +23,24 @@ function Header({
   const location = useLocation();
   const value = styleColor === "black" ? false : true;
   const [showSearchForm, setShowSearchForm] = useState(value);
-  console.log(location.pathname)
+  console.log(location.pathname);
 
   return (
     <header
-      className={location.pathname === '/' ? "header" : "header__savedarticle"}
+      className={location.pathname === "/" ? "header" : "header__savedarticle"}
     >
       <div id="headerMenu" className="header__menu">
         <Link to="/" className="header__link">
           <p
             className={`header__logo ${
-              location.pathname === '/' ? "header__white" : "header__black"
+              location.pathname === "/" ? "header__white" : "header__black"
             }`}
             alt="Header Logo"
           >
             NewsExplorer
           </p>
         </Link>
-        {showSavedArticles === true && (
+        {location.pathname === "/" && (
           <div id="headerContainer" className="header__container">
             {!currentUser && (
               <Link
@@ -80,7 +80,8 @@ function Header({
                   <nav>
                     <p
                       className={`header__home ${
-                        showSearchForm == true
+                        // showSearchForm == true
+                        location.pathname === "/"
                           ? "header__white"
                           : "header__black"
                       }`}
@@ -102,7 +103,7 @@ function Header({
                   <nav>
                     <p
                       className={`header__saved ${
-                        showSearchForm == true
+                        location.pathname === "/"
                           ? "header__white"
                           : "header__black"
                       }`}
@@ -116,14 +117,15 @@ function Header({
                   <nav>
                     <button
                       className={`header__username ${
-                        showSearchForm == true
+                        // showSearchForm == true
+                        location.pathname === "/"
                           ? "header__white"
                           : "header__black header__border"
                       }`}
                     >
                       {currentUser.name}
                       <img
-                        src={showSearchForm == true ? usernameicon : logout}
+                        src={location.pathname === "/" ? usernameicon : logout}
                         alt="Username Icon"
                         className="header__username-icon"
                         onClick={onSignOut}
@@ -143,7 +145,7 @@ function Header({
           className="header__menuicon"
         />
       </div>
-      {location.pathname === '/' && (
+      {location.pathname === "/" && (
         <div className="header__searchlist">
           <h1 className="header__title">What&apos;s going on in the world?</h1>
           <p className="header__text">

@@ -114,6 +114,18 @@
   }
 }
 
+@media screen and (max-width: 622px) {
+  .about__description {
+    margin: 16px 10px 96px auto;
+  }
+}
+
+@media screen and (max-width: 598px) {
+  .about__description {
+    margin: 16px 15px 96px 10px;
+  }
+}
+
 @media screen and (max-width: 566px) {
   .about {
     flex-direction: column;
