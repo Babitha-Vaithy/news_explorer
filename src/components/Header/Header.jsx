@@ -17,13 +17,11 @@ function Header({
   handleMenu,
   onSearch,
   showSavedArticles,
+  handleSavedArticleColor,
 }) {
   const currentUser = useContext(CurrentUserContext);
 
   const location = useLocation();
-  const value = styleColor === "black" ? false : true;
-  const [showSearchForm, setShowSearchForm] = useState(value);
-  console.log(location.pathname);
 
   return (
     <header
@@ -40,103 +38,101 @@ function Header({
             NewsExplorer
           </p>
         </Link>
-        {location.pathname === "/" && (
-          <div id="headerContainer" className="header__container">
-            {!currentUser && (
+        <div id="headerContainer" className="header__container">
+          {!currentUser && (
+            <Link
+              to="/"
+              className={
+                location.pathname === "/"
+                  ? "header__link-selected"
+                  : "header__link"
+              }
+            >
+              <p className="header__home" alt="Home">
+                Home
+              </p>
+            </Link>
+          )}
+          {!currentUser && (
+            <button
+              onClick={handleSignInClick}
+              type="button"
+              className="header__signin"
+            >
+              Sign in
+            </button>
+          )}
+
+          {currentUser && (
+            <div className="header__user-containter">
               <Link
                 to="/"
+                
                 className={
                   location.pathname === "/"
                     ? "header__link-selected"
                     : "header__link"
                 }
               >
-                <p className="header__home" alt="Home">
-                  Home
-                </p>
+                <nav>
+                  <p
+                    className={`header__home ${
+                      // showSearchForm == true
+                      location.pathname === "/"
+                        ? "header__white"
+                        : "header__black"
+                    }`}
+                    alt="Home"
+                  >
+                    Home
+                  </p>
+                </nav>
               </Link>
-            )}
-            {!currentUser && (
-              <button
-                onClick={handleSignInClick}
-                type="button"
-                className="header__signin"
+              <Link
+                to="/saved-news"
+                className={
+                  location.pathname === "/saved-news"
+                    ? "header__link-saved"
+                    : "header__link"
+                }
               >
-                Sign in
-              </button>
-            )}
+                <nav>
+                  <p
+                    className={`header__saved ${
+                      location.pathname === "/"
+                        ? "header__white"
+                        : "header__black"
+                    }`}
+                    alt="Saved Articles"
+                  >
+                    Saved articles
+                  </p>
+                </nav>
+              </Link>
+              <Link to="/" className="header__link">
+                <nav>
+                  <button
+                    className={`header__username ${
+                      // showSearchForm == true
+                      location.pathname === "/"
+                        ? "header__white"
+                        : "header__black header__border"
+                    }`}
+                  >
+                    {currentUser.name}
+                    <img
+                      src={location.pathname === "/" ? usernameicon : logout}
+                      alt="Username Icon"
+                      className="header__username-icon"
+                      onClick={onSignOut}
+                    />
+                  </button>
+                </nav>
+              </Link>
+            </div>
+          )}
+        </div>
 
-            {currentUser && (
-              <div className="header__user-containter">
-                <Link
-                  to="/"
-                  onClick={() => setShowSearchForm(true)}
-                  className={
-                    location.pathname === "/"
-                      ? "header__link-selected"
-                      : "header__link"
-                  }
-                >
-                  <nav>
-                    <p
-                      className={`header__home ${
-                        // showSearchForm == true
-                        location.pathname === "/"
-                          ? "header__white"
-                          : "header__black"
-                      }`}
-                      alt="Home"
-                    >
-                      Home
-                    </p>
-                  </nav>
-                </Link>
-                <Link
-                  to="/saved-news"
-                  onClick={() => setShowSearchForm(false)}
-                  className={
-                    location.pathname === "/saved-news"
-                      ? "header__link-saved"
-                      : "header__link"
-                  }
-                >
-                  <nav>
-                    <p
-                      className={`header__saved ${
-                        location.pathname === "/"
-                          ? "header__white"
-                          : "header__black"
-                      }`}
-                      alt="Saved Articles"
-                    >
-                      Saved articles
-                    </p>
-                  </nav>
-                </Link>
-                <Link to="/" className="header__link">
-                  <nav>
-                    <button
-                      className={`header__username ${
-                        // showSearchForm == true
-                        location.pathname === "/"
-                          ? "header__white"
-                          : "header__black header__border"
-                      }`}
-                    >
-                      {currentUser.name}
-                      <img
-                        src={location.pathname === "/" ? usernameicon : logout}
-                        alt="Username Icon"
-                        className="header__username-icon"
-                        onClick={onSignOut}
-                      />
-                    </button>
-                  </nav>
-                </Link>
-              </div>
-            )}
-          </div>
-        )}
         <img
           src={styleColor === "white" ? menuicon : menublack}
           alt="Menu Icon"

@@ -169,11 +169,11 @@
 
   .about__title {
     max-width: 288px;
-    margin: 0 65px 16px auto;
+    margin: 0 46px 16px 16px;
   }
 
   .about__description {
     max-width: 288px;
-    margin: 0 auto 128px auto;
+    margin: 0 0 128px auto;
   }
 }

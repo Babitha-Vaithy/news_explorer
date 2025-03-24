@@ -14,13 +14,18 @@ function Menu({
   onSignOut,
   handleSignInClick,
   handleClickSavedArticles,
+  handleSavedArticleColor,
 }) {
   const currentUser = useContext(CurrentUserContext);
+  const handleMenuColor = () => {
+    handleSavedArticleColor();
+    closeActiveModal();
+  };
   return (
     <div className={`menu ${isOpen === true && "menu_opened"}`}>
       <div className="menu__container">
         <div className="menu__header">
-          <Link to="/" onClick={closeActiveModal} className="menu__link">
+          <Link to="/" onClick={handleMenuColor} className="menu__link">
             <nav>
               <p
                 className="menu__logo"
@@ -44,7 +49,7 @@ function Menu({
           {!currentUser && (
             <Link
               to="/"
-              onClick={closeActiveModal}
+              onClick={handleMenuColor}
               className={
                 location.pathname === "/" ? "menu__link-selected" : "menu__link"
               }
@@ -70,7 +75,7 @@ function Menu({
             <div className="menu__content">
               <Link
                 to="/"
-                onClick={closeActiveModal}
+                onClick={handleMenuColor}
                 className={
                   location.pathname === "/"
                     ? "menu__link-selected"
@@ -107,6 +112,7 @@ function Menu({
                   <button
                     className="menu__username"
                     style={{ color: styleColor, borderColor: styleColor }}
+                    onClick={handleMenuColor}
                   >
                     {currentUser.name}
                     <img
