@@ -23,16 +23,17 @@ function Header({
   const location = useLocation();
   const value = styleColor === "black" ? false : true;
   const [showSearchForm, setShowSearchForm] = useState(value);
+  console.log(location.pathname)
 
   return (
     <header
-      className={showSearchForm === true ? "header" : "header__savedarticle"}
+      className={location.pathname === '/' ? "header" : "header__savedarticle"}
     >
       <div id="headerMenu" className="header__menu">
         <Link to="/" className="header__link">
           <p
             className={`header__logo ${
-              showSearchForm === true ? "header__white" : "header__black"
+              location.pathname === '/' ? "header__white" : "header__black"
             }`}
             alt="Header Logo"
           >
@@ -119,7 +120,6 @@ function Header({
                           ? "header__white"
                           : "header__black header__border"
                       }`}
-                      // style={{ color: styleColor, borderColor: styleColor }}
                     >
                       {currentUser.name}
                       <img
@@ -143,7 +143,7 @@ function Header({
           className="header__menuicon"
         />
       </div>
-      {showSearchForm === true && showSavedArticles === true && (
+      {location.pathname === '/' && (
         <div className="header__searchlist">
           <h1 className="header__title">What&apos;s going on in the world?</h1>
           <p className="header__text">

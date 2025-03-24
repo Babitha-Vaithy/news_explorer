@@ -89,6 +89,12 @@
   }
 }
 
+@media screen and (max-width: 677px) {
+  .footer__leftside {
+    margin-right: 21px;
+  }
+}
+
 @media screen and (max-width: 921px) {
   .footer__container {
     display: flex;

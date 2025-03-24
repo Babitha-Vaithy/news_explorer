@@ -78,12 +78,18 @@
 @media screen and (max-width: 936px) {
   .about__description {
     max-width: 288px;
-    margin: 0 auto 128px 0;
+    margin: 0 26px 128px 0;
   }
 
   .about__title {
     margin: 40px auto 16px 0;
     font-size: 33px;
+  }
+}
+
+@media screen and (max-width: 957px) {
+  .about__avatar {
+    margin: 80px auto 80px auto;
   }
 }
 
