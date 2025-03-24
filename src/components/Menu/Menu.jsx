@@ -1,7 +1,7 @@
 import "./Menu.css";
 
 import { CurrentUserContext } from "../../Contexts/CurrentUserContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import closebutton from "../../assets/closebutton.svg";
 import usernameicon from "../../assets/username_icon.svg";
 import logout from "../../assets/logout.svg";
@@ -13,6 +13,7 @@ function Menu({
   closeActiveModal,
   onSignOut,
   handleSignInClick,
+  handleClickSavedArticles,
 }) {
   const currentUser = useContext(CurrentUserContext);
   return (
@@ -88,7 +89,7 @@ function Menu({
               </Link>
               <Link
                 to="/saved-news"
-                onClick={closeActiveModal}
+                onClick={handleClickSavedArticles}
                 className={
                   location.pathname === "/saved-news"
                     ? "menu__link-saved"

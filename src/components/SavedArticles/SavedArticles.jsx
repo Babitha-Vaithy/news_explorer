@@ -39,53 +39,49 @@ function Savedarticles({ handleMenu }) {
 
   return (
     <div className="savedarticles">
-      {/* <Header
-        className="Header__saved-page"
-        styleColor="black"
-        handleMenu={handleMenu}
-      /> */}
-      <div className="saved__container">
-        <p className="saved__name">Saved articles</p>
-        <h1 className="saved__title">
+      <div className="savedarticles__container">
+        <p className="savedarticles__name">Saved articles</p>
+        <h1 className="savedarticles__title">
           Elise, you have {savedArticles && savedArticles.length} saved articles
         </h1>
-        <p className="saved__keywords">
+        <p className="savedarticles__keywords">
           By keywords:
-          <span className="keywords">{keyword}</span>;
+          <span className="savedarticles__keyword">{keyword}</span>;
         </p>
-        <div className="saved__cards">
+        <ul className="savedarticles__cards">
           {savedArticles &&
             savedArticles.map((item, index) => {
               {
                 return (
-                  <li key={index} className="saved__list">
+                  <li key={index} className="savedarticles__card">
                     <img
                       src={item.urlToImage}
                       alt="Newscard Image"
-                      className="saved__image"
+                      className="savedarticles__image"
                     />
-                    <h2 className="keywords__image-text">{item.keyword}</h2>
-                    <div className="delete__container">
+                    <h2 className="savedarticles__imagetext">{item.keyword}</h2>
+                    <div className="savedarticles__deletecontainer">
                       <button
-                        className="saved__deletebtn"
+                        className="savedarticles__deletebtn"
                         onClick={() => onDelete(item._id)}
                       />
 
-                      <h3 className="hover__text">Remove from saved</h3>
+                      <h3 className="savedarticles__hovertext">
+                        Remove from saved
+                      </h3>
                     </div>
 
-                    <p className="saved__date">{item.publishedAt}</p>
+                    <p className="savedarticles__date">{item.publishedAt}</p>
 
-                    <h3 className="saved__caption">{item.title}</h3>
-                    <p className="saved__content">{item.description}</p>
-                    <p className="saved__author">{item.author}</p>
+                    <h3 className="savedarticles__caption">{item.title}</h3>
+                    <p className="savedarticles__content">{item.description}</p>
+                    <p className="savedarticles__author">{item.author}</p>
                   </li>
                 );
               }
             })}
-        </div>
+        </ul>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

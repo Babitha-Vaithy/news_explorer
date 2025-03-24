@@ -22,6 +22,7 @@ function App() {
   const [search, setSearch] = useState(null);
   const [loader, setLoader] = useState(null);
   const [savedArticles, setSavedArticles] = useState(false);
+  const [showSavedArticles, setShowSavedArticles] = useState(true);
 
   const handleSignupClick = () => {
     setActiveModal("signUp");
@@ -40,6 +41,11 @@ function App() {
 
   const handleSavedArticles = () => {
     setSavedArticles(true);
+  };
+
+  const handleClickSavedArticles = () => {
+    setShowSavedArticles(false);
+    closeActiveModal();
   };
 
   const onSignIn = ({ email, password }) => {
@@ -109,11 +115,12 @@ function App() {
           <div className="page__content">
             <Header
               handleSignInClick={handleSignInClick}
-              styleColor="white"
+              styleColor={showSavedArticles === false ? "black" : "white"}
               handleSavedArticles={handleSavedArticles}
               onSignOut={onSignOut}
               handleMenu={handleMenu}
               onSearch={onSearch}
+              showSavedArticles={showSavedArticles}
             />
             <Routes>
               <Route
@@ -158,8 +165,9 @@ function App() {
           <Menu
             isOpen={activeModal === "menu"}
             styleColor="white"
-            closeActiveModal={closeActiveModal}
+            handleClickSavedArticles={handleClickSavedArticles}
             onSignOut={onSignOut}
+            closeActiveModal={closeActiveModal}
             handleSignInClick={handleSignInClick}
           />
         )}

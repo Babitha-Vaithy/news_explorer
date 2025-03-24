@@ -14,10 +14,10 @@ const SuccessModal = ({ isOpen, closeActiveModal, handleSignInClick }) => {
           <img
             src={closebutton}
             alt="Close Btn"
-            className="success__close_btn"
+            className="success__closebtn"
           />
         </button>
-        <div className="signin__container">
+        <div className="success__container">
           <button onClick={handleSignInClick} className="success__sigin">
             Sign in
           </button>

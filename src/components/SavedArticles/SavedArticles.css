@@ -12,10 +12,10 @@
   box-shadow: 0px -1px 0px 0px rgba(209, 210, 214, 1) inset;
 }
 
-.saved__name {
+.savedarticles__name {
   margin-top: 40px;
   margin-bottom: 28px;
-  font-family: "Roboto",Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -24,9 +24,9 @@
   margin-left: 102px;
 }
 
-.saved__title {
+.savedarticles__title {
   width: 530px;
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 40px;
   line-height: 46px;
@@ -36,8 +36,8 @@
   margin-left: 102px;
 }
 
-.saved__keywords {
-  font-family: "Roboto",Arial, Helvetica, sans-serif;
+.savedarticles__keywords {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -46,29 +46,29 @@
   margin-bottom: 56px;
 }
 
-.keywords {
-  font-family: "Roboto",Arial, Helvetica, sans-serif;
+.savedarticles__keyword {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0px;
 }
 
-.saved__cards {
+.savedarticles__cards {
   max-width: 1400px;
   list-style-type: none;
   background-color: rgba(245, 246, 247, 1);
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
   padding-bottom: 62px;
   padding-top: 62px;
-  padding-left: 102px;
+  padding-left: 0;
 }
 
-.saved__list {
+.savedarticles__card {
   width: 400px;
   margin-right: 16px;
   list-style-type: none;
@@ -78,7 +78,7 @@
   position: relative;
 }
 
-.saved__image {
+.savedarticles__image {
   width: 400px;
   height: 272px;
   min-height: 272px;
@@ -87,9 +87,9 @@
   border-top-left-radius: 15px;
 }
 
-.saved__date {
+.savedarticles__date {
   margin: 0 0 12px 24px;
-  font-family: "Source Sans Pro",Arial, Helvetica, sans-serif;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -97,20 +97,20 @@
   color: rgba(182, 188, 191, 1);
 }
 
-.saved__caption {
+.savedarticles__caption {
   width: 352px;
   margin: 0 24px 16px 24px;
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 26px;
   line-height: 30px;
   color: rgba(26, 27, 34, 1);
 }
 
-.saved__content {
+.savedarticles__content {
   width: 352px;
   margin: 0 24px 18px 24px;
-  font-family: "Roboto",Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -118,8 +118,8 @@
   color: rgba(26, 27, 34, 1);
 }
 
-.saved__author {
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+.savedarticles__author {
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -127,11 +127,11 @@
   margin: 0 0 24px 24px;
 }
 
-.keywords__image-text {
+.savedarticles__imagetext {
   width: 124px;
   max-width: 100%;
   background-color: rgba(255, 255, 255, 1);
-  font-family: "Roboto",Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 37px;
@@ -144,11 +144,11 @@
   display: block;
 }
 
-.delete__container {
+.savedarticles__deletecontainer {
   position: absolute;
 }
 
-.saved__deletebtn {
+.savedarticles__deletebtn {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -159,14 +159,14 @@
   border-radius: 10px;
 }
 
-.saved__deletebtn:hover {
+.savedarticles__deletebtn:hover {
   border: none;
   border-radius: 8px;
   background: url("../../assets/deletebtn_hover.svg");
   cursor: pointer;
 }
 
-.hover__text {
+.savedarticles__hovertext {
   width: 159px;
   border-radius: 10px;
   display: none;
@@ -184,52 +184,37 @@
   padding: 11px 20px 11px 20px;
 }
 
-.delete__container:hover .hover__text {
+.savedarticles__deletecontainer:hover .savedarticles__hovertext {
   display: block;
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-  .saved__name {
-    font-size: 14px;
-    margin: 24px 0 16px 40px;
-  }
-
-  .saved__title {
-    width: 336px;
-    font-size: 30px;
-    line-height: 34px;
-    margin: 0 0 16px 40px;
-  }
-
-  .saved__keywords {
-    margin: 0 0 32px 40px;
-  }
-
-  .saved__cards {
-    max-width: 768px;
+@media screen and (max-width: 906px) {
+  .savedarticles__cards {
+    max-width: 906px;
     padding: 32px 0 32px 31px;
     gap: 8px;
+    margin: 0;
   }
 
-  .saved__list {
+  .savedarticles__card {
     width: 224px;
     margin-right: 8px;
     height: 420px;
   }
 
-  .saved__image {
+  .savedarticles__image {
     width: 224px;
     height: 150px;
     min-height: 150px;
     margin-bottom: 20px;
   }
 
-  .saved__date {
+  .savedarticles__date {
     margin: 0 0 8px 15px;
   }
 
-  .saved__caption {
+  .savedarticles__caption {
     width: 192px;
     height: 72px;
     font-size: 22px;
@@ -238,31 +223,111 @@
     overflow: hidden;
   }
 
-  .saved__content {
+  .savedarticles__content {
     width: 192px;
     margin: 0 16px 12px 16px;
     height: 88px;
     overflow: hidden;
   }
 
-  .saved__author {
+  .savedarticles__author {
     width: 192px;
     margin: 0 16px 16px 16px;
   }
 
-  .saved__deletebtn {
+  .savedarticles__deletebtn {
     border-radius: 8px;
     top: -162px;
     left: 175px;
   }
 
-  .keywords__image-text {
+  .savedarticles__imagetext {
     line-height: 24px;
     top: 8px;
     left: 8px;
   }
 
-  .hover__text {
+  .savedarticles__hovertext {
+    width: 107px;
+    top: 103px;
+    left: -105px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .savedarticles__name {
+    font-size: 14px;
+    margin: 24px 0 16px 40px;
+  }
+
+  .savedarticles__title {
+    width: 336px;
+    font-size: 30px;
+    line-height: 34px;
+    margin: 0 0 16px 40px;
+  }
+
+  .savedarticles__keywords {
+    margin: 0 0 32px 40px;
+  }
+
+  .savedarticles__cards {
+    max-width: 768px;
+    padding: 32px 0 32px 31px;
+    gap: 8px;
+  }
+
+  .savedarticles__card {
+    width: 224px;
+    margin-right: 8px;
+    height: 420px;
+  }
+
+  .savedarticles__image {
+    width: 224px;
+    height: 150px;
+    min-height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .savedarticles__date {
+    margin: 0 0 8px 15px;
+  }
+
+  .savedarticles__caption {
+    width: 192px;
+    height: 72px;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0 16px 10px 16px;
+    overflow: hidden;
+  }
+
+  .savedarticles__content {
+    width: 192px;
+    margin: 0 16px 12px 16px;
+    height: 88px;
+    overflow: hidden;
+  }
+
+  .savedarticles__author {
+    width: 192px;
+    margin: 0 16px 16px 16px;
+  }
+
+  .savedarticles__deletebtn {
+    border-radius: 8px;
+    top: -162px;
+    left: 175px;
+  }
+
+  .savedarticles__imagetext {
+    line-height: 24px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .savedarticles__hovertext {
     width: 107px;
     top: 103px;
     left: -105px;
@@ -270,45 +335,45 @@
 }
 
 @media screen and (max-width: 320px) {
-  .saved__name {
+  .savedarticles__name {
     font-size: 12px;
     margin: 8px 0 16px 16px;
   }
 
-  .saved__title {
+  .savedarticles__title {
     width: 288px;
     font-size: 30px;
     line-height: 34px;
     margin: 0 0 50px 16px;
   }
 
-  .saved__keywords {
+  .savedarticles__keywords {
     margin: 0 17px 32px 15px;
   }
 
-  .saved__cards {
+  .savedarticles__cards {
     max-width: 320px;
     padding: 24px 16px 12px 16px;
   }
 
-  .saved__list {
+  .savedarticles__card {
     width: 288px;
-    margin-right: 16px;
+    margin: 0 16px 0 16px;
     height: 440px;
   }
 
-  .saved__image {
+  .savedarticles__image {
     width: 288px;
     height: 196px;
     min-height: 196px;
     margin-bottom: 16px;
   }
 
-  .saved__date {
+  .savedarticles__date {
     margin: 0 0 10px 16px;
   }
 
-  .saved__caption {
+  .savedarticles__caption {
     width: 256px;
     height: 48px;
     font-size: 22px;
@@ -317,31 +382,31 @@
     overflow: hidden;
   }
 
-  .saved__content {
+  .savedarticles__content {
     width: 256px;
     margin: 0 16px 30px 16px;
     height: 66px;
     overflow: hidden;
   }
 
-  .saved__author {
+  .savedarticles__author {
     width: 256px;
     margin: 0 16px 16px 16px;
   }
 
-  .saved__deletebtn {
+  .savedarticles__deletebtn {
     border-radius: 8px;
     top: -207px;
     left: 238px;
   }
 
-  .keywords__image-text {
+  .savedarticles__imagetext {
     line-height: 24px;
     top: 8px;
     left: 13px;
   }
 
-  .hover__text {
+  .savedarticles__hovertext {
     width: 107px;
     top: 59px;
     left: -46px;
