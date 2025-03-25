@@ -125,22 +125,15 @@ function App() {
               handleMenu={handleMenu}
               onSearch={onSearch}
               showSavedArticles={showSavedArticles}
-              
             />
             <Routes>
               <Route
                 path="/"
                 element={
                   <Main
-                    // onSearch={onSearch}
-                    // handleSignInClick={handleSignInClick}
-                    // styleColor="white"
-                    // handleSavedArticles={handleSavedArticles}
                     loader={loader}
                     search={search}
                     onSaveCards={onSaveCards}
-                    // onSignOut={onSignOut}
-                    // handleMenu={handleMenu}
                   />
                 }
               ></Route>{" "}
@@ -156,7 +149,6 @@ function App() {
             <Footer />
           </div>
         }
-        {savedArticles === false && <>{/* <Footer /> */}</>}
 
         {activeModal === "signUp" && (
           <RegisterModal

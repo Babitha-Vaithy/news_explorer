@@ -74,7 +74,6 @@ function Header({
                 <nav>
                   <p
                     className={`header__home ${
-                      // showSearchForm == true
                       location.pathname === "/"
                         ? "header__white"
                         : "header__black"
@@ -110,7 +109,6 @@ function Header({
                 <nav>
                   <button
                     className={`header__username ${
-                      // showSearchForm == true
                       location.pathname === "/"
                         ? "header__white"
                         : "header__black header__border"
