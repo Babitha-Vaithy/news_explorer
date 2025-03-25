@@ -59,16 +59,14 @@
   list-style-type: none;
   background-color: rgba(245, 246, 247, 1);
   display: grid;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: repeat(3, 33%);
   place-content: center;
   gap: 16px;
-  padding-bottom: 62px;
-  padding-top: 62px;
-  padding-left: 0;
+  padding: 62px 102px;
 }
 
 .savedarticles__card {
-  width: 400px;
+  width: 100%;
   margin-right: 16px;
   list-style-type: none;
   background-color: rgba(255, 255, 255, 1);
@@ -78,7 +76,7 @@
 }
 
 .savedarticles__image {
-  width: 400px;
+  width: 100%;
   height: 272px;
   min-height: 272px;
   margin-bottom: 20px;
@@ -98,23 +96,33 @@
 
 .savedarticles__caption {
   width: 352px;
-  margin: 0 24px 16px 24px;
+  margin: 0 auto 16px auto;
   font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 26px;
   line-height: 30px;
   color: rgba(26, 27, 34, 1);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .savedarticles__content {
   width: 352px;
-  margin: 0 24px 18px 24px;
+  margin: 0 auto 18px auto;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0px;
   color: rgba(26, 27, 34, 1);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .savedarticles__author {
@@ -152,7 +160,7 @@
   height: 40px;
   position: absolute;
   top: -272px;
-  left: 338px;
+  left: 325px;
   background-image: url("../../assets/Deletebtn.svg");
   border: none;
   border-radius: 10px;
@@ -188,12 +196,256 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1367px) {
+  .savedarticles__deletebtn {
+    left: 309px;
+  }
+}
+
+@media screen and (max-width: 1306px) {
+  .savedarticles__deletebtn {
+    left: 292px;
+  }
+}
+
+@media screen and (max-width: 1306px) {
+  .savedarticles__content {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 18px auto;
+  }
+
+  .savedarticles__caption {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 16px auto;
+  }
+}
+
+@media screen and (max-width: 1247px) {
+  .savedarticles__deletebtn {
+    left: 268px;
+  }
+}
+
+@media screen and (max-width: 1212px) {
+  .savedarticles__content {
+    max-width: 300px;
+  }
+
+  .savedarticles__caption {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 1178px) {
+  .savedarticles__deletebtn {
+    left: 249px;
+  }
+
+  .savedarticles__content {
+    max-width: 272px;
+  }
+
+  .savedarticles__caption {
+    max-width: 272px;
+  }
+}
+
+@media screen and (max-width: 1111px) {
+  .savedarticles__deletebtn {
+    left: 232px;
+  }
+
+  .savedarticles__content {
+    max-width: 250px;
+  }
+
+  .savedarticles__caption {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 1062px) {
+  .savedarticles__deletebtn {
+    left: 215px;
+  }
+}
+
+@media screen and (max-width: 1003px) {
+  .savedarticles__deletebtn {
+    left: 195px;
+  }
+
+  .savedarticles__content {
+    max-width: 212px;
+  }
+
+  .savedarticles__caption {
+    max-width: 212px;
+  }
+}
+
+@media screen and (max-width: 932px) {
+  .savedarticles__deletebtn {
+    left: 181px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .savedarticles__cards {
+    max-width: 920px;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .savedarticles__card {
+    max-width: 224px;
+    margin-right: 8px;
+    height: 420px;
+  }
+
+  .savedarticles__image {
+    max-width: 224px;
+    height: 150px;
+    min-height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .savedarticles__date {
+    margin: 0 0 8px 15px;
+  }
+
+  .savedarticles__caption {
+    max-width: 192px;
+    height: 72px;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0 16px 10px 16px;
+    overflow: hidden;
+  }
+
+  .savedarticles__content {
+    width: 192px;
+    margin: 0 16px 12px 16px;
+    height: 88px;
+    overflow: hidden;
+  }
+
+  .savedarticles__author {
+    width: 192px;
+    margin: 0 16px 16px 16px;
+  }
+
+  .savedarticles__deletebtn {
+    border-radius: 8px;
+    top: -162px;
+    left: 175px;
+  }
+
+  .savedarticles__imagetext {
+    line-height: 24px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .savedarticles__hovertext {
+    width: 107px;
+    top: 103px;
+    left: -105px;
+  }
+}
+
 @media screen and (max-width: 906px) {
   .savedarticles__cards {
     max-width: 906px;
-    padding: 32px 0 32px 31px;
     gap: 8px;
     margin: 0;
+  }
+
+  .savedarticles__card {
+    max-width: 224px;
+    margin-right: 8px;
+    height: 420px;
+  }
+
+  .savedarticles__image {
+    max-width: 224px;
+    height: 150px;
+    min-height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .savedarticles__date {
+    margin: 0 0 8px 15px;
+  }
+
+  .savedarticles__caption {
+    max-width: 192px;
+    height: 72px;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0 16px 10px 16px;
+    overflow: hidden;
+  }
+
+  .savedarticles__content {
+    width: 192px;
+    margin: 0 16px 12px 16px;
+    height: 88px;
+    overflow: hidden;
+  }
+
+  .savedarticles__author {
+    width: 192px;
+    margin: 0 16px 16px 16px;
+  }
+
+  .savedarticles__deletebtn {
+    border-radius: 8px;
+    top: -162px;
+    left: 175px;
+  }
+
+  .savedarticles__imagetext {
+    line-height: 24px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .savedarticles__hovertext {
+    width: 107px;
+    top: 103px;
+    left: -105px;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .savedarticles__deletebtn {
+    left: 155px;
+  }
+}
+
+@media screen and (max-width: 834px) {
+  .savedarticles__name {
+    font-size: 14px;
+    margin: 24px 0 16px 40px;
+  }
+
+  .savedarticles__title {
+    width: 336px;
+    font-size: 30px;
+    line-height: 34px;
+    margin: 0 0 16px 40px;
+  }
+
+  .savedarticles__keywords {
+    margin: 0 0 32px 40px;
+  }
+
+  .savedarticles__cards {
+    max-width: 834px;
+    gap: 38px;
   }
 
   .savedarticles__card {
@@ -250,6 +502,12 @@
     width: 107px;
     top: 103px;
     left: -105px;
+  }
+}
+
+@media screen and (max-width: 797px) {
+  .savedarticles__cards {
+    gap: 51px;
   }
 }
 
@@ -272,8 +530,8 @@
 
   .savedarticles__cards {
     max-width: 768px;
-    padding: 32px 0 32px 31px;
-    gap: 8px;
+    gap: 13px;
+    padding: 40px 40px;
   }
 
   .savedarticles__card {
@@ -333,6 +591,26 @@
   }
 }
 
+@media screen and (max-width: 744px) {
+  .savedarticles__cards {
+    gap: 19px;
+    grid-template-columns: 224px 224px;
+  }
+}
+
+@media screen and (max-width: 738px) {
+  .savedarticles__cards {
+    gap: 23px;
+  }
+}
+
+@media screen and (max-width: 718px) {
+  .savedarticles__cards {
+    gap: 19px;
+    grid-template-columns: 224px 224px;
+  }
+}
+
 @media screen and (max-width: 566px) {
   .savedarticles__cards {
     max-width: 566px;
@@ -343,6 +621,19 @@
   .savedarticles__card {
     width: 288px;
     height: 440px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .savedarticles__title {
+    margin: 0 auto 50px 38px;
+  }
+}
+
+@media screen and (max-width: 314px) {
+  .savedarticles__title {
+    margin: 0 auto 50px 15px;
   }
 }
 
@@ -394,6 +685,7 @@
     max-width: 320px;
     padding: 24px 16px 12px 16px;
     grid-template-columns: repeat(1, 288px);
+    margin-left: 51px;
   }
 
   .savedarticles__card {
@@ -436,7 +728,7 @@
   .savedarticles__deletebtn {
     border-radius: 8px;
     top: -207px;
-    left: 238px;
+    left: 166px;
   }
 
   .savedarticles__imagetext {

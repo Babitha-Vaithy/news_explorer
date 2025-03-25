@@ -2,7 +2,7 @@ import "./SavedArticles.css";
 import { useEffect, useState } from "react";
 import { getItems } from "../../utils/auth";
 
-function Savedarticles({ handleMenu }) {
+function Savedarticles() {
   const [savedArticles, setSavedArticles] = useState(null);
   const [keyword, setKeyword] = useState(null);
 

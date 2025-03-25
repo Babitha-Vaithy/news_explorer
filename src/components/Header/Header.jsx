@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import "./Header.css";
 import { CurrentUserContext } from "../../Contexts/CurrentUserContext";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import usernameicon from "../../assets/username_icon.svg";
 import logout from "../../assets/logout.svg";
 import { useLocation } from "react-router-dom";
@@ -16,8 +16,6 @@ function Header({
   onSignOut,
   handleMenu,
   onSearch,
-  showSavedArticles,
-  handleSavedArticleColor,
 }) {
   const currentUser = useContext(CurrentUserContext);
 
@@ -67,7 +65,6 @@ function Header({
             <div className="header__user-containter">
               <Link
                 to="/"
-                
                 className={
                   location.pathname === "/"
                     ? "header__link-selected"

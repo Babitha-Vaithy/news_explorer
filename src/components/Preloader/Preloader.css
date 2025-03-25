@@ -28,7 +28,7 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom: -554px;
+  bottom: -480px;
   margin: auto;
   animation: spin 0.75s infinite linear;
 }
@@ -52,7 +52,7 @@
 .error__title {
   width: 356px;
   margin-left: 542px;
-  font-family: "Roboto Slab",Arial, Helvetica, sans-serif;
+  font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 26px;
   line-height: 30px;

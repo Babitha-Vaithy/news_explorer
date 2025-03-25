@@ -1,19 +1,10 @@
 import "./Main.css";
-import SearchForm from "../SearchForm/SearchForm";
+
 import NewsCard from "../NewsCard/NewsCard.jsx";
 import Preloader from "../Preloader/Preloader.jsx";
 import About from "../About/About";
 
-function Main({
-  onSearch,
-  handleSignInClick,
-  handleSavedArticles,
-  loader,
-  search,
-  onSaveCards,
-  onSignOut,
-  handleMenu,
-}) {
+function Main({ loader, search, onSaveCards }) {
   return (
     <main>
       <div className="main__container">

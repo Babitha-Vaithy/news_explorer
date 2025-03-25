@@ -1,7 +1,7 @@
 import "./Menu.css";
 
 import { CurrentUserContext } from "../../Contexts/CurrentUserContext";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import closebutton from "../../assets/closebutton.svg";
 import usernameicon from "../../assets/username_icon.svg";
 import logout from "../../assets/logout.svg";
