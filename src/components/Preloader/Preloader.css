@@ -70,3 +70,287 @@
   text-align: center;
   color: rgba(182, 188, 191, 1);
 }
+
+@media screen and (max-width: 1397px) {
+  .preloader__text {
+    margin-left: 612px;
+  }
+}
+
+@media screen and (max-width: 1343px) {
+  .preloader__error {
+    margin-left: -49px;
+  }
+}
+
+@media screen and (max-width: 1338px) {
+  .preloader__text {
+    margin-left: 588px;
+  }
+}
+
+@media screen and (max-width: 1309px) {
+  .preloader__error {
+    margin-left: -87px;
+  }
+}
+
+@media screen and (max-width: 1290px) {
+  .preloader__text {
+    margin-left: 563px;
+  }
+}
+
+@media screen and (max-width: 1243px) {
+  .preloader__text {
+    margin-left: 543px;
+  }
+}
+
+@media screen and (max-width: 1231px) {
+  .preloader__error {
+    margin-left: -144px;
+  }
+}
+
+@media screen and (max-width: 1147px) {
+  .preloader__error {
+    margin-left: -175px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .preloader__error {
+    margin-left: -281px;
+  }
+}
+
+@media screen and (max-width: 967px) {
+  .preloader__error {
+    margin-left: -289px;
+  }
+}
+
+@media screen and (max-width: 816px) {
+  .preloader__error {
+    margin-left: -350px;
+  }
+}
+
+@media screen and (max-width: 702px) {
+  .preloader__error {
+    margin-left: -388px;
+  }
+}
+
+@media screen and (max-width: 588px) {
+  .preloader__error {
+    margin-left: -481px;
+  }
+}
+
+@media screen and (max-width: 527px) {
+  .preloader__error {
+    margin-left: -453px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .preloader__error {
+    margin-left: -488px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .preloader__error {
+    margin-left: -514px;
+  }
+}
+
+@media screen and (max-width: 398px) {
+  .preloader__error {
+    margin-left: -524px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .preloader__error {
+    margin-left: -532px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .preloader__error {
+    margin-left: -552px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .error__title {
+    font-size: 20px;
+    width: 200px;
+    margin-left: 624px;
+  }
+
+  .error__text {
+    width: 227px;
+    margin-left: 605px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .preloader__error {
+    margin-left: -559px;
+  }
+}
+
+@media screen and (max-width: 1202px) {
+  .preloader__text {
+    margin-left: 513px;
+  }
+}
+
+@media screen and (max-width: 1156px) {
+  .preloader__text {
+    margin-left: 492px;
+  }
+}
+
+@media screen and (max-width: 1106px) {
+  .preloader__text {
+    margin-left: 472px;
+  }
+}
+
+@media screen and (max-width: 1061px) {
+  .preloader__text {
+    margin-left: 450px;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .preloader__text {
+    margin-left: 428px;
+  }
+}
+
+@media screen and (max-width: 962px) {
+  .preloader__text {
+    margin-left: 396px;
+  }
+}
+
+@media screen and (max-width: 905px) {
+  .preloader__text {
+    margin-left: 366px;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .preloader__text {
+    margin-left: 338px;
+  }
+}
+
+@media screen and (max-width: 828px) {
+  .circle__preloader {
+    bottom: -382px;
+  }
+}
+
+@media screen and (max-width: 794px) {
+  .preloader__text {
+    margin-left: 315px;
+  }
+}
+
+@media screen and (max-width: 778px) {
+  .circle__preloader {
+    bottom: -187px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .preloader__text {
+    margin-left: 298px;
+  }
+
+  .circle__preloader {
+    bottom: -200px;
+  }
+}
+
+@media screen and (max-width: 734px) {
+  .preloader__text {
+    margin-left: 281px;
+  }
+}
+
+@media screen and (max-width: 679px) {
+  .preloader__text {
+    margin-left: 255px;
+  }
+}
+
+@media screen and (max-width: 637px) {
+  .preloader__text {
+    margin-left: 231px;
+  }
+}
+
+@media screen and (max-width: 589px) {
+  .preloader__text {
+    margin-left: 216px;
+  }
+}
+
+@media screen and (max-width: 566px) {
+  .preloader__text {
+    margin-left: 207px;
+  }
+
+  .circle__preloader {
+    bottom: -291px;
+  }
+}
+
+@media screen and (max-width: 518px) {
+  .preloader__text {
+    margin-left: 174px;
+  }
+}
+
+@media screen and (max-width: 473px) {
+  .preloader__text {
+    margin-left: 149px;
+  }
+}
+
+@media screen and (max-width: 423px) {
+  .preloader__text {
+    margin-left: 126px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .preloader__text {
+    margin-left: 108px;
+  }
+
+  .circle__preloader {
+    bottom: -315px;
+  }
+}
+
+@media screen and (max-width: 364px) {
+  .preloader__text {
+    margin-left: 96px;
+  }
+}
+
+@media screen and (max-width: 322px) {
+  .preloader__text {
+    margin-left: 71px;
+  }
+}

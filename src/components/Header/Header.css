@@ -466,11 +466,11 @@
 
 @media screen and (max-width: 352px) {
   .header__text {
-    margin: 0 auto 94px auto;
+    margin: 0 16px 94px 27px;
   }
 
   .header__title {
-    margin: 30px auto 16px auto;
+    margin: 30px 16px 16px 27px;
   }
 }
 
@@ -552,7 +552,7 @@
   }
 
   .header__title {
-    margin: 30px 16px 16px 15px;
+    margin: 30px 0 16px 15px;
   }
 }
 
@@ -677,6 +677,22 @@
 
   .header__text {
     margin: 0 0 48px 70px;
+  }
+}
+
+@media screen and (max-width: 762px) {
+  .header__title {
+    margin: 81px auto 32px 125px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .header__title {
+    margin: 30px 16px 16px 49px;
+  }
+
+  .header__text {
+    margin: 0 16px 94px 47px;
   }
 }
 

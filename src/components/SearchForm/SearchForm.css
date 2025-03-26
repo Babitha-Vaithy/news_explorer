@@ -55,6 +55,24 @@ button[type="submit"] {
   color: rgba(255, 255, 255, 1);
 }
 
+@media screen and (max-width: 762px) {
+  .search__form {
+    padding-left: 22px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .search__form {
+    padding-left: 103px;
+  }
+}
+
+@media screen and (max-width: 753px) {
+  .search__form {
+    padding-left: 110px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .search__form {
     padding-bottom: 48px;
