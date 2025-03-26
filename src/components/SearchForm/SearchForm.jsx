@@ -7,13 +7,14 @@ const SearchForm = ({ onSearch }) => {
     setSearch(e.target.value);
   };
 
-  const handleOnClick = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     onSearch(search);
   };
 
   return (
     <>
-      <form className="search__form">
+      <form onSubmit={handleSubmit} className="search__form">
         <input
           className="searchform__input"
           type="search"
@@ -25,7 +26,6 @@ const SearchForm = ({ onSearch }) => {
           type="submit"
           onChange={onSearch}
           className="searchform__button"
-          onClick={handleOnClick}
         >
           Search
         </button>

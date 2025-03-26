@@ -78,7 +78,7 @@ function App() {
         setLoader("complete");
         setSearch(data.articles);
       })
-      .catch(console.error);
+      .catch(setSearch([]));
   };
 
   const onSaveCards = (item) => {
