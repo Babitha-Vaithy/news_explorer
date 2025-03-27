@@ -82,6 +82,7 @@
   margin-bottom: 20px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
+  object-fit: cover;
 }
 
 .savedarticles__date {
@@ -310,6 +311,7 @@
     height: 150px;
     min-height: 150px;
     margin-bottom: 20px;
+    object-fit: cover;
   }
 
   .savedarticles__date {
@@ -374,6 +376,7 @@
     height: 150px;
     min-height: 150px;
     margin-bottom: 20px;
+    object-fit: cover;
   }
 
   .savedarticles__date {
@@ -459,6 +462,7 @@
     height: 150px;
     min-height: 150px;
     margin-bottom: 20px;
+    object-fit: cover;
   }
 
   .savedarticles__date {
@@ -545,6 +549,7 @@
     height: 150px;
     min-height: 150px;
     margin-bottom: 20px;
+    object-fit: cover;
   }
 
   .savedarticles__date {
@@ -685,12 +690,12 @@
     max-width: 320px;
     padding: 24px 16px 12px 16px;
     grid-template-columns: repeat(1, 288px);
-    margin-left: 51px;
   }
 
   .savedarticles__card {
     width: 288px;
     height: 440px;
+    margin-left: 31px;
   }
 
   .savedarticles__image {
@@ -698,6 +703,7 @@
     height: 196px;
     min-height: 196px;
     margin-bottom: 16px;
+    object-fit: cover;
   }
 
   .savedarticles__date {
@@ -715,14 +721,13 @@
 
   .savedarticles__content {
     width: 256px;
-    margin: 0 16px 30px 16px;
+    margin: 0 0 30px 16px;
     height: 66px;
     overflow: hidden;
   }
 
   .savedarticles__author {
-    width: 256px;
-    margin: 0 16px 16px 16px;
+    margin: 0 0 16px 16px;
   }
 
   .savedarticles__deletebtn {

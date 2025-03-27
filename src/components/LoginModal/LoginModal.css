@@ -1,4 +1,4 @@
-.signin__signup {
+.modal__signin {
   width: 358px;
   height: 64px;
   background-color: rgba(230, 232, 235, 1);
@@ -12,12 +12,12 @@
   color: rgba(182, 188, 191, 1);
 }
 
-.signin__signup:hover {
+.modal__signin:hover {
   background-color: rgba(47, 113, 229, 1);
   color: rgba(255, 255, 255, 1);
 }
 
-.email__error {
+.modal__emailerror {
   max-width: 173px;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -27,7 +27,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  .signin__signup {
+  .modal__signin {
     width: 288px;
     margin-top: 23px;
   }

@@ -49,9 +49,9 @@ function NewsCard({ search, onSaveCards }) {
           <h1 className="newscard__title">Search results</h1>
           <ul className="newscard__list">
             {items &&
-              items.map((item) => {
+              items.map((item, i) => {
                 return (
-                  <li key={item.id} className="newscard__items">
+                  <li key={i} className="newscard__items">
                     <img
                       src={item.urlToImage}
                       alt="Newscard Image"

@@ -73,7 +73,7 @@ const RegisterModal = ({
         />
       </label>
 
-      <button type="submit" onClick={onSignUp} className="signup__signin">
+      <button type="submit" onClick={onSignUp} className="modal__signup">
         Sign up
       </button>
     </ModalWithForm>

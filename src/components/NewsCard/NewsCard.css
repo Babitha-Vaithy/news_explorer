@@ -62,6 +62,7 @@
   margin-bottom: 20px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
+  object-fit: cover;
 }
 
 .newscard__date {
@@ -278,6 +279,7 @@
     height: 150px;
     min-height: 150px;
     margin-bottom: 16px;
+    object-fit: cover;
   }
 
   .newscard__date {
@@ -408,6 +410,7 @@
     height: 150px;
     min-height: 150px;
     margin-bottom: 16px;
+    object-fit: cover;
   }
 
   .newscard__date {
@@ -451,10 +454,16 @@
   }
 }
 
+@media screen and (max-width: 558px) {
+  .newscard__list {
+    padding-left: 69px;
+  }
+}
+
 @media screen and (max-width: 751px) {
   .newscard__list {
     gap: 27px;
-    grid-template-columns: 224px;
+    grid-template-columns: 224px 224px;
   }
 
   .newscard__show {
@@ -498,6 +507,36 @@
   }
 }
 
+@media screen and (max-width: 482px) {
+  .newscard__show {
+    margin: 16px 16px 24px 89px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .newscard__list {
+    margin-left: -18px;
+  }
+}
+
+@media screen and (max-width: 408px) {
+  .newscard__show {
+    margin: 16px 16px 24px 65px;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .newscard__show {
+    margin: 16px 16px 24px 31px;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .newscard__show {
+    margin: 16px 16px 24px 16px;
+  }
+}
+
 @media screen and (max-width: 548px) {
   .newscard__container {
     max-width: 549px;
@@ -511,7 +550,7 @@
   .newscard__show {
     width: 288px;
     height: 56px;
-    margin: 16px 16px 24px 16px;
+    margin: 16px 16px 24px 123px;
   }
 
   .newscard__items {
@@ -521,7 +560,7 @@
   }
 
   .newscard__list {
-    margin-left: 16px;
+    margin-left: -18px;
     grid-template-columns: 224px;
   }
 
@@ -530,6 +569,7 @@
     height: 196px;
     min-height: 196px;
     margin-bottom: 16px;
+    object-fit: cover;
   }
 
   .newscard__date {
@@ -580,23 +620,24 @@
 
   .newscard__title {
     width: 288px;
-    margin: 32px 16px 58px 16px;
+    margin: 32px 0 58px 16px;
   }
 
   .newscard__show {
     width: 288px;
     height: 56px;
-    margin: 16px 16px 24px 16px;
+    margin: 16px 0 24px 9px;
   }
 
   .newscard__items {
-    width: 288px;
-    margin-right: 16px;
+    max-width: 288px;
+    margin-left: -31px;
     height: 450px;
   }
 
   .newscard__list {
-    margin-left: 16px;
+    margin-left: -2px;
+    padding: 0 102px 0 102px;
   }
 
   .newscard__image {
@@ -604,10 +645,11 @@
     height: 196px;
     min-height: 196px;
     margin-bottom: 16px;
+    object-fit: cover;
   }
 
   .newscard__date {
-    margin: 0 16px 10px 16px;
+    margin: 0 0 10px 16px;
   }
 
   .newscard__caption {
@@ -615,20 +657,20 @@
     height: 48px;
     font-size: 22px;
     line-height: 24px;
-    margin: 0 16px 14px 16px;
+    margin: 0 0 14px 16px;
     overflow: hidden;
   }
 
   .newscard__content {
     width: 256px;
-    margin: 0 16px 8px 16px;
+    margin: 0 0 8px 16px;
     height: 88px;
     overflow: hidden;
   }
 
   .newscard__name {
     width: 256px;
-    margin: 0 16px 16px 16px;
+    margin: 0 0 16px 16px;
   }
 
   .newscard__savebtn {

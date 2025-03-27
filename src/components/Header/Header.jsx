@@ -25,7 +25,7 @@ function Header({
     <header
       className={location.pathname === "/" ? "header" : "header__savedarticle"}
     >
-      <div id="headerMenu" className="header__menu">
+      <nav id="headerMenu" className="header__menu">
         <Link to="/" className="header__link">
           <p
             className={`header__logo ${
@@ -71,18 +71,16 @@ function Header({
                     : "header__link"
                 }
               >
-                <nav>
-                  <p
-                    className={`header__home ${
-                      location.pathname === "/"
-                        ? "header__white"
-                        : "header__black"
-                    }`}
-                    alt="Home"
-                  >
-                    Home
-                  </p>
-                </nav>
+                <p
+                  className={`header__home ${
+                    location.pathname === "/"
+                      ? "header__white"
+                      : "header__black"
+                  }`}
+                  alt="Home"
+                >
+                  Home
+                </p>
               </Link>
               <Link
                 to="/saved-news"
@@ -92,37 +90,33 @@ function Header({
                     : "header__link"
                 }
               >
-                <nav>
-                  <p
-                    className={`header__saved ${
-                      location.pathname === "/"
-                        ? "header__white"
-                        : "header__black"
-                    }`}
-                    alt="Saved Articles"
-                  >
-                    Saved articles
-                  </p>
-                </nav>
+                <p
+                  className={`header__saved ${
+                    location.pathname === "/"
+                      ? "header__white"
+                      : "header__black"
+                  }`}
+                  alt="Saved Articles"
+                >
+                  Saved articles
+                </p>
               </Link>
               <Link to="/" className="header__link">
-                <nav>
-                  <button
-                    className={`header__username ${
-                      location.pathname === "/"
-                        ? "header__white"
-                        : "header__black header__border"
-                    }`}
-                  >
-                    {currentUser.name}
-                    <img
-                      src={location.pathname === "/" ? usernameicon : logout}
-                      alt="Username Icon"
-                      className="header__username-icon"
-                      onClick={onSignOut}
-                    />
-                  </button>
-                </nav>
+                <button
+                  className={`header__username ${
+                    location.pathname === "/"
+                      ? "header__white"
+                      : "header__black header__border"
+                  }`}
+                >
+                  {currentUser.name}
+                  <img
+                    src={location.pathname === "/" ? usernameicon : logout}
+                    alt="Username Icon"
+                    className="header__username-icon"
+                    onClick={onSignOut}
+                  />
+                </button>
               </Link>
             </div>
           )}
@@ -135,7 +129,8 @@ function Header({
           onClick={handleMenu}
           className="header__menuicon"
         />
-      </div>
+      </nav>
+
       {location.pathname === "/" && (
         <div className="header__searchlist">
           <h1 className="header__title">What&apos;s going on in the world?</h1>

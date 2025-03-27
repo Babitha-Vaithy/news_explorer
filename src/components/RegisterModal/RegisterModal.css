@@ -1,4 +1,4 @@
-.signup__signin {
+.modal__signup {
   width: 360px;
   height: 64px;
   margin-bottom: -11px;
@@ -13,13 +13,13 @@
   border-radius: 50px;
 }
 
-.signup__signin:hover {
+.modal__signup:hover {
   background-color: rgba(47, 113, 229, 1);
   color: rgba(255, 255, 255, 1);
 }
 
 @media screen and (max-width: 320px) {
-  .signup__signin {
+  .modal__signup {
     width: 277px;
     margin-top: 23px;
   }

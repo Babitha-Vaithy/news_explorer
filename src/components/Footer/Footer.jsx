@@ -10,39 +10,38 @@ function Footer() {
       <p className="footer__name">
         &copy; {new Date().getFullYear()} Supersite, Powered by News API
       </p>
-      <div className="footer__container">
-        <div className="footer__leftside">
+
+      <nav className="footer__container">
+        <ul className="footer__leftside">
           <Link to="/" className="footer__link">
-            <nav>Home</nav>
+            Home
           </Link>
-          <nav>
-            <a
-              href="https://tripleten.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer__link"
-            >
-              TripleTen
-            </a>
-          </nav>
-        </div>
-        <div className="footer__rightside">
-          <nav>
-            <a
-              href="https://github.com/Babitha-Vaithy"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={gitavatar}
-                alt="Git Avatar"
-                className="footer__gitavatar"
-              />
-            </a>
-          </nav>
-          <img src={facebook} alt="" className="footer__facebook" />
-        </div>
-      </div>
+
+          <a
+            href="https://tripleten.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__link"
+          >
+            TripleTen
+          </a>
+        </ul>
+        <ul className="footer__rightside">
+          <a
+            href="https://github.com/Babitha-Vaithy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={gitavatar}
+              alt="Git Avatar"
+              className="footer__gitavatar"
+            />
+          </a>
+
+          <img src={facebook} alt="Facebook" className="footer__facebook" />
+        </ul>
+      </nav>
     </footer>
   );
 }

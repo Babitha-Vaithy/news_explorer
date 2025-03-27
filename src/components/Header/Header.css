@@ -454,6 +454,16 @@
   }
 }
 
+@media screen and (max-width: 324px) {
+  .header__text {
+    margin: 0 16px 94px 10px;
+  }
+
+  .header__title {
+    margin: 30px 16px 16px 10px;
+  }
+}
+
 @media screen and (max-width: 391px) {
   .header__text {
     margin: 0 0 94px 59px;
@@ -520,7 +530,7 @@
   }
 }
 
-@media screen and (max-width: 365px) {
+@media screen and (max-width: 368px) {
   .header__text {
     margin: 0 0 94px 41px;
   }
@@ -532,7 +542,11 @@
 
 @media screen and (max-width: 344px) {
   .header__text {
-    margin: 0 0 94px 37px;
+    margin: 0 0 94px 21px;
+  }
+
+  .header__title {
+    margin: 30px 16px 16px 21px;
   }
 }
 

@@ -1,4 +1,4 @@
-.search__form {
+.searchform {
   display: flex;
   justify-content: center;
   padding-bottom: 80px;
@@ -56,25 +56,31 @@ button[type="submit"] {
 }
 
 @media screen and (max-width: 762px) {
-  .search__form {
+  .searchform {
     padding-left: 22px;
   }
 }
 
+@media screen and (max-width: 753px) {
+  .searchform {
+    padding-left: 117px;
+  }
+}
+
 @media screen and (max-width: 760px) {
-  .search__form {
+  .searchform {
     padding-left: 103px;
   }
 }
 
 @media screen and (max-width: 753px) {
-  .search__form {
+  .searchform {
     padding-left: 110px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .search__form {
+  .searchform {
     padding-bottom: 48px;
     margin-left: 111px;
   }
@@ -91,49 +97,49 @@ button[type="submit"] {
 }
 
 @media screen and (max-width: 760px) {
-  .search__form {
+  .searchform {
     margin-left: 7px;
   }
 }
 
 @media screen and (max-width: 752px) {
-  .search__form {
+  .searchform {
     margin-left: 52px;
   }
 }
 
 @media screen and (max-width: 763px) {
-  .search__form {
+  .searchform {
     padding-left: 100px;
   }
 }
 
 @media screen and (max-width: 759px) {
-  .search__form {
+  .searchform {
     padding-left: 61px;
   }
 }
 
 @media screen and (max-width: 584px) {
-  .search__form {
+  .searchform {
     margin-left: 30px;
   }
 }
 
 @media screen and (max-width: 566px) {
-  .search__form {
+  .searchform {
     margin-left: 124px;
   }
 }
 
 @media screen and (max-width: 537px) {
-  .search__form {
+  .searchform {
     margin-left: 99px;
   }
 }
 
 @media screen and (max-width: 461px) {
-  .search__form {
+  .searchform {
     padding-top: 9px;
     padding-left: 10px;
   }
@@ -153,7 +159,7 @@ button[type="submit"] {
 }
 
 @media screen and (max-width: 566px) {
-  .search__form {
+  .searchform {
     padding-bottom: 32px;
     padding-left: 0px;
     margin-left: auto;
@@ -174,7 +180,7 @@ button[type="submit"] {
 }
 
 @media screen and (max-width: 320px) {
-  .search__form {
+  .searchform {
     padding-bottom: 32px;
     padding-left: 0px;
     margin-left: auto;

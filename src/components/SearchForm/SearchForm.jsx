@@ -14,7 +14,7 @@ const SearchForm = ({ onSearch }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="search__form">
+      <form onSubmit={handleSubmit} className="searchform">
         <input
           className="searchform__input"
           type="search"

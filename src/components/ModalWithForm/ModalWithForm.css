@@ -28,11 +28,13 @@
 }
 
 .modal__closebtn {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../assets/closebutton.svg");
   position: absolute;
-  top: -53px;
-  right: -51px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .modal__content {

@@ -16,7 +16,7 @@ function Preloader({ loader, search }) {
           {showloader && (
             <>
               <div className="preloader__circle-container">
-                <div className="circle__preloader"></div>
+                <div className="preloader__circle"></div>
                 <p className="preloader__text">Searching for news...</p>
               </div>
             </>
@@ -27,10 +27,10 @@ function Preloader({ loader, search }) {
                 <img
                   src={notfound}
                   alt="Not Found avatar"
-                  className="error__avatar"
+                  className="preloader__erroravatar"
                 />
-                <p className="error__title">Nothing found</p>
-                <p className="error__text">
+                <p className="preloader__errortitle">Nothing found</p>
+                <p className="preloader__errortext">
                   Sorry, but nothing matched your search terms.
                 </p>
               </>
