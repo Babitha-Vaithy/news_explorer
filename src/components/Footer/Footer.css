@@ -179,9 +179,9 @@
   }
 }
 
-@media screen and (max-width: 806px) {
+@media screen and (max-width: 881px) {
   .footer__facebook {
-    margin: 28px 36px 28px 40px;
+    margin-right:20px;
   }
 }
 

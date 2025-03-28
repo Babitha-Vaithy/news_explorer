@@ -31,7 +31,6 @@ function Header({
             className={`header__logo ${
               location.pathname === "/" ? "header__white" : "header__black"
             }`}
-            alt="Header Logo"
           >
             NewsExplorer
           </p>
@@ -42,7 +41,7 @@ function Header({
               to="/"
               className={
                 location.pathname === "/"
-                  ? "header__link-selected"
+                  ? "header__link header__link_selected"
                   : "header__link"
               }
             >
@@ -62,12 +61,12 @@ function Header({
           )}
 
           {currentUser && (
-            <div className="header__user-containter">
+            <div className="header__user_container">
               <Link
                 to="/"
                 className={
                   location.pathname === "/"
-                    ? "header__link-selected"
+                    ? "header__link header__link_selected"
                     : "header__link"
                 }
               >
@@ -86,7 +85,7 @@ function Header({
                 to="/saved-news"
                 className={
                   location.pathname === "/saved-news"
-                    ? "header__link-saved"
+                    ? "header__link header__link_saved"
                     : "header__link"
                 }
               >

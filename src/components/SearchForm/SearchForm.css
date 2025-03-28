@@ -21,7 +21,7 @@ input[type="search"] {
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0px;
-  padding: 21px 0 21px 24px;
+  padding: 21px 24px 21px 24px;
 }
 
 .searchform__button {
