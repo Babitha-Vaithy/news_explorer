@@ -21,7 +21,6 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [search, setSearch] = useState(null);
   const [loader, setLoader] = useState(null);
-  const [savedArticles, setSavedArticles] = useState(false);
   const [showSavedArticles, setShowSavedArticles] = useState(false);
 
   const handleSignupClick = () => {
@@ -37,10 +36,6 @@ function App() {
 
   const handleMenu = () => {
     setActiveModal("menu");
-  };
-
-  const handleSavedArticles = () => {
-    setSavedArticles(true);
   };
 
   const handleClickSavedArticles = () => {
@@ -84,9 +79,7 @@ function App() {
   const onSaveCards = (item) => {
     console.log(item);
     saveArticle(item)
-      .then(() => {
-        setSavedArticles(item.articles);
-      })
+      .then(() => {})
       .catch(console.error);
   };
 
@@ -120,11 +113,9 @@ function App() {
             <Header
               handleSignInClick={handleSignInClick}
               styleColor={showSavedArticles === false ? "white" : "black"}
-              handleSavedArticles={handleSavedArticles}
               onSignOut={onSignOut}
               handleMenu={handleMenu}
               onSearch={onSearch}
-              showSavedArticles={showSavedArticles}
             />
             <Routes>
               <Route
@@ -141,7 +132,7 @@ function App() {
                 path="/saved-news"
                 element={
                   <ProtectedRoute isLoggedIn={isLoggedIn}>
-                    <Savedarticles handleMenu={handleMenu} />
+                    <Savedarticles />
                   </ProtectedRoute>
                 }
               ></Route>

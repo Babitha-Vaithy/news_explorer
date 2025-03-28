@@ -46,7 +46,7 @@ function Savedarticles() {
         </h1>
         <p className="savedarticles__keywords">
           By keywords:
-          <span className="savedarticles__keyword">{keyword}</span>;
+          <span className="savedarticles__keyword">{keyword}</span>
         </p>
         <ul className="savedarticles__cards">
           {savedArticles &&
