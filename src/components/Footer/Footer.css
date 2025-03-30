@@ -181,7 +181,7 @@
 
 @media screen and (max-width: 881px) {
   .footer__facebook {
-    margin-right:20px;
+    margin-right: 20px;
   }
 }
 
@@ -251,7 +251,7 @@
 
   .footer__link {
     padding-left: 146px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
 
   .footer__name {
@@ -276,6 +276,12 @@
   .footer__name {
     width: 288px;
     margin: 38px 16px 22px 12px;
+  }
+}
+
+@media screen and (max-width: 357px) {
+  .footer__link {
+    padding-left: 130px;
   }
 }
 
@@ -306,7 +312,7 @@
   }
 
   .footer__link {
-    padding-left: 103px;
+    padding-left: 114px;
   }
 
   .footer__name {
