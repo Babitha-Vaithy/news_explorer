@@ -93,13 +93,13 @@
     color: rgba(255, 255, 255, 1);
   }
 
-  .menu__link-selected {
+  .menu__link_selected {
     text-decoration: none;
     padding: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 1);
   }
 
-  .menu__link-saved {
+  .menu__link_saved {
     text-decoration: none;
     padding: 30px 0 26px;
     border-bottom: 1px solid rgba(26, 27, 34, 1);
@@ -285,13 +285,13 @@
     color: rgba(255, 255, 255, 1);
   }
 
-  .menu__link-selected {
+  .menu__link_selected {
     text-decoration: none;
     padding: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 1);
   }
 
-  .menu__link-saved {
+  .menu__link_saved {
     text-decoration: none;
     padding: 30px 0 26px;
     border-bottom: 1px solid rgba(26, 27, 34, 1);

@@ -65,7 +65,7 @@ function NewsCard({ search, onSaveCards }) {
                         onClick={(e) => saveCards(e, item)}
                       />
 
-                      <h3 className="hover__image-text">
+                      <h3 className="newscard__hovertext">
                         Sign in to save articles
                       </h3>
                     </div>

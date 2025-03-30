@@ -149,7 +149,7 @@
   left: 10px;
 }
 
-.hover__image-text {
+.newscard__hovertext {
   width: 124px;
   border-radius: 10px;
   display: none;
@@ -167,7 +167,7 @@
   padding: 11px 20px 11px 20px;
 }
 
-.savedbtn__container:hover .hover__image-text {
+.savedbtn__container:hover .newscard__hovertext {
   display: block;
 }
 
@@ -317,7 +317,7 @@
     left: 162px;
   }
 
-  .hover__image-text {
+  .newscard__hovertext {
     top: -2px;
     left: -6px;
   }
@@ -374,7 +374,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .newscard{
+  .newscard {
     max-width: 768px;
   }
 
@@ -448,7 +448,7 @@
     left: 162px;
   }
 
-  .hover__image-text {
+  .newscard__hovertext {
     top: -2px;
     left: -6px;
   }
@@ -607,7 +607,7 @@
     left: 226px;
   }
 
-  .hover__image-text {
+  .newscard__hovertext {
     top: -2px;
     left: 53px;
   }
@@ -683,7 +683,7 @@
     left: 226px;
   }
 
-  .hover__image-text {
+  .newscard__hovertext {
     top: -2px;
     left: 53px;
   }

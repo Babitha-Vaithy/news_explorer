@@ -51,7 +51,7 @@ function Menu({
               to="/"
               onClick={handleMenuColor}
               className={
-                location.pathname === "/" ? "menu__link-selected" : "menu__link"
+                location.pathname === "/" ? "menu__link_selected" : "menu__link"
               }
             >
               <nav>
@@ -78,7 +78,7 @@ function Menu({
                 onClick={handleMenuColor}
                 className={
                   location.pathname === "/"
-                    ? "menu__link-selected"
+                    ? "menu__link_selected"
                     : "menu__link"
                 }
               >
@@ -97,7 +97,7 @@ function Menu({
                 onClick={handleClickSavedArticles}
                 className={
                   location.pathname === "/saved-news"
-                    ? "menu__link-saved"
+                    ? "menu__link_saved"
                     : "menu__link"
                 }
               >
