@@ -1,6 +1,6 @@
 import "./About.css";
 
-import about from "../../assets/about.svg";
+import about from "../../assets/about.png";
 
 function About() {
   return (

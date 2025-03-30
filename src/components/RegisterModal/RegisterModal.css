@@ -18,9 +18,14 @@
   color: rgba(255, 255, 255, 1);
 }
 
+@media screen and (max-width: 500px) {
+  .modal__signup {
+    width: 288px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .modal__signup {
     width: 277px;
-    margin-top: 23px;
   }
 }

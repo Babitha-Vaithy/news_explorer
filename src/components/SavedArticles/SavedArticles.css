@@ -625,7 +625,8 @@
   }
 
   .savedarticles__card {
-    width: 288px;
+    max-width: 288px;
+    width: 100%;
     height: 440px;
   }
 }
@@ -635,6 +636,45 @@
     max-width: 504px;
     padding: 24px 16px 12px 16px;
     grid-template-columns: 224px;
+  }
+
+  .savedarticles__card {
+    height: 440px;
+    width: 288px;
+    margin-left: -26px;
+  }
+
+  .savedarticles__image {
+    max-width: 288px;
+    height: 196px;
+    min-height: 196px;
+    margin-bottom: 16px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .savedarticles__caption {
+    max-width: 256px;
+    height: 48px;
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0 16px 14px 16px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .savedarticles__content {
+    max-width: 256px;
+    margin: 0 0 30px 16px;
+    height: 66px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .savedarticles__deletebtn {
+    border-radius: 8px;
+    top: -207px;
+    left: 223px;
   }
 }
 
@@ -701,17 +741,19 @@
   }
 
   .savedarticles__card {
-    width: 288px;
+    width: 100%;
     height: 440px;
-    margin-left: 31px;
+    max-width: 288px;
+    margin-left: 3px;
   }
 
   .savedarticles__image {
-    width: 288px;
+    max-width: 288px;
     height: 196px;
     min-height: 196px;
     margin-bottom: 16px;
     object-fit: cover;
+    width: 100%;
   }
 
   .savedarticles__date {
@@ -719,19 +761,21 @@
   }
 
   .savedarticles__caption {
-    width: 256px;
+    max-width: 256px;
     height: 48px;
     font-size: 22px;
     line-height: 24px;
     margin: 0 16px 14px 16px;
     overflow: hidden;
+    width: 100%;
   }
 
   .savedarticles__content {
-    width: 256px;
+    max-width: 256px;
     margin: 0 0 30px 16px;
     height: 66px;
     overflow: hidden;
+    width: 100%;
   }
 
   .savedarticles__author {
@@ -741,7 +785,7 @@
   .savedarticles__deletebtn {
     border-radius: 8px;
     top: -207px;
-    left: 166px;
+    left: 223px;
   }
 
   .savedarticles__imagetext {

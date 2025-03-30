@@ -26,9 +26,17 @@
   color: rgba(255, 0, 0, 1);
 }
 
+@media screen and (max-width: 500px) {
+  .modal__signin {
+    width: 288px;
+    margin-top: 23px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .modal__signin {
     width: 288px;
     margin-top: 23px;
+    margin-left: -5px;
   }
 }

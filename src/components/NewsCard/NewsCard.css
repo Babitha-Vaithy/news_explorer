@@ -1,4 +1,4 @@
-.newscard__container {
+.newscard {
   display: flex;
   flex-direction: column;
   max-width: 1440px;
@@ -244,7 +244,7 @@
 }
 
 @media screen and (max-width: 972px) {
-  .newscard__container {
+  .newscard {
     max-width: 972px;
   }
 
@@ -374,7 +374,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .newscard__container {
+  .newscard{
     max-width: 768px;
   }
 
@@ -538,7 +538,7 @@
 }
 
 @media screen and (max-width: 548px) {
-  .newscard__container {
+  .newscard {
     max-width: 549px;
   }
 
@@ -614,7 +614,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  .newscard__container {
+  .newscard {
     max-width: 320px;
   }
 

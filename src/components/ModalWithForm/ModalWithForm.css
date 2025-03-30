@@ -35,6 +35,8 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  top: -58px;
+  right: -31px;
 }
 
 .modal__content {
@@ -94,6 +96,40 @@
   border: none;
   background-color: transparent;
   color: rgba(182, 188, 191, 1);
+}
+
+@media screen and (max-width: 500px) {
+  .modal__closebtn {
+    right: -3px;
+  }
+  .modal__content {
+    max-width: 320px;
+  }
+
+  .modal__title {
+    width: 158px;
+    margin-bottom: 18px;
+    padding-top: 16px;
+    padding-left: 17px;
+  }
+
+  .modal__form {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .modal__label {
+    margin-bottom: 30px;
+  }
+
+  .modal__input {
+    width: 288px;
+    margin-top: 8px;
+  }
+
+  .modal__submit {
+    margin: 16px auto 28px auto;
+  }
 }
 
 @media screen and (max-width: 320px) {

@@ -61,7 +61,7 @@ function Header({
           )}
 
           {currentUser && (
-            <div className="header__user_container">
+            <div className="header__usercontainer">
               <Link
                 to="/"
                 className={

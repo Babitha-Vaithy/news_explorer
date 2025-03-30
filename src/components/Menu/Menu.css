@@ -77,8 +77,8 @@
   .menu__signin {
     display: block;
     position: absolute;
-    left: 8px;
-    bottom: 24px;
+    left: 80px;
+    bottom: 833px;
     width: 288px;
     height: 56px;
     border-radius: 50px;
@@ -155,6 +155,18 @@
   .menu__link {
     padding: 0;
     text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .menu__signin {
+    left: 22px;
+  }
+}
+
+@media screen and (max-width: 334px) {
+  .menu__signin {
+    left: 10px;
   }
 }
 

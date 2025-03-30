@@ -45,7 +45,7 @@ function NewsCard({ search, onSaveCards }) {
   return (
     <>
       {search && search.length > 0 && (
-        <div className="newscard__container">
+        <div className="newscard">
           <h1 className="newscard__title">Search results</h1>
           <ul className="newscard__list">
             {items &&
