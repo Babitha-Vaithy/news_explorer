@@ -51,7 +51,9 @@ function Menu({
               to="/"
               onClick={handleMenuColor}
               className={
-                location.pathname === "/" ? "menu__link_selected" : "menu__link"
+                location.pathname === "/"
+                  ? "menu__link menu__link_selected"
+                  : "menu__link"
               }
             >
               <nav>
@@ -78,7 +80,7 @@ function Menu({
                 onClick={handleMenuColor}
                 className={
                   location.pathname === "/"
-                    ? "menu__link_selected"
+                    ? "menu__link menu__link_selected"
                     : "menu__link"
                 }
               >
@@ -97,7 +99,7 @@ function Menu({
                 onClick={handleClickSavedArticles}
                 className={
                   location.pathname === "/saved-news"
-                    ? "menu__link_saved"
+                    ? "menu__link menu__link_saved"
                     : "menu__link"
                 }
               >
@@ -118,7 +120,7 @@ function Menu({
                     <img
                       src={styleColor == "white" ? usernameicon : logout}
                       alt="Username Icon"
-                      className="menu__username-icon"
+                      className="menu__usernameicon"
                       onClick={onSignOut}
                     />
                   </button>
