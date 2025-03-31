@@ -1,0 +1,42 @@
+.modal__signin {
+  width: 358px;
+  height: 64px;
+  background-color: rgba(230, 232, 235, 1);
+  border-radius: 50px;
+  border: none;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(182, 188, 191, 1);
+}
+
+.modal__signin:hover {
+  background-color: rgba(47, 113, 229, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.modal__emailerror {
+  max-width: 173px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.52px;
+  color: rgba(255, 0, 0, 1);
+}
+
+@media screen and (max-width: 500px) {
+  .modal__signin {
+    width: 288px;
+    margin-top: 23px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .modal__signin {
+    width: 288px;
+    margin-top: 23px;
+    margin-left: -5px;
+  }
+}

@@ -1,0 +1,31 @@
+.success__title {
+  width: 315px;
+  margin-left: 36px;
+  margin-top: 43px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28.13px;
+  color: rgba(0, 0, 0, 1);
+}
+
+.success__close {
+  position: absolute;
+  top: -53px;
+  right: -51px;
+  background-color: transparent;
+  border: none;
+}
+
+.success__sigin {
+  max-width: 100%;
+  margin-bottom: 51px;
+  margin-left: 36px;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+  background-color: transparent;
+  border: none;
+  color: rgba(47, 113, 229, 1);
+}

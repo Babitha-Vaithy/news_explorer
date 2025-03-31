@@ -1,0 +1,31 @@
+.modal__signup {
+  width: 360px;
+  height: 64px;
+  margin-bottom: -11px;
+  border: none;
+  margin-left: 2px;
+  background-color: rgba(230, 232, 235, 1);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.modal__signup:hover {
+  background-color: rgba(47, 113, 229, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 500px) {
+  .modal__signup {
+    width: 288px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .modal__signup {
+    width: 277px;
+  }
+}
